@@ -26,6 +26,7 @@ Adding a resource? Read [CONTRIBUTING.md](CONTRIBUTING.md) first — a banner an
   - [Fluid Functionalism](#fluid-functionalism)
   - [interior.dev](#interiordev)
   - [Magic UI](#magic-ui)
+  - [Payload Components](#payload-components)
   - [ReUI](#reui)
   - [Spell UI](#spell-ui)
   - [Supabase UI](#supabase-ui)
@@ -443,6 +444,12 @@ The broadest catalogue of marketing-grade visual effects here: backgrounds, text
 | [Word Rotate](https://magicui.design/docs/components/word-rotate) | The headline names several audiences and the last word cycles cleanly between them. |
 
 </details>
+
+### [Payload Components](https://www.payload-components.xyz/)
+
+MIT registry of typed Payload CMS blocks for Payload v3 and Next.js. Components install as reviewable source, and the companion CLI wires the block into the Payload collection and renderer before regenerating types and the admin import map.
+
+Use when you are building a Payload-backed Next.js site and want shadcn-style block installation without manually repeating the Payload integration work.
 
 ### [ReUI](https://reui.io/components)
 
