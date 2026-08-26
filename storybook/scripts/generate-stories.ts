@@ -24,8 +24,10 @@ import type { ManifestItem } from "./resolve-components"
 
 const GENERATED = "src/stories/generated"
 
-/** Components already covered by a hand-written story, by `<alias>:<item>`. */
-const CURATED = new Set([
+const HANDWRITTEN = "src/stories/handwritten"
+
+/** The ten stories written before the generator existed, which live at the stories root. */
+const CURATED_ROOT = new Set([
   "magicui:border-beam",
   "magicui:shimmer-button",
   "magicui:marquee",
@@ -37,6 +39,26 @@ const CURATED = new Set([
   "ncdai:copy-button",
   "dotmatrix:dotm-square-1",
 ])
+
+/**
+ * Components covered by a hand-written story, by `<alias>:<item>`.
+ *
+ * Anything under `src/stories/handwritten/<alias>/` claims its component, so
+ * writing a story by hand is all it takes to stop the generator overwriting it.
+ */
+const curated = async () => {
+  const claimed = new Set(CURATED_ROOT)
+  for await (const file of new Bun.Glob("*/*.stories.tsx").scan({ cwd: HANDWRITTEN })) {
+    const [alias, base] = file.split("/")
+    const kebab = (base.replace(".stories.tsx", "").match(/[A-Z]+(?![a-z])|[A-Z]?[a-z0-9]+/g) ?? [])
+      .join("-")
+      .toLowerCase()
+    claimed.add(`${alias}:${kebab}`)
+  }
+  return claimed
+}
+
+const CURATED = await curated()
 
 const importPath = (path: string) => `@/${path.replace(/^src\//, "").replace(/\.tsx?$/, "")}`
 

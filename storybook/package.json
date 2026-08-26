@@ -12,7 +12,8 @@
     "install-registry": "bun scripts/install-registry.ts",
     "generate-stories": "bun scripts/generate-stories.ts",
     "smoke-stories": "bun scripts/smoke-stories.ts",
-    "prune-args": "bun scripts/prune-args.ts"
+    "prune-args": "bun scripts/prune-args.ts",
+    "stories": "bun scripts/generate-stories.ts --force && bun scripts/prune-args.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

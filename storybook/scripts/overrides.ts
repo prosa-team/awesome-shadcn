@@ -132,3 +132,36 @@ export const NOT_RENDERABLE: Record<string, string> = {
   "fluid:surfaces": "Shared surface class names, published as lib/surface-classes.ts.",
   "dotmatrix:all": "An aggregate item that installs no component of its own.",
 }
+
+/**
+ * Errors a component logs at runtime that do not stop it rendering.
+ *
+ * The smoke test treats a thrown error as a failure, which is right for a
+ * component that renders nothing. These throw during an optional side effect —
+ * loading a sound — while the component itself is on screen and usable.
+ */
+export const RUNTIME_WARNINGS: RegExp[] = [
+  // Chanh Dai's spotlight-logo and toc-minimap depend on `@soundcn/*`, a
+  // registry with no reachable host. The nearest published hook, @ncdai/use-sound,
+  // takes a URL where those components pass a base64 SoundAsset, so the fetch
+  // 404s. The component renders; only its click sound is missing.
+  /Failed to fetch audio/,
+]
+
+/**
+ * Stories that render in development but not in the production build.
+ *
+ * `framer-motion` publishes Reorder as `export { namespace as Reorder }` over an
+ * `import * as namespace`. The production build drops that namespace's members,
+ * so `Reorder.Group` is undefined and React throws error #130. A probe story
+ * that only rendered `<Reorder.Group>` reproduced it with nothing else on the
+ * page, which puts the fault in the bundler's handling of that re-export rather
+ * than in either registry.
+ *
+ * Both components work in `bun run storybook`. Neither survives
+ * `bun run build-storybook`.
+ */
+export const DEV_ONLY: Record<string, string> = {
+  "interior:reorder-list": "Renders through motion's Reorder.Group.",
+  "extend:file-system": "Its columns view renders through motion's Reorder.Group.",
+}

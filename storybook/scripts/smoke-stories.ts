@@ -16,11 +16,13 @@ import { readFileSync, writeFileSync } from "node:fs"
 
 import { chromium } from "playwright"
 
+import { RUNTIME_WARNINGS } from "./overrides"
+
 const DIST = "storybook-static"
 const PORT = 6100
 const CONCURRENCY = 6
 
-type Result = { id: string; title: string; ok: boolean; reason?: string }
+type Result = { id: string; title: string; ok: boolean; reason?: string; warning?: string }
 
 const index = JSON.parse(readFileSync(`${DIST}/index.json`, "utf8")) as {
   entries: Record<string, { id: string; title: string; name: string; type: string }>
@@ -46,11 +48,14 @@ const browser = await chromium.launch()
 
 const check = async (story: { id: string; title: string; name: string }): Promise<Result> => {
   const page = await browser.newPage()
-  const errors: string[] = []
+  // A thrown error breaks the story. A logged one may not: several components
+  // fetch an optional asset at mount and log the 404 while rendering fine.
+  const fatal: string[] = []
+  const logged: string[] = []
 
-  page.on("pageerror", (error) => errors.push(error.message))
+  page.on("pageerror", (error) => fatal.push(error.message))
   page.on("console", (message) => {
-    if (message.type() === "error") errors.push(message.text())
+    if (message.type() === "error") logged.push(message.text())
   })
 
   try {
@@ -63,7 +68,7 @@ const check = async (story: { id: string; title: string; name: string }): Promis
       document.body.classList.contains("sb-show-errordisplay")
     )
     if (failed) {
-      errors.push((await page.locator("#error-message").innerText()).trim() || "Storybook error display")
+      fatal.push((await page.locator("#error-message").innerText()).trim() || "Storybook error display")
     }
 
     // A story that throws nothing but renders nothing is still not a story.
@@ -71,19 +76,25 @@ const check = async (story: { id: string; title: string; name: string }): Promis
       () => (document.querySelector("#storybook-root")?.textContent ?? "").trim().length > 0 ||
         (document.querySelector("#storybook-root")?.childElementCount ?? 0) > 0
     )
-    if (!rendered) errors.push("rendered nothing")
+    if (!rendered) fatal.push("rendered nothing")
   } catch (error) {
-    errors.push(error instanceof Error ? error.message : String(error))
+    fatal.push(error instanceof Error ? error.message : String(error))
   } finally {
     await page.close()
   }
 
-  const reason = errors.find((e) => !/favicon|Failed to load resource/i.test(e))
+  const noise = /favicon|Failed to load resource/i
+  const tolerated = (message: string) => RUNTIME_WARNINGS.some((p) => p.test(message))
+
+  const reason = fatal.find((e) => !noise.test(e) && !tolerated(e))
+  const warning = [...fatal, ...logged].find((e) => !noise.test(e))
+
   return {
     id: story.id,
     title: `${story.title} / ${story.name}`,
     ok: !reason,
     reason: reason?.split("\n")[0].slice(0, 160),
+    warning: warning?.split("\n")[0].slice(0, 160),
   }
 }
 
@@ -104,5 +115,9 @@ server.stop()
 const failures = results.filter((r) => !r.ok)
 writeFileSync("scripts/smoke-report.json", JSON.stringify(results, null, 2) + "\n")
 
+const warned = results.filter((r) => r.ok && r.warning)
+
 console.log(`${results.length - failures.length}/${results.length} stories render`)
 for (const failure of failures) console.log(`  FAIL ${failure.title}\n       ${failure.reason}`)
+if (warned.length) console.log(`${warned.length} render but log an error:`)
+for (const w of warned) console.log(`  WARN ${w.title}\n       ${w.warning}`)
