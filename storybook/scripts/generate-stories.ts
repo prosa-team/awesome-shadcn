@@ -41,24 +41,34 @@ const CURATED_ROOT = new Set([
 ])
 
 /**
- * Components covered by a hand-written story, by `<alias>:<item>`.
+ * Story titles already claimed by a hand-written story.
  *
- * Anything under `src/stories/handwritten/<alias>/` claims its component, so
- * writing a story by hand is all it takes to stop the generator overwriting it.
+ * Matching on the title rather than on the filename is the difference between
+ * a guess and a fact: `AddCashDisclosure.stories.tsx` only maps back to
+ * `add-cash-disclosure` if the kebab-casing happens to agree, and when it does
+ * not the generator writes a second story under the same title and Storybook
+ * refuses to index either.
  */
-const curated = async () => {
-  const claimed = new Set(CURATED_ROOT)
-  for await (const file of new Bun.Glob("*/*.stories.tsx").scan({ cwd: HANDWRITTEN })) {
-    const [alias, base] = file.split("/")
-    const kebab = (base.replace(".stories.tsx", "").match(/[A-Z]+(?![a-z])|[A-Z]?[a-z0-9]+/g) ?? [])
-      .join("-")
-      .toLowerCase()
-    claimed.add(`${alias}:${kebab}`)
+/**
+ * The story title, read from the meta declaration.
+ *
+ * Not the first `title:` in the file — several stories declare sample data
+ * above their meta, and `{ id: '1', title: 'Registry review' }` is not a story
+ * title.
+ */
+export const metaTitle = (source: string) =>
+  /const meta[^=]*=\s*\{[\s\S]*?\btitle:\s*'([^']+)'/.exec(source)?.[1] ?? null
+
+const claimedTitles = async () => {
+  const titles = new Set<string>()
+  for await (const file of new Bun.Glob("**/*.stories.tsx").scan({ cwd: HANDWRITTEN })) {
+    const title = metaTitle(readFileSync(`${HANDWRITTEN}/${file}`, "utf8"))
+    if (title) titles.add(title)
   }
-  return claimed
+  return titles
 }
 
-const CURATED = await curated()
+const CLAIMED = await claimedTitles()
 
 const importPath = (path: string) => `@/${path.replace(/^src\//, "").replace(/\.tsx?$/, "")}`
 
@@ -114,7 +124,9 @@ const wanted = manifest.filter((item) => {
   if (!item.name) return false
   if (aliasFilter && !aliasFilter.startsWith("--") && item.alias !== aliasFilter) return false
   const key = keyFor(item.alias, item.name)
-  return !EXCLUDED_RESOURCES[item.alias] && !BROKEN[key] && !NOT_RENDERABLE[key] && !CURATED.has(key)
+  if (CLAIMED.has(`${item.resource}/${item.component}`)) return false
+  if (CURATED_ROOT.has(key)) return false
+  return !EXCLUDED_RESOURCES[item.alias] && !BROKEN[key] && !NOT_RENDERABLE[key]
 })
 
 let written = 0
@@ -153,3 +165,22 @@ for (const item of wanted) {
 console.log(`wrote ${written} stories into ${GENERATED}`)
 for (const name of unlocated) console.log(`  UNLOCATED ${name}`)
 for (const name of needsArgs) console.log(`  NEEDS ARGS ${name}`)
+
+// A duplicate title makes Storybook refuse to index either story, and the dev
+// server dies on start. Catch it here rather than there.
+const titles = new Map<string, string>()
+for await (const file of new Bun.Glob("**/*.stories.tsx").scan({ cwd: GENERATED })) {
+  const path = `${GENERATED}/${file}`
+  const title = metaTitle(readFileSync(path, "utf8"))
+  if (!title) continue
+  if (CLAIMED.has(title)) {
+    console.error(`  DUPLICATE ${title} is hand-written and was generated as ${path}`)
+    process.exitCode = 1
+  }
+  const seen = titles.get(title)
+  if (seen) {
+    console.error(`  DUPLICATE ${title} generated twice: ${seen} and ${path}`)
+    process.exitCode = 1
+  }
+  titles.set(title, path)
+}

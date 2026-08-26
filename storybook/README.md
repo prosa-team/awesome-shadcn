@@ -3,7 +3,7 @@
 Every component the [README](../README.md) lists, from every registry that
 publishes one, installed with the shadcn CLI and given a story.
 
-**502 of the README's 676 components have a story. 501 of them render.**
+**512 of the README's 676 components have a story. 511 of them render.**
 
 ```bash
 bun install

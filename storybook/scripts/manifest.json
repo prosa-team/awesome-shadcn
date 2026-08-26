@@ -666,9 +666,10 @@
     "component": "Bounding Box Citations Block",
     "docs": "https://ui.extend.ai/ui/blocks#bounding-box-citations",
     "useWhen": "The full citation review screen: extracted fields on one side, highlighted source on the other.",
-    "name": "bounding-box-citations",
-    "url": "https://ui.extend.ai/r/bounding-box-citations.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Its registry item targets `registry/new-york-v4/blocks/`, outside the project's src tree, so the CLI writes it nowhere the app can import."
   },
   {
     "resource": "Extend UI",
@@ -2291,7 +2292,7 @@
     "useWhen": "A message belongs to a region of the page and must stay visible, unlike a toast that disappears.",
     "name": "alert",
     "url": "https://reui.io/r/alert.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2323,7 +2324,7 @@
     "useWhen": "Options come from a server as the user types — debouncing, loading, and empty results are part of the problem.",
     "name": "autocomplete",
     "url": "https://reui.io/r/autocomplete.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2344,7 +2345,7 @@
     "useWhen": "A row or card carries a state (`active`, `failed`, `3`) that must be scannable in a column of many.",
     "name": "badge",
     "url": "https://reui.io/r/badge.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2486,7 +2487,7 @@
     "useWhen": "The table is the product: sorting, column filters, row selection, pinning, virtualised rows. The main reason to install ReUI.",
     "name": "data-grid",
     "url": "https://reui.io/r/data-grid.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2496,7 +2497,7 @@
     "useWhen": "A date or range is one field among many in a form and a full calendar would dominate it.",
     "name": "date-selector",
     "url": "https://reui.io/r/date-selector.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2550,7 +2551,7 @@
     "useWhen": "Scheduling is the feature: month, week, day, and agenda views with overlapping events handled.",
     "name": "event-calendar",
     "url": "https://reui.io/r/event-calendar.json",
-    "via": "probe"
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2580,10 +2581,9 @@
     "component": "Filters",
     "docs": "https://reui.io/components/filters",
     "useWhen": "Filter state must survive a reload and be shareable as a URL, defined from a schema rather than hand-built.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "filters",
+    "url": "https://reui.io/r/filters.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2591,10 +2591,9 @@
     "component": "Frame",
     "docs": "https://reui.io/components/frame",
     "useWhen": "You render a preview of the user's own content or an embedded app and need it isolated in a frame.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "frame",
+    "url": "https://reui.io/r/frame.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2602,10 +2601,9 @@
     "component": "Gantt",
     "docs": "https://reui.io/components/gantt",
     "useWhen": "Tasks have durations and dependencies, and a list would hide the fact that two of them collide.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "gantt",
+    "url": "https://reui.io/r/gantt.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2624,10 +2622,9 @@
     "component": "Icon Stack",
     "docs": "https://reui.io/components/icon-stack",
     "useWhen": "A row must show a tech or integration set compactly, overlapping instead of wrapping.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "icon-stack",
+    "url": "https://reui.io/r/icon-stack.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2635,10 +2632,9 @@
     "component": "Icon Tile",
     "docs": "https://reui.io/components/icon-tile",
     "useWhen": "An icon needs a consistent framed container across a settings list or feature grid.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "icon-tile",
+    "url": "https://reui.io/r/icon-tile.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2690,10 +2686,9 @@
     "component": "Kanban",
     "docs": "https://reui.io/components/kanban",
     "useWhen": "Work moves between states by dragging, and the board must stay accessible by keyboard too.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "kanban",
+    "url": "https://reui.io/r/kanban.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2756,10 +2751,9 @@
     "component": "Number Field",
     "docs": "https://reui.io/components/number-field",
     "useWhen": "Quantities are nudged rather than typed, and min/max/step must be enforced in the control.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "number-field",
+    "url": "https://reui.io/r/number-field.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2778,10 +2772,9 @@
     "component": "Phone Input",
     "docs": "https://reui.io/components/phone-input",
     "useWhen": "Users are international, so country codes and per-country formats must be part of the input.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "phone-input",
+    "url": "https://reui.io/r/phone-input.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2822,10 +2815,9 @@
     "component": "Rating",
     "docs": "https://reui.io/components/rating",
     "useWhen": "Users score something and half-steps or hover previews are part of the interaction.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "rating",
+    "url": "https://reui.io/r/rating.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2855,10 +2847,9 @@
     "component": "Scrollspy",
     "docs": "https://reui.io/components/scrollspy",
     "useWhen": "Long documentation needs side navigation that reflects the section actually in view.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "scrollspy",
+    "url": "https://reui.io/r/scrollspy.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2932,10 +2923,9 @@
     "component": "Sortable",
     "docs": "https://reui.io/components/sortable",
     "useWhen": "Order is data the user controls, and dragging must work with a keyboard as well.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "sortable",
+    "url": "https://reui.io/r/sortable.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -2954,10 +2944,9 @@
     "component": "Stepper",
     "docs": "https://reui.io/components/stepper",
     "useWhen": "A form is long enough that users need to see progress and go back without losing input.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "stepper",
+    "url": "https://reui.io/r/stepper.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -3009,10 +2998,9 @@
     "component": "Timeline",
     "docs": "https://reui.io/components/timeline",
     "useWhen": "Order in time is the information: deploys, audit logs, activity feeds.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "timeline",
+    "url": "https://reui.io/r/timeline.json",
+    "via": "index"
   },
   {
     "resource": "ReUI",
@@ -3053,10 +3041,9 @@
     "component": "Tree",
     "docs": "https://reui.io/components/tree",
     "useWhen": "Data is hierarchical and depth matters — files, org charts, categories — with keyboard traversal.",
-    "name": null,
-    "url": null,
-    "via": "skipped",
-    "reason": "Behind a licence key; the registry answers 401 without one."
+    "name": "tree",
+    "url": "https://reui.io/r/tree.json",
+    "via": "index"
   },
   {
     "resource": "Spell UI",

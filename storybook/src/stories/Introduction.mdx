@@ -7,7 +7,7 @@ import { Meta } from '@storybook/addon-docs/blocks'
 Every component this repo's README lists, from every registry that publishes
 one, installed with the shadcn CLI and documented here.
 
-**502 of the README's 676 components have a story. 501 of them render.**
+**512 of the README's 676 components have a story. 511 of them render.**
 
 The point of this Storybook is to answer the question the README cannot: what
 does a component actually do when you move its knobs?
@@ -28,20 +28,19 @@ registries, and every one of them ships its own `button`.
 - **Extend UI** — 19 of 21
 - **Dot Matrix** — 60 of 61
 - **AICSS** — 13 of 14
-- **ReUI** — 6 of 72
+- **ReUI** — 16 of 72
 
-## Why the other 174 have no story
+## Why the other 164 have no story
 
 Nothing here is an oversight. Each has a reason recorded in
 `scripts/overrides.ts`, and `bun run coverage --detail` prints them
 component by component.
 
-- **64 are behind a licence.** ReUI answers 401 for a paid item. Four of its
-  free components are unusable too, because they are built on its licensed
-  Popover and Checkbox.
-- **52 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
+- **52 are behind a licence.** ReUI answers 401 for a paid item.
+- **54 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
   its registry does not publish; Unlumen's glow imports a `buttonVariants` its
-  own button does not export.
+  own button does not export; four ReUI components are free but built on its
+  licensed Popover and Checkbox.
 - **34 have no registry.** Beautiful UI is copy-paste only. Coachmark is a
   library built from source. Transitions.dev says outright that its recipes are
   not separately addressable.
