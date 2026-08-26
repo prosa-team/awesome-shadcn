@@ -11,7 +11,7 @@
  * a `url` that is not a URL makes a link component look broken in a way the
  * component is not.
  */
-import { members, typeBlock } from "./component-props"
+import { membersOfType, typeBlock } from "./component-props"
 
 /** Sample strings by prop name, longest match first. */
 const BY_NAME: [RegExp, string][] = [
@@ -100,10 +100,9 @@ export const sampleValue = (
 
   // A named type declared in the same file.
   if (/^[A-Z]\w*$/.test(t)) {
-    const block = typeBlock(source, t)
-    if (!block) throw new Unsupported(t)
+    if (!typeBlock(source, t)) throw new Unsupported(t)
 
-    const entries = members(block)
+    const entries = membersOfType(source, t)
       .filter((m) => m.required || /^(?:id|label|title|name|value)$/i.test(m.name))
       .map((m) => `${m.name}: ${sampleValue(m.type, m.name, source, index, depth + 1).source}`)
 

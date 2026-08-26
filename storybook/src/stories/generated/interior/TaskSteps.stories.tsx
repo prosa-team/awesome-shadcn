@@ -14,6 +14,10 @@ const meta: Meta<typeof TaskSteps> = {
   title: 'interior.dev/Task Steps',
   component: TaskSteps,
   tags: ['autodocs'],
+  args: {
+    steps: [{ id: "item-1", label: "Registry component" }, { id: "item-1 2", label: "Registry component 2" }, { id: "item-1 3", label: "Registry component 3" }],
+    current: 1,
+  },
 }
 
 export default meta

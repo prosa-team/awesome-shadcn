@@ -15,6 +15,7 @@ const meta: Meta<typeof MiddleTruncation> = {
   component: MiddleTruncation,
   tags: ['autodocs'],
   args: {
+    children: "The quick brown fox jumps over the lazy dog.",
     end: 8,
   },
 }

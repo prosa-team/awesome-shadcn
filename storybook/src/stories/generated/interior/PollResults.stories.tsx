@@ -15,6 +15,7 @@ const meta: Meta<typeof PollResults> = {
   component: PollResults,
   tags: ['autodocs'],
   args: {
+    options: [{ id: "item-1", label: "Registry component", votes: 1 }, { id: "item-1 2", label: "Registry component 2", votes: 2 }, { id: "item-1 3", label: "Registry component 3", votes: 3 }],
     label: "Registry component",
   },
 }

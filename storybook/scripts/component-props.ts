@@ -46,6 +46,23 @@ export const typeBlock = (source: string, typeName: string): string | null => {
 }
 
 /**
+ * The named types an alias or interface composes with.
+ *
+ * interior.dev writes `type PollResultsProps = UsePollResultsOptions & { label: string }`,
+ * so reading only the object half loses `options`, which is the prop the story
+ * actually needs. `extends` on an interface is the same idea.
+ */
+const composedTypes = (source: string, typeName: string): string[] => {
+  const alias = new RegExp(`type\\s+${typeName}\\s*=([^;{]*)`).exec(source)
+  const extended = new RegExp(`interface\\s+${typeName}\\b\\s*extends\\s+([^{]*)`).exec(source)
+  const heads = `${alias?.[1] ?? ""} ${extended?.[1] ?? ""}`
+
+  return [...heads.matchAll(/\b([A-Z]\w*)\b/g)]
+    .map((match) => match[1])
+    .filter((name) => name !== typeName)
+}
+
+/**
  * Props annotated inline, as in `function X({ text }: { text: string })`.
  *
  * AICSS writes every component this way, so there is no named type to look up.
@@ -95,13 +112,31 @@ const inlinePropsBlock = (source: string, componentName: string): string | null 
   return null
 }
 
+/** Every member of a type, following intersections and `extends` one level deep. */
+export const membersOfType = (
+  source: string,
+  typeName: string,
+  seen = new Set<string>()
+): (Prop & { required: boolean })[] => {
+  if (seen.has(typeName)) return []
+  seen.add(typeName)
+
+  const own = typeBlock(source, typeName)
+  const composed = composedTypes(source, typeName).flatMap((name) =>
+    membersOfType(source, name, seen)
+  )
+
+  const all = [...composed, ...(own ? members(own) : [])]
+  // A member redeclared in the composing type wins.
+  return [...new Map(all.map((m) => [m.name, m])).values()]
+}
+
 const propsBlock = (source: string, componentName: string): string | null => {
   const annotated = propsTypeName(source, componentName)
   for (const name of [annotated, `${componentName}Props`, "Props"].filter(Boolean) as string[]) {
-    const block = typeBlock(source, name)
-    if (block) return block
+    if (typeBlock(source, name) || composedTypes(source, name).length) return name
   }
-  return inlinePropsBlock(source, componentName)
+  return null
 }
 
 /** Members of a type block, required flag included. */
@@ -130,9 +165,10 @@ export const members = (block: string): (Prop & { required: boolean })[] => {
 }
 
 export const requiredProps = (source: string, componentName: string): Prop[] => {
-  const block = propsBlock(source, componentName)
-  if (!block) return []
-  return members(block)
-    .filter((m) => m.required)
-    .map(({ name, type }) => ({ name, type }))
+  const typeName = propsBlock(source, componentName)
+  const found = typeName
+    ? membersOfType(source, typeName)
+    : members(inlinePropsBlock(source, componentName) ?? "")
+
+  return found.filter((m) => m.required).map(({ name, type }) => ({ name, type }))
 }
