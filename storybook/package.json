@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "resolve-components": "bun scripts/resolve-components.ts"
+    "resolve-components": "bun scripts/resolve-components.ts",
+    "sync-components-json": "bun scripts/sync-components-json.ts",
+    "install-registry": "bun scripts/install-registry.ts"
   },
   "dependencies": {
     "@rexa-developer/tiks": "^0.3.0",
