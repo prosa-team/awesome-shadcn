@@ -14,6 +14,10 @@ const meta: Meta<typeof SkeletonSwap> = {
   title: 'interior.dev/Skeleton Swap',
   component: SkeletonSwap,
   tags: ['autodocs'],
+  args: {
+    ready: true,
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -17,6 +17,8 @@
 import { mkdirSync, readFileSync, existsSync, writeFileSync, rmSync } from "node:fs"
 
 import { locate, pascal } from "./locate-components"
+import { requiredProps } from "./component-props"
+import { sampleArgs } from "./sample-args"
 import { BROKEN, EXCLUDED_RESOURCES, NOT_RENDERABLE, keyFor } from "./overrides"
 import type { ManifestItem } from "./resolve-components"
 
@@ -45,7 +47,19 @@ const quote = (value: string) => `'${value.replace(/\\/g, "\\\\").replace(/'/g, 
 const jsdoc = (lines: string[]) =>
   ["/**", ...lines.map((l) => ` * ${l.replaceAll("*/", "*\\/")}`.trimEnd()), " */"].join("\n")
 
-const storySource = (item: ManifestItem, component: string, from: string, isDefault: boolean) =>
+const argsBlock = (args: Record<string, string>) => {
+  const entries = Object.entries(args)
+  if (!entries.length) return ""
+  return `\n  args: {\n${entries.map(([k, v]) => `    ${k}: ${v},`).join("\n")}\n  },`
+}
+
+const storySource = (
+  item: ManifestItem,
+  component: string,
+  from: string,
+  isDefault: boolean,
+  args: Record<string, string>
+) =>
   `${jsdoc([
     item.useWhen,
     "",
@@ -61,7 +75,7 @@ ${isDefault ? `import ${component} from '${from}'` : `import { ${component} } fr
 const meta: Meta<typeof ${component}> = {
   title: ${quote(`${item.resource}/${item.component}`)},
   component: ${component},
-  tags: ['autodocs'],
+  tags: ['autodocs'],${argsBlock(args)}
 }
 
 export default meta
@@ -83,6 +97,7 @@ const wanted = manifest.filter((item) => {
 
 let written = 0
 const unlocated: string[] = []
+const needsArgs: string[] = []
 
 for (const item of wanted) {
   const located = await locate(item.alias, item.name as string)
@@ -102,9 +117,14 @@ for (const item of wanted) {
   const path = `${dir}/${pascal(item.name as string)}.stories.tsx`
   if (existsSync(path) && !flags.includes("--force")) continue
 
-  writeFileSync(path, storySource(item, component, importPath(located.path), isDefault))
+  const source = readFileSync(located.path, "utf8")
+  const { args, unsupported } = sampleArgs(requiredProps(source, component), source)
+  if (unsupported.length) needsArgs.push(`@${item.alias}/${item.name}  ${unsupported.join("  ")}`)
+
+  writeFileSync(path, storySource(item, component, importPath(located.path), isDefault, args))
   written++
 }
 
 console.log(`wrote ${written} stories into ${GENERATED}`)
 for (const name of unlocated) console.log(`  UNLOCATED ${name}`)
+for (const name of needsArgs) console.log(`  NEEDS ARGS ${name}`)

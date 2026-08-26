@@ -14,6 +14,9 @@ const meta: Meta<typeof AuroraText> = {
   title: 'Magic UI/Aurora Text',
   component: AuroraText,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

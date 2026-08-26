@@ -14,6 +14,9 @@ const meta: Meta<typeof LineNav> = {
   title: 'Chánh Đại Components/Line Nav',
   component: LineNav,
   tags: ['autodocs'],
+  args: {
+    items: [{ title: "Registry component", href: "https://ui.shadcn.com" }, { title: "Registry component 2", href: "https://ui.shadcn.com 2" }, { title: "Registry component 3", href: "https://ui.shadcn.com 3" }],
+  },
 }
 
 export default meta

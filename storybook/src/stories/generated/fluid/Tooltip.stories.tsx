@@ -14,6 +14,10 @@ const meta: Meta<typeof Tooltip> = {
   title: 'Fluid Functionalism/Tooltip',
   component: Tooltip,
   tags: ['autodocs'],
+  args: {
+    content: "The quick brown fox jumps over the lazy dog.",
+    children: <span>The quick brown fox jumps over the lazy dog.</span>,
+  },
 }
 
 export default meta

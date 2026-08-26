@@ -14,6 +14,10 @@ const meta: Meta<typeof TreeView> = {
   title: 'interior.dev/Tree View',
   component: TreeView,
   tags: ['autodocs'],
+  args: {
+    nodes: [{ id: "item-1", label: "Registry component" }, { id: "item-1 2", label: "Registry component 2" }, { id: "item-1 3", label: "Registry component 3" }],
+    label: "Registry component",
+  },
 }
 
 export default meta

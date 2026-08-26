@@ -14,6 +14,9 @@ const meta: Meta<typeof Pagination> = {
   title: 'interior.dev/Pagination',
   component: Pagination,
   tags: ['autodocs'],
+  args: {
+    count: 1,
+  },
 }
 
 export default meta

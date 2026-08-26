@@ -14,6 +14,9 @@ const meta: Meta<typeof ElasticSlider> = {
   title: 'Chánh Đại Components/Elastic Slider',
   component: ElasticSlider,
   tags: ['autodocs'],
+  args: {
+    label: "Registry component",
+  },
 }
 
 export default meta

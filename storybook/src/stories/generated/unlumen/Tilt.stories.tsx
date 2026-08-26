@@ -14,6 +14,9 @@ const meta: Meta<typeof Tilt> = {
   title: 'Unlumen UI/Tilt',
   component: Tilt,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof ProgressBar> = {
   title: 'interior.dev/Progress Bar',
   component: ProgressBar,
   tags: ['autodocs'],
+  args: {
+    value: 1,
+  },
 }
 
 export default meta

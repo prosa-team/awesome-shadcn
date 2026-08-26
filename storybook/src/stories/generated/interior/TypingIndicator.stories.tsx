@@ -14,6 +14,9 @@ const meta: Meta<typeof TypingIndicator> = {
   title: 'interior.dev/Typing Indicator',
   component: TypingIndicator,
   tags: ['autodocs'],
+  args: {
+    typists: ["Sample", "Sample 2", "Sample 3"],
+  },
 }
 
 export default meta

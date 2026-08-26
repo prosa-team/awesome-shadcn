@@ -14,6 +14,9 @@ const meta: Meta<typeof SpinningCircularText> = {
   title: 'Chánh Đại Components/Spinning Circular Text',
   component: SpinningCircularText,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

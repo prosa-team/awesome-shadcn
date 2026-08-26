@@ -14,6 +14,9 @@ const meta: Meta<typeof NewItemsPill> = {
   title: 'interior.dev/New Items Pill',
   component: NewItemsPill,
   tags: ['autodocs'],
+  args: {
+    count: 1,
+  },
 }
 
 export default meta

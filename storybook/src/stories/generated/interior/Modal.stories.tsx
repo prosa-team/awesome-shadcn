@@ -14,6 +14,9 @@ const meta: Meta<typeof Modal> = {
   title: 'interior.dev/Modal',
   component: Modal,
   tags: ['autodocs'],
+  args: {
+    open: true,
+  },
 }
 
 export default meta

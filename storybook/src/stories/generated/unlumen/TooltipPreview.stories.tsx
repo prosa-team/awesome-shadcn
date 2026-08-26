@@ -14,6 +14,11 @@ const meta: Meta<typeof TooltipPreview> = {
   title: 'Unlumen UI/Tooltip Preview',
   component: TooltipPreview,
   tags: ['autodocs'],
+  args: {
+    href: "https://ui.shadcn.com",
+    title: "Registry component",
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

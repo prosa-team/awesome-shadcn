@@ -14,6 +14,10 @@ const meta: Meta<typeof StickyHeader> = {
   title: 'interior.dev/Sticky Header',
   component: StickyHeader,
   tags: ['autodocs'],
+  args: {
+    title: "Registry component",
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

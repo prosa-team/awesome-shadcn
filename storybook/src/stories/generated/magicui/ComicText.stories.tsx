@@ -14,6 +14,9 @@ const meta: Meta<typeof ComicText> = {
   title: 'Magic UI/Comic Text',
   component: ComicText,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

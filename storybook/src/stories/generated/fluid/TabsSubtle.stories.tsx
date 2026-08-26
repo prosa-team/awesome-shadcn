@@ -14,6 +14,10 @@ const meta: Meta<typeof TabsSubtle> = {
   title: 'Fluid Functionalism/TabsSubtle',
   component: TabsSubtle,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+    selectedIndex: 1,
+  },
 }
 
 export default meta

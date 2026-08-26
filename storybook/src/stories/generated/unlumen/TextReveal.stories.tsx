@@ -14,6 +14,9 @@ const meta: Meta<typeof TextReveal> = {
   title: 'Unlumen UI/Text Reveal',
   component: TextReveal,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof CopyButton> = {
   title: 'Unlumen UI/Copy Button',
   component: CopyButton,
   tags: ['autodocs'],
+  args: {
+    content: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

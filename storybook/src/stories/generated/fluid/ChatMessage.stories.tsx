@@ -14,6 +14,9 @@ const meta: Meta<typeof ChatMessage> = {
   title: 'Fluid Functionalism/ChatMessage',
   component: ChatMessage,
   tags: ['autodocs'],
+  args: {
+    from: "user",
+  },
 }
 
 export default meta

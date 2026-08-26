@@ -14,6 +14,9 @@ const meta: Meta<typeof BentoGrid> = {
   title: 'Magic UI/Bento Grid',
   component: BentoGrid,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof LogoMarquee> = {
   title: 'interior.dev/Logo Marquee',
   component: LogoMarquee,
   tags: ['autodocs'],
+  args: {
+    items: [{ id: "item-1", label: "Registry component" }, { id: "item-1 2", label: "Registry component 2" }, { id: "item-1 3", label: "Registry component 3" }],
+  },
 }
 
 export default meta

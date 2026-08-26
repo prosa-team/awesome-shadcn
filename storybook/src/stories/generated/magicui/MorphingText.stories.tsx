@@ -14,6 +14,9 @@ const meta: Meta<typeof MorphingText> = {
   title: 'Magic UI/Morphing Text',
   component: MorphingText,
   tags: ['autodocs'],
+  args: {
+    texts: ["Sample", "Sample 2", "Sample 3"],
+  },
 }
 
 export default meta

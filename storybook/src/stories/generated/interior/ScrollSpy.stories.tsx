@@ -14,6 +14,9 @@ const meta: Meta<typeof ScrollSpy> = {
   title: 'interior.dev/Scroll Spy',
   component: ScrollSpy,
   tags: ['autodocs'],
+  args: {
+    sections: [{ id: "item-1", label: "Registry component" }, { id: "item-1 2", label: "Registry component 2" }, { id: "item-1 3", label: "Registry component 3" }],
+  },
 }
 
 export default meta

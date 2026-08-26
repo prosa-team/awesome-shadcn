@@ -14,6 +14,9 @@ const meta: Meta<typeof Text3DFlip> = {
   title: 'Magic UI/Text 3D Flip',
   component: Text3DFlip,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

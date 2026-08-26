@@ -14,6 +14,10 @@ const meta: Meta<typeof GitHubStars> = {
   title: 'Chánh Đại Components/GitHub Stars',
   component: GitHubStars,
   tags: ['autodocs'],
+  args: {
+    repo: "shadcn-ui/ui",
+    stargazersCount: 1,
+  },
 }
 
 export default meta

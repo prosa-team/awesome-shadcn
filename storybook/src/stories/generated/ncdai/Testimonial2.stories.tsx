@@ -14,6 +14,12 @@ const meta: Meta<typeof Testimonial2> = {
   title: 'Chánh Đại Components/Testimonial 2',
   component: Testimonial2,
   tags: ['autodocs'],
+  args: {
+    authorName: "Sample",
+    authorTagline: "Sample",
+    url: "https://ui.shadcn.com",
+    quote: "Sample",
+  },
 }
 
 export default meta

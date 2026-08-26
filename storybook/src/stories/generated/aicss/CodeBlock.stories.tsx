@@ -14,6 +14,10 @@ const meta: Meta<typeof CodeBlock> = {
   title: 'AICSS/Code Block',
   component: CodeBlock,
   tags: ['autodocs'],
+  args: {
+    lang: "tsx",
+    code: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

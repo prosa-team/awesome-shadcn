@@ -14,6 +14,9 @@ const meta: Meta<typeof Select> = {
   title: 'Fluid Functionalism/Select',
   component: Select,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

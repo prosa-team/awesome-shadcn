@@ -14,6 +14,9 @@ const meta: Meta<typeof ShinyButton> = {
   title: 'Magic UI/Shiny Button',
   component: ShinyButton,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

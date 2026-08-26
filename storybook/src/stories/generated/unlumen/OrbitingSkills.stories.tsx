@@ -14,6 +14,9 @@ const meta: Meta<typeof OrbitingSkills> = {
   title: 'Unlumen UI/Orbiting Skills',
   component: OrbitingSkills,
   tags: ['autodocs'],
+  args: {
+    items: [{ label: "Registry component" }, { label: "Registry component 2" }, { label: "Registry component 3" }],
+  },
 }
 
 export default meta

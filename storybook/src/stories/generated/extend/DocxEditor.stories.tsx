@@ -14,6 +14,9 @@ const meta: Meta<typeof DocxEditorPreview> = {
   title: 'Extend UI/DOCX Editor',
   component: DocxEditorPreview,
   tags: ['autodocs'],
+  args: {
+    isDark: true,
+  },
 }
 
 export default meta

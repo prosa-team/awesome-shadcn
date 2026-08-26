@@ -14,6 +14,9 @@ const meta: Meta<typeof CopyButton> = {
   title: 'interior.dev/Copy Button',
   component: CopyButton,
   tags: ['autodocs'],
+  args: {
+    value: "item-1",
+  },
 }
 
 export default meta

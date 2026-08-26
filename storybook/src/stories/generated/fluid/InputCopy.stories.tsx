@@ -14,6 +14,9 @@ const meta: Meta<typeof InputCopy> = {
   title: 'Fluid Functionalism/InputCopy',
   component: InputCopy,
   tags: ['autodocs'],
+  args: {
+    value: "item-1",
+  },
 }
 
 export default meta

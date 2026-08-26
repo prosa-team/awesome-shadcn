@@ -14,6 +14,9 @@ const meta: Meta<typeof Ripple> = {
   title: 'interior.dev/Ripple',
   component: Ripple,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

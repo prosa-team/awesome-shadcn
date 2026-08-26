@@ -14,6 +14,9 @@ const meta: Meta<typeof TOCMinimap> = {
   title: 'Chánh Đại Components/TOC Minimap',
   component: TOCMinimap,
   tags: ['autodocs'],
+  args: {
+    items: [{ title: "Registry component", url: "https://ui.shadcn.com", depth: 1 }, { title: "Registry component 2", url: "https://ui.shadcn.com 2", depth: 2 }, { title: "Registry component 3", url: "https://ui.shadcn.com 3", depth: 3 }],
+  },
 }
 
 export default meta

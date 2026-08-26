@@ -14,6 +14,9 @@ const meta: Meta<typeof FloatingLabelInput> = {
   title: 'interior.dev/Floating Label',
   component: FloatingLabelInput,
   tags: ['autodocs'],
+  args: {
+    label: "Registry component",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof KineticText> = {
   title: 'Magic UI/Kinetic Text',
   component: KineticText,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

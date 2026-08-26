@@ -14,6 +14,9 @@ const meta: Meta<typeof TextAnimate> = {
   title: 'Magic UI/Text Animate',
   component: TextAnimate,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof Dropdown> = {
   title: 'Fluid Functionalism/Dropdown',
   component: Dropdown,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

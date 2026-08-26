@@ -14,6 +14,9 @@ const meta: Meta<typeof FloatingTooltipProvider> = {
   title: 'Unlumen UI/Floating Tooltip',
   component: FloatingTooltipProvider,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

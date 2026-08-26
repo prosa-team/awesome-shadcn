@@ -14,6 +14,14 @@ const meta: Meta<typeof CodeComparison> = {
   title: 'Magic UI/Code Comparison',
   component: CodeComparison,
   tags: ['autodocs'],
+  args: {
+    beforeCode: "Sample",
+    afterCode: "Sample",
+    language: "tsx",
+    filename: "button.tsx",
+    lightTheme: "Sample",
+    darkTheme: "Sample",
+  },
 }
 
 export default meta

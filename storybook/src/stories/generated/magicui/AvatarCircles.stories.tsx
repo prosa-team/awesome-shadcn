@@ -14,6 +14,9 @@ const meta: Meta<typeof AvatarCircles> = {
   title: 'Magic UI/Avatar Circles',
   component: AvatarCircles,
   tags: ['autodocs'],
+  args: {
+    avatarUrls: [{ imageUrl: "https://github.com/shadcn.png", profileUrl: "Sample" }, { imageUrl: "https://github.com/shadcn.png 2", profileUrl: "Sample 2" }, { imageUrl: "https://github.com/shadcn.png 3", profileUrl: "Sample 3" }],
+  },
 }
 
 export default meta

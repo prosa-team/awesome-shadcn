@@ -14,6 +14,9 @@ const meta: Meta<typeof Accordion> = {
   title: 'Fluid Functionalism/Accordion',
   component: Accordion,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof Kbd> = {
   title: 'Unlumen UI/Kbd',
   component: Kbd,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

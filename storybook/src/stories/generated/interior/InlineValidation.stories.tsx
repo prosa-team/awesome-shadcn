@@ -14,6 +14,10 @@ const meta: Meta<typeof InlineValidation> = {
   title: 'interior.dev/Inline Validation',
   component: InlineValidation,
   tags: ['autodocs'],
+  args: {
+    label: "Registry component",
+    value: "item-1",
+  },
 }
 
 export default meta

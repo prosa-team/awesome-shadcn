@@ -14,6 +14,9 @@ const meta: Meta<typeof InputGroup> = {
   title: 'Fluid Functionalism/InputGroup',
   component: InputGroup,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

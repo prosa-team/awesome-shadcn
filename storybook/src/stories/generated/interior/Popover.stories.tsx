@@ -14,6 +14,11 @@ const meta: Meta<typeof Popover> = {
   title: 'interior.dev/Popover',
   component: Popover,
   tags: ['autodocs'],
+  args: {
+    trigger: "Sample",
+    children: "The quick brown fox jumps over the lazy dog.",
+    label: "Registry component",
+  },
 }
 
 export default meta

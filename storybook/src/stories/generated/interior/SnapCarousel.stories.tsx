@@ -14,6 +14,10 @@ const meta: Meta<typeof SnapCarousel> = {
   title: 'interior.dev/Snap Carousel',
   component: SnapCarousel,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+    label: "Registry component",
+  },
 }
 
 export default meta

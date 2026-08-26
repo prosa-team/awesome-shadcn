@@ -14,6 +14,9 @@ const meta: Meta<typeof TextReveal> = {
   title: 'Magic UI/Text Reveal',
   component: TextReveal,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

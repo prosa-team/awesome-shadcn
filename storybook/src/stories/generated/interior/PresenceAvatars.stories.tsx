@@ -14,6 +14,9 @@ const meta: Meta<typeof PresenceAvatars> = {
   title: 'interior.dev/Presence Avatars',
   component: PresenceAvatars,
   tags: ['autodocs'],
+  args: {
+    people: [{ id: "item-1", name: "Registry component" }, { id: "item-1 2", name: "Registry component 2" }, { id: "item-1 3", name: "Registry component 3" }],
+  },
 }
 
 export default meta

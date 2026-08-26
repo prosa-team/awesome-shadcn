@@ -14,6 +14,9 @@ const meta: Meta<typeof ShimmeringText> = {
   title: 'Unlumen UI/Shimmering Text',
   component: ShimmeringText,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

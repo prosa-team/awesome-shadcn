@@ -14,6 +14,9 @@ const meta: Meta<typeof TiltCard> = {
   title: 'Unlumen UI/Tilt Card',
   component: TiltCard,
   tags: ['autodocs'],
+  args: {
+    title: "Registry component",
+  },
 }
 
 export default meta

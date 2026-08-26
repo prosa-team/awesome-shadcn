@@ -14,6 +14,9 @@ const meta: Meta<typeof AnimatedList> = {
   title: 'Magic UI/Animated List',
   component: AnimatedList,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

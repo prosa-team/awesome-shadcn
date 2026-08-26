@@ -14,6 +14,9 @@ const meta: Meta<typeof PressDepth> = {
   title: 'interior.dev/Press Depth',
   component: PressDepth,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

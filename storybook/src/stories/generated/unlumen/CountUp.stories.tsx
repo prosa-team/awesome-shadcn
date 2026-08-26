@@ -14,6 +14,9 @@ const meta: Meta<typeof CountUp> = {
   title: 'Unlumen UI/Count Up',
   component: CountUp,
   tags: ['autodocs'],
+  args: {
+    to: 1,
+  },
 }
 
 export default meta

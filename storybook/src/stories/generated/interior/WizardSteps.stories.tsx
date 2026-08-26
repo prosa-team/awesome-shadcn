@@ -14,6 +14,9 @@ const meta: Meta<typeof WizardSteps> = {
   title: 'interior.dev/Wizard Steps',
   component: WizardSteps,
   tags: ['autodocs'],
+  args: {
+    steps: [{ id: "item-1", label: "Registry component", content: "The quick brown fox jumps over the lazy dog." }, { id: "item-1 2", label: "Registry component 2", content: "The quick brown fox jumps over the lazy dog. 2" }, { id: "item-1 3", label: "Registry component 3", content: "The quick brown fox jumps over the lazy dog. 3" }],
+  },
 }
 
 export default meta

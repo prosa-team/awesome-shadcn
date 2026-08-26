@@ -14,6 +14,9 @@ const meta: Meta<typeof ValueFlash> = {
   title: 'interior.dev/Value Flash',
   component: ValueFlash,
   tags: ['autodocs'],
+  args: {
+    value: 1,
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof WordRotate> = {
   title: 'Magic UI/Word Rotate',
   component: WordRotate,
   tags: ['autodocs'],
+  args: {
+    words: ["Sample", "Sample 2", "Sample 3"],
+  },
 }
 
 export default meta

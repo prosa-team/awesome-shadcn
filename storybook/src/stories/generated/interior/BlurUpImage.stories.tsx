@@ -14,6 +14,11 @@ const meta: Meta<typeof BlurUpImage> = {
   title: 'interior.dev/Blur-up Image',
   component: BlurUpImage,
   tags: ['autodocs'],
+  args: {
+    alt: "Sample",
+    width: 1,
+    height: 1,
+  },
 }
 
 export default meta

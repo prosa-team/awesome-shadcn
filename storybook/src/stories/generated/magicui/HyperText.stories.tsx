@@ -14,6 +14,9 @@ const meta: Meta<typeof HyperText> = {
   title: 'Magic UI/Hyper Text',
   component: HyperText,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

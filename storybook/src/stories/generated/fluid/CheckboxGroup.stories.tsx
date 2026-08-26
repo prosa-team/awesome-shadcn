@@ -14,6 +14,10 @@ const meta: Meta<typeof CheckboxGroup> = {
   title: 'Fluid Functionalism/CheckboxGroup',
   component: CheckboxGroup,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+    checkedIndices: new Set([1]),
+  },
 }
 
 export default meta

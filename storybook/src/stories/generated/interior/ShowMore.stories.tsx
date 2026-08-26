@@ -14,6 +14,9 @@ const meta: Meta<typeof ShowMore> = {
   title: 'interior.dev/Show More',
   component: ShowMore,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

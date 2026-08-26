@@ -14,6 +14,9 @@ const meta: Meta<typeof Tabs> = {
   title: 'interior.dev/Tabs',
   component: Tabs,
   tags: ['autodocs'],
+  args: {
+    items: [{ value: "item-1", label: "Registry component" }, { value: "item-1 2", label: "Registry component 2" }, { value: "item-1 3", label: "Registry component 3" }],
+  },
 }
 
 export default meta

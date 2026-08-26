@@ -14,6 +14,9 @@ const meta: Meta<typeof Lens> = {
   title: 'Magic UI/Lens',
   component: Lens,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

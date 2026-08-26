@@ -14,6 +14,9 @@ const meta: Meta<typeof CollapsibleBanner> = {
   title: 'interior.dev/Collapsible Banner',
   component: CollapsibleBanner,
   tags: ['autodocs'],
+  args: {
+    title: "Registry component",
+  },
 }
 
 export default meta

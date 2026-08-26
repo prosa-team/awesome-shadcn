@@ -14,6 +14,9 @@ const meta: Meta<typeof PasswordStrength> = {
   title: 'interior.dev/Password Strength',
   component: PasswordStrength,
   tags: ['autodocs'],
+  args: {
+    value: "item-1",
+  },
 }
 
 export default meta

@@ -14,6 +14,14 @@ const meta: Meta<typeof BrandAssetsMenu> = {
   title: 'Chánh Đại Components/Brand Assets Menu',
   component: BrandAssetsMenu,
   tags: ['autodocs'],
+  args: {
+    logomark: <span>Sample</span>,
+    logomarkSVG: "Sample",
+    logotypeSVG: "Sample",
+    brandGuidelinesURL: "Sample",
+    brandAssetsURL: "Sample",
+    children: <span>The quick brown fox jumps over the lazy dog.</span>,
+  },
 }
 
 export default meta

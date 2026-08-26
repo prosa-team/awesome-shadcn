@@ -14,6 +14,9 @@ const meta: Meta<typeof WarpBackground> = {
   title: 'Magic UI/Warp Background',
   component: WarpBackground,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

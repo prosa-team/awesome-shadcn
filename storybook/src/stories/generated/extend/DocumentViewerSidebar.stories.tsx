@@ -14,6 +14,11 @@ const meta: Meta<typeof DocumentViewerThumbnailSidebar> = {
   title: 'Extend UI/Document Viewer Sidebar',
   component: DocumentViewerThumbnailSidebar,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+    inline: true,
+    open: true,
+  },
 }
 
 export default meta

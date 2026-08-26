@@ -14,6 +14,10 @@ const meta: Meta<typeof HeroVideoDialog> = {
   title: 'Magic UI/Hero Video Dialog',
   component: HeroVideoDialog,
   tags: ['autodocs'],
+  args: {
+    videoSrc: "Sample",
+    thumbnailSrc: "Sample",
+  },
 }
 
 export default meta

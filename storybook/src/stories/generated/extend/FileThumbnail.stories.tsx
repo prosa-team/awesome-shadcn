@@ -14,6 +14,9 @@ const meta: Meta<typeof FileThumbnail> = {
   title: 'Extend UI/File Thumbnail',
   component: FileThumbnail,
   tags: ['autodocs'],
+  args: {
+    file: { name: "Registry component", type: "Sample" },
+  },
 }
 
 export default meta

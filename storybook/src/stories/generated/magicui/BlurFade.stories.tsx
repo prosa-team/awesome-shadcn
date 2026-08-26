@@ -14,6 +14,9 @@ const meta: Meta<typeof BlurFade> = {
   title: 'Magic UI/Blur Fade',
   component: BlurFade,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

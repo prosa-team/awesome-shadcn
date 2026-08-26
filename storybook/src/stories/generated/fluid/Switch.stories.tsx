@@ -14,6 +14,10 @@ const meta: Meta<typeof Switch> = {
   title: 'Fluid Functionalism/Switch',
   component: Switch,
   tags: ['autodocs'],
+  args: {
+    label: "Registry component",
+    checked: true,
+  },
 }
 
 export default meta

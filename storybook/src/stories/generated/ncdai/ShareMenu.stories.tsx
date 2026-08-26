@@ -14,6 +14,10 @@ const meta: Meta<typeof ShareMenu> = {
   title: 'Chánh Đại Components/Share Menu',
   component: ShareMenu,
   tags: ['autodocs'],
+  args: {
+    title: "Registry component",
+    url: "https://ui.shadcn.com",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof LineShadowText> = {
   title: 'Magic UI/Line Shadow Text',
   component: LineShadowText,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

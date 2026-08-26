@@ -14,6 +14,9 @@ const meta: Meta<typeof PollResults> = {
   title: 'interior.dev/Poll Results',
   component: PollResults,
   tags: ['autodocs'],
+  args: {
+    label: "Registry component",
+  },
 }
 
 export default meta

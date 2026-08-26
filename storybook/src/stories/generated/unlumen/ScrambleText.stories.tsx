@@ -14,6 +14,9 @@ const meta: Meta<typeof ScrambleText> = {
   title: 'Unlumen UI/Scramble Text',
   component: ScrambleText,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof GlowCardGrid> = {
   title: 'Chánh Đại Components/Glow Card Grid',
   component: GlowCardGrid,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof ContextMenu> = {
   title: 'interior.dev/Context Menu',
   component: ContextMenu,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

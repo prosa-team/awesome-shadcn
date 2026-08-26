@@ -14,6 +14,9 @@ const meta: Meta<typeof Table> = {
   title: 'Fluid Functionalism/Table',
   component: Table,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

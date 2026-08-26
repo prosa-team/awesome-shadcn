@@ -14,6 +14,9 @@ const meta: Meta<typeof TextFlip> = {
   title: 'Chánh Đại Components/Text Flip',
   component: TextFlip,
   tags: ['autodocs'],
+  args: {
+    children: ["The quick brown fox jumps over the lazy dog.", "The quick brown fox jumps over the lazy dog. 2", "The quick brown fox jumps over the lazy dog. 3"],
+  },
 }
 
 export default meta

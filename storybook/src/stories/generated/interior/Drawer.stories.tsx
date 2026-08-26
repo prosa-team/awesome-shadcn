@@ -14,6 +14,9 @@ const meta: Meta<typeof Drawer> = {
   title: 'interior.dev/Drawer',
   component: Drawer,
   tags: ['autodocs'],
+  args: {
+    open: true,
+  },
 }
 
 export default meta

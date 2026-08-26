@@ -14,6 +14,9 @@ const meta: Meta<typeof DiaTextReveal> = {
   title: 'Magic UI/Dia Text Reveal',
   component: DiaTextReveal,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

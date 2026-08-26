@@ -14,6 +14,9 @@ const meta: Meta<typeof GitHubContributions> = {
   title: 'Chánh Đại Components/GitHub Contributions',
   component: GitHubContributions,
   tags: ['autodocs'],
+  args: {
+    githubProfileUrl: "Sample",
+  },
 }
 
 export default meta

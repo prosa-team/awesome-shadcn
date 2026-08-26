@@ -14,6 +14,9 @@ const meta: Meta<typeof InputMessage> = {
   title: 'Fluid Functionalism/InputMessage',
   component: InputMessage,
   tags: ['autodocs'],
+  args: {
+    value: "item-1",
+  },
 }
 
 export default meta

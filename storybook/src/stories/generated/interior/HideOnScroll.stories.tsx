@@ -14,6 +14,10 @@ const meta: Meta<typeof HideOnScroll> = {
   title: 'interior.dev/Hide on Scroll',
   component: HideOnScroll,
   tags: ['autodocs'],
+  args: {
+    bar: "Sample",
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof Highlighter> = {
   title: 'Magic UI/Highlighter',
   component: Highlighter,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

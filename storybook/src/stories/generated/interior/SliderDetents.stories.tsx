@@ -14,6 +14,9 @@ const meta: Meta<typeof SliderDetents> = {
   title: 'interior.dev/Slider Detents',
   component: SliderDetents,
   tags: ['autodocs'],
+  args: {
+    value: 1,
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof MiddleTruncation> = {
   title: 'Chánh Đại Components/Middle Truncation',
   component: MiddleTruncation,
   tags: ['autodocs'],
+  args: {
+    end: 8,
+  },
 }
 
 export default meta

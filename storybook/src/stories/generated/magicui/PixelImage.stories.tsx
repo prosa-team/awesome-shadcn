@@ -14,6 +14,9 @@ const meta: Meta<typeof PixelImage> = {
   title: 'Magic UI/Pixel Image',
   component: PixelImage,
   tags: ['autodocs'],
+  args: {
+    src: "https://ui.shadcn.com",
+  },
 }
 
 export default meta

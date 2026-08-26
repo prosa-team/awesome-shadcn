@@ -14,6 +14,9 @@ const meta: Meta<typeof LogosCarousel> = {
   title: 'Chánh Đại Components/Logos Carousel',
   component: LogosCarousel,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

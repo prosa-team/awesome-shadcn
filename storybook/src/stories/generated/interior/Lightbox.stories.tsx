@@ -14,6 +14,9 @@ const meta: Meta<typeof Lightbox> = {
   title: 'interior.dev/Lightbox',
   component: Lightbox,
   tags: ['autodocs'],
+  args: {
+    open: true,
+  },
 }
 
 export default meta

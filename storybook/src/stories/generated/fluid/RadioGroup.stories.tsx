@@ -14,6 +14,9 @@ const meta: Meta<typeof RadioGroup> = {
   title: 'Fluid Functionalism/RadioGroup',
   component: RadioGroup,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

@@ -14,6 +14,9 @@ const meta: Meta<typeof Twemoji> = {
   title: 'Chánh Đại Components/Twemoji',
   component: Twemoji,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

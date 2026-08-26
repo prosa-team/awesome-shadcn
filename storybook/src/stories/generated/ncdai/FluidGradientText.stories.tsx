@@ -14,6 +14,9 @@ const meta: Meta<typeof FluidGradientText> = {
   title: 'Chánh Đại Components/Fluid Gradient Text',
   component: FluidGradientText,
   tags: ['autodocs'],
+  args: {
+    text: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

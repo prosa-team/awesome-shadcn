@@ -14,6 +14,9 @@ const meta: Meta<typeof Accordion> = {
   title: 'interior.dev/Accordion',
   component: Accordion,
   tags: ['autodocs'],
+  args: {
+    items: [{ id: "item-1", title: "Registry component", content: "The quick brown fox jumps over the lazy dog." }, { id: "item-1 2", title: "Registry component 2", content: "The quick brown fox jumps over the lazy dog. 2" }, { id: "item-1 3", title: "Registry component 3", content: "The quick brown fox jumps over the lazy dog. 3" }],
+  },
 }
 
 export default meta

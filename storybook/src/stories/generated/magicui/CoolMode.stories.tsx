@@ -14,6 +14,9 @@ const meta: Meta<typeof CoolMode> = {
   title: 'Magic UI/Cool Mode',
   component: CoolMode,
   tags: ['autodocs'],
+  args: {
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

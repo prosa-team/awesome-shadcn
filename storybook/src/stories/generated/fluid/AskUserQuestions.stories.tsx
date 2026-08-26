@@ -14,6 +14,9 @@ const meta: Meta<typeof AskUserQuestions> = {
   title: 'Fluid Functionalism/AskUserQuestions',
   component: AskUserQuestions,
   tags: ['autodocs'],
+  args: {
+    questions: [{ id: "item-1", title: "Registry component" }, { id: "item-1 2", title: "Registry component 2" }, { id: "item-1 3", title: "Registry component 3" }],
+  },
 }
 
 export default meta

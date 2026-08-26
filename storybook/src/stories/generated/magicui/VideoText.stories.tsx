@@ -14,6 +14,10 @@ const meta: Meta<typeof VideoText> = {
   title: 'Magic UI/Video Text',
   component: VideoText,
   tags: ['autodocs'],
+  args: {
+    src: "https://ui.shadcn.com",
+    children: "The quick brown fox jumps over the lazy dog.",
+  },
 }
 
 export default meta

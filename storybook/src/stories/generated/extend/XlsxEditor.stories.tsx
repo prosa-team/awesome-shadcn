@@ -14,6 +14,9 @@ const meta: Meta<typeof XlsxEditorSurface> = {
   title: 'Extend UI/XLSX Editor',
   component: XlsxEditorSurface,
   tags: ['autodocs'],
+  args: {
+    isDark: true,
+  },
 }
 
 export default meta
