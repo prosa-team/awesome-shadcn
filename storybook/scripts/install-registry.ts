@@ -32,6 +32,7 @@ import { dirname } from "node:path"
 import { itemUrl, originOf, REGISTRIES } from "./registries"
 import { BROKEN, EXTRA_ITEMS, STOCK_ITEMS, keyFor } from "./overrides"
 import { expandDependencies } from "./registry-deps"
+import { startRegistryProxy } from "./registry-proxy"
 import type { ManifestItem } from "./resolve-components"
 
 const COMPONENTS_JSON = "components.json"
@@ -164,7 +165,16 @@ if (flags.includes("--dry")) {
 
 const before = await listSrc()
 const original = readConfig()
-writeConfig({ ...original, aliases: { ...original.aliases, ...aliasesFor(alias) } })
+
+// The CLI resolves bare registryDependencies against ui.shadcn.com, so a
+// registry that depends on its own items needs them named explicitly.
+const proxy = await startRegistryProxy(alias, registry.url, originOf(registry))
+
+writeConfig({
+  ...original,
+  aliases: { ...original.aliases, ...aliasesFor(alias) },
+  registries: { ...original.registries, [`@${alias}`]: proxy?.url ?? registry.url },
+})
 
 /**
  * Installs one at a time, pausing between attempts.
@@ -175,7 +185,11 @@ writeConfig({ ...original, aliases: { ...original.aliases, ...aliasesFor(alias) 
 const installEach = async (items: string[], pauseMs: number) => {
   const failed: string[] = []
   for (const target of items) {
-    if (!(await shadcn(["add", target, "--yes", "--overwrite"])).ok) failed.push(target)
+    const result = await shadcn(["add", target, "--yes", "--overwrite"])
+    if (!result.ok) {
+      failed.push(target)
+      if (flags.includes("--verbose")) console.log(`\n--- ${target}\n${result.output}`)
+    }
     if (pauseMs) await Bun.sleep(pauseMs)
   }
   return failed
@@ -194,6 +208,7 @@ try {
   }
 } finally {
   writeConfig(original)
+  proxy?.stop()
 }
 
 const moved = relocate(alias, before, await listSrc())
@@ -203,5 +218,11 @@ const rewritten = await normalizeImports(alias)
 console.log(`${alias}: installed ${names.length - failed.length}/${names.length}`)
 if (moved) console.log(`${alias}: moved ${moved} target-pinned files into the namespace`)
 if (utils) console.log(`${alias}: wrote the namespace's own lib/utils.ts`)
+if (proxy?.rewritten) {
+  console.log(`${alias}: named ${proxy.rewritten} same-registry dependencies explicitly`)
+}
+if (proxy?.repaired) {
+  console.log(`${alias}: repaired ${proxy.repaired} npm dependencies published as import paths`)
+}
 if (rewritten) console.log(`${alias}: rewrote imports in ${rewritten} files`)
 for (const target of failed) console.log(`  FAILED ${target}`)

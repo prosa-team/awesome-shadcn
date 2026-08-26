@@ -7,7 +7,8 @@
  * enough — Storybook's docgen reads the props off it from there.
  */
 const PATTERNS = [
-  /export\s+(?:default\s+)?function\s+([A-Z]\w*)/g,
+  // `export default function X` is a default export, not a named one.
+  /export\s+function\s+([A-Z]\w*)/g,
   /export\s+const\s+([A-Z]\w*)\s*[:=]/g,
   /export\s*\{([^}]+)\}/g,
 ]

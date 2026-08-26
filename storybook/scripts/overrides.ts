@@ -52,6 +52,50 @@ export const BROKEN: Record<string, string> = {
     "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
   "reui:gantt":
     "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
+  "watermelon:navigation-1":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-2":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-3":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-4":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-5":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-6":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:navigation-7":
+    "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:notification-1":
+    "Declares a registryDependency on `notification`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:notification-2":
+    "Declares a registryDependency on `notification`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:notification-3":
+    "Declares a registryDependency on `notification`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:notification-4":
+    "Declares a registryDependency on `notification`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-1":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-2":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-3":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-4":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-5":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-6":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-7":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:widget-8":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:family-wallet":
+    "Imports Github, Chrome, and Twitter from lucide-react, which dropped its brand icons in v1.",
+  "watermelon:web3-dashboard":
+    "Its sidebar imports a relative ../ui/theme-toggle that the registry item does not ship.",
+  "watermelon:widget-9":
+    "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
   "unlumen:glow":
     "Imports buttonVariants from its own primitives/button, which exports only Button and ButtonProps.",
   "unlumen:refresh":
@@ -76,6 +120,10 @@ export const TYPE_ONLY_DEFECTS: Record<string, string> = {
   "ncdai:spotlight-logo": "Passes a SoundAsset to use-sound, which takes a string.",
   "ncdai:toc-minimap": "Passes a SoundAsset to use-sound, which takes a string.",
   "unlumen:dialog": "Passes variant=\"outline\" to its own Button, whose ButtonProps has no variant.",
+  "watermelon:chart":
+    "The stock shadcn chart wrapper, whose Recharts tooltip payload types drifted in Recharts 3.",
+  "watermelon:calendar":
+    "The stock shadcn calendar, whose classNames keys drifted in react-day-picker 9.",
 }
 
 /**

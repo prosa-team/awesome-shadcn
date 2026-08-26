@@ -129,9 +129,12 @@ for (const item of wanted) {
   }
 
   // Prefer the export whose name matches the item, else the first component.
+  // The export named after the item wins; a default export beats an unrelated
+  // named one, because a file with both usually exports the component by default.
   const preferred = pascal(item.name as string)
-  const named = located.exports.find((e) => e === preferred) ?? located.exports[0]
-  const component = named ?? (located.defaultExport as string)
+  const exact = located.exports.find((e) => e === preferred)
+  const named = exact ?? (located.defaultExport ? undefined : located.exports[0])
+  const component = named ?? (located.defaultExport as string) ?? located.exports[0]
   const isDefault = !named && Boolean(located.defaultExport)
 
   const dir = `${GENERATED}/${item.alias}`

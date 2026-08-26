@@ -3437,6 +3437,2106 @@
     "via": "index"
   },
   {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Accordion",
+    "docs": "https://ui.watermelon.sh/components/accordion",
+    "useWhen": "16 variants — pick a disclosure style that matches the page rather than restyling the stock one.",
+    "name": "accordion",
+    "url": "https://registry.watermelon.sh/r/accordion.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Alerts",
+    "docs": "https://ui.watermelon.sh/components/alerts",
+    "useWhen": "30 variants — the widest set here, for products that need distinct looks per severity and placement.",
+    "name": "alerts",
+    "url": "https://registry.watermelon.sh/r/alerts.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Avatar",
+    "docs": "https://ui.watermelon.sh/components/avatar",
+    "useWhen": "21 variants — including stacked, status-dot, and shaped versions you would otherwise build by hand.",
+    "name": "avatar",
+    "url": "https://registry.watermelon.sh/r/avatar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Badge",
+    "docs": "https://ui.watermelon.sh/components/badge",
+    "useWhen": "24 variants — enough to give status, count, and tag badges visually distinct treatments.",
+    "name": "badge",
+    "url": "https://registry.watermelon.sh/r/badge.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Breadcrumb",
+    "docs": "https://ui.watermelon.sh/components/breadcrumb",
+    "useWhen": "8 variants — separators and truncation styles for deep hierarchies.",
+    "name": "breadcrumb",
+    "url": "https://registry.watermelon.sh/r/breadcrumb.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Button",
+    "docs": "https://ui.watermelon.sh/components/button",
+    "useWhen": "38 variants — the reason to come here first when the design has no button style yet.",
+    "name": "button",
+    "url": "https://registry.watermelon.sh/r/button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Button Group",
+    "docs": "https://ui.watermelon.sh/components/button-group",
+    "useWhen": "12 variants — segmented and split-action groupings.",
+    "name": "button-group",
+    "url": "https://registry.watermelon.sh/r/button-group.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Calendar",
+    "docs": "https://ui.watermelon.sh/components/calendar",
+    "useWhen": "25 variants — date display and picking in many densities.",
+    "name": "calendar",
+    "url": "https://registry.watermelon.sh/r/calendar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Card",
+    "docs": "https://ui.watermelon.sh/components/card",
+    "useWhen": "15 variants — container styles to settle a product's card language early.",
+    "name": "card",
+    "url": "https://registry.watermelon.sh/r/card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Checkbox",
+    "docs": "https://ui.watermelon.sh/components/checkbox",
+    "useWhen": "16 variants — including the animated and card-style selections.",
+    "name": "checkbox",
+    "url": "https://registry.watermelon.sh/r/checkbox.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Collapsible",
+    "docs": "https://ui.watermelon.sh/components/collapsible",
+    "useWhen": "9 variants — single show/hide regions without accordion semantics.",
+    "name": "collapsible",
+    "url": "https://registry.watermelon.sh/r/collapsible.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Combobox",
+    "docs": "https://ui.watermelon.sh/components/combobox",
+    "useWhen": "12 variants — searchable selects in several shapes.",
+    "name": "combobox",
+    "url": "https://registry.watermelon.sh/r/combobox.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Data Table",
+    "docs": "https://ui.watermelon.sh/components/data-table",
+    "useWhen": "13 variants — styled tables; for heavy behaviour use [ReUI Data Grid](https://reui.io/components/data-grid) instead.",
+    "name": "data-table",
+    "url": "https://registry.watermelon.sh/r/data-table.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Date Picker",
+    "docs": "https://ui.watermelon.sh/components/date-picker",
+    "useWhen": "13 variants — single date and range pickers as form fields.",
+    "name": "date-picker",
+    "url": "https://registry.watermelon.sh/r/date-picker.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Dialog",
+    "docs": "https://ui.watermelon.sh/components/dialog",
+    "useWhen": "23 variants — modal treatments from minimal to full-bleed.",
+    "name": "dialog",
+    "url": "https://registry.watermelon.sh/r/dialog.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Dropdown Menu",
+    "docs": "https://ui.watermelon.sh/components/dropdown-menu",
+    "useWhen": "14 variants — action menus with different grouping and icon styles.",
+    "name": "dropdown-menu",
+    "url": "https://registry.watermelon.sh/r/dropdown-menu.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Form",
+    "docs": "https://ui.watermelon.sh/components/form",
+    "useWhen": "10 variants — complete form layouts, so field spacing and error placement are decided for you.",
+    "name": "form",
+    "url": "https://registry.watermelon.sh/r/form.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Input Mask",
+    "docs": "https://ui.watermelon.sh/components/input-mask",
+    "useWhen": "6 variants — enforce format while typing for phone, date, IBAN, or card numbers.",
+    "name": "input-mask",
+    "url": "https://registry.watermelon.sh/r/input-mask.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Input OTP",
+    "docs": "https://ui.watermelon.sh/components/input-otp",
+    "useWhen": "10 variants — verification code entry in several box styles.",
+    "name": "input-otp",
+    "url": "https://registry.watermelon.sh/r/input-otp.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pagination",
+    "docs": "https://ui.watermelon.sh/components/pagination",
+    "useWhen": "15 variants — from compact prev/next to full page ranges.",
+    "name": "pagination",
+    "url": "https://registry.watermelon.sh/r/pagination.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Popover",
+    "docs": "https://ui.watermelon.sh/components/popover",
+    "useWhen": "12 variants — anchored panels with different arrow and padding treatments.",
+    "name": "popover",
+    "url": "https://registry.watermelon.sh/r/popover.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Radio Group",
+    "docs": "https://ui.watermelon.sh/components/radio-group",
+    "useWhen": "13 variants — including card-style choices for plan pickers.",
+    "name": "radio-group",
+    "url": "https://registry.watermelon.sh/r/radio-group.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Select",
+    "docs": "https://ui.watermelon.sh/components/select",
+    "useWhen": "36 variants — the second-largest set, covering most select styling needs.",
+    "name": "select",
+    "url": "https://registry.watermelon.sh/r/select.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Sheet",
+    "docs": "https://ui.watermelon.sh/components/sheet",
+    "useWhen": "7 variants — edge panels from each side.",
+    "name": "sheet",
+    "url": "https://registry.watermelon.sh/r/sheet.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Sonner",
+    "docs": "https://ui.watermelon.sh/components/sonner",
+    "useWhen": "20 variants — toast styling per severity and position.",
+    "name": "sonner",
+    "url": "https://registry.watermelon.sh/r/sonner.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Switch",
+    "docs": "https://ui.watermelon.sh/components/switch",
+    "useWhen": "18 variants — including icon and labelled thumbs.",
+    "name": "switch",
+    "url": "https://registry.watermelon.sh/r/switch.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Table",
+    "docs": "https://ui.watermelon.sh/components/table",
+    "useWhen": "16 variants — static tables in several densities and border styles.",
+    "name": "table",
+    "url": "https://registry.watermelon.sh/r/table.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Tabs",
+    "docs": "https://ui.watermelon.sh/components/tabs",
+    "useWhen": "26 variants — underline, pill, and segmented tab languages.",
+    "name": "tabs",
+    "url": "https://registry.watermelon.sh/r/tabs.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Textarea",
+    "docs": "https://ui.watermelon.sh/components/textarea",
+    "useWhen": "9 variants — including auto-growing and character-counted versions.",
+    "name": "textarea",
+    "url": "https://registry.watermelon.sh/r/textarea.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Tooltip",
+    "docs": "https://ui.watermelon.sh/components/tooltip",
+    "useWhen": "12 variants — hover hints matched to the rest of the set.",
+    "name": "tooltip",
+    "url": "https://registry.watermelon.sh/r/tooltip.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Card Split Accordian",
+    "docs": "https://ui.watermelon.sh/animated-components/card-split-accordian",
+    "useWhen": "Accordion | A card must reveal detail by splitting open, when a normal accordion below it would break the card's shape.",
+    "name": "card-split-accordian",
+    "url": "https://registry.watermelon.sh/r/card-split-accordian.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Action",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-action",
+    "useWhen": "Action | A value is edited where it sits, so the user never leaves the context to change it.",
+    "name": "inline-action",
+    "url": "https://registry.watermelon.sh/r/inline-action.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Family Receive Button",
+    "docs": "https://ui.watermelon.sh/animated-components/family-receive-button",
+    "useWhen": "Buttons | A button must become a full confirmation modal with backdrop blur — for money or transfer flows.",
+    "name": "family-receive-button",
+    "url": "https://registry.watermelon.sh/r/family-receive-button.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Morphing Button",
+    "docs": "https://ui.watermelon.sh/animated-components/morphing-button",
+    "useWhen": "Buttons | A button expands into its own input or panel instead of opening a detached surface.",
+    "name": "morphing-button",
+    "url": "https://registry.watermelon.sh/r/morphing-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Run Action Button",
+    "docs": "https://ui.watermelon.sh/animated-components/run-action-button",
+    "useWhen": "Buttons | One click starts a sequence of steps and the button itself reports progress through them.",
+    "name": "run-action-button",
+    "url": "https://registry.watermelon.sh/r/run-action-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Save Toggle",
+    "docs": "https://ui.watermelon.sh/animated-components/save-toggle",
+    "useWhen": "Buttons | Save state cycles through idle, saving, and saved, and all three must live in one control.",
+    "name": "save-toggle",
+    "url": "https://registry.watermelon.sh/r/save-toggle.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Shimmer Button",
+    "docs": "https://ui.watermelon.sh/animated-components/shimmer-button",
+    "useWhen": "Buttons | A call to action needs a light sweep on hover to read as primary.",
+    "name": "shimmer-button",
+    "url": "https://registry.watermelon.sh/r/shimmer-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Split Button",
+    "docs": "https://ui.watermelon.sh/animated-components/split-button",
+    "useWhen": "Buttons | A default action plus alternates, where the expansion should feel like one control widening.",
+    "name": "split-button",
+    "url": "https://registry.watermelon.sh/r/split-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Timed Undo Action",
+    "docs": "https://ui.watermelon.sh/animated-components/time-undo-action",
+    "useWhen": "Buttons | A destructive action is reversible for a few seconds and the countdown must be visible, not implied.",
+    "name": "timed-undo-action",
+    "url": "https://registry.watermelon.sh/r/timed-undo-action.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Stepper",
+    "docs": "https://ui.watermelon.sh/animated-components/stepper",
+    "useWhen": "Buttons | A quantity is nudged up and down, with digits rolling so the change is legible at a glance.",
+    "name": "stepper",
+    "url": "https://registry.watermelon.sh/r/stepper.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Budget Card",
+    "docs": "https://ui.watermelon.sh/animated-components/budget-card",
+    "useWhen": "Cards | Spending against a limit must be read in one look — the remaining balance is the headline.",
+    "name": "budget-card",
+    "url": "https://registry.watermelon.sh/r/budget-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Compose Email Card",
+    "docs": "https://ui.watermelon.sh/animated-components/compose-email-card",
+    "useWhen": "Cards | Composing happens inline in a list view, without navigating to a full mail screen.",
+    "name": "compose-email-card",
+    "url": "https://registry.watermelon.sh/r/compose-email-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Credit Usage Card",
+    "docs": "https://ui.watermelon.sh/animated-components/credit-usage-card",
+    "useWhen": "Cards | Usage-based pricing means the customer must always be able to see how much they have burned.",
+    "name": "credit-usage-card",
+    "url": "https://registry.watermelon.sh/r/credit-usage-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Deployment Card",
+    "docs": "https://ui.watermelon.sh/animated-components/deployment-card",
+    "useWhen": "Cards | A deploy needs environment, progress, duration, logs, and commit in one card a developer can scan.",
+    "name": "deployment-card",
+    "url": "https://registry.watermelon.sh/r/deployment-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Expandable Event Card",
+    "docs": "https://ui.watermelon.sh/animated-components/expandable-event-card",
+    "useWhen": "Cards | A grid item opens into a full-screen detail view without a route change — events, concerts, destinations.",
+    "name": "expandable-event-card",
+    "url": "https://registry.watermelon.sh/r/expandable-event-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Expandable Profile Card",
+    "docs": "https://ui.watermelon.sh/animated-components/expandable-profile-card",
+    "useWhen": "Cards | A profile expands into a side-by-side detail view, keeping the list visible beside it.",
+    "name": "expandable-profile-card",
+    "url": "https://registry.watermelon.sh/r/expandable-profile-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Integration Card",
+    "docs": "https://ui.watermelon.sh/animated-components/integration-card",
+    "useWhen": "Cards | A settings page lists connected services with status and connect/disconnect actions per row.",
+    "name": "integration-card",
+    "url": "https://registry.watermelon.sh/r/integration-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Meeting Card",
+    "docs": "https://ui.watermelon.sh/animated-components/meeting-card",
+    "useWhen": "Cards | An upcoming meeting needs time, participants, and a join action reachable in one tap.",
+    "name": "meeting-card",
+    "url": "https://registry.watermelon.sh/r/meeting-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Onboarding Checklist",
+    "docs": "https://ui.watermelon.sh/animated-components/onboarding-checklist",
+    "useWhen": "Cards | Activation depends on finishing several steps, and visible progress is what drives completion.",
+    "name": "onboarding-checklist",
+    "url": "https://registry.watermelon.sh/r/onboarding-checklist.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Onboarding Screen",
+    "docs": "https://ui.watermelon.sh/animated-components/onboarding-screen",
+    "useWhen": "Cards | First run needs a guided screen that explains setup visually rather than as a form.",
+    "name": "onboarding-screen",
+    "url": "https://registry.watermelon.sh/r/onboarding-screen.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Onboarding Setup",
+    "docs": "https://ui.watermelon.sh/animated-components/onboarding-setup",
+    "useWhen": "Cards | Initial configuration has real choices to make, and they should be sequenced rather than dumped.",
+    "name": "onboarding-setup",
+    "url": "https://registry.watermelon.sh/r/onboarding-setup.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Profile Card",
+    "docs": "https://ui.watermelon.sh/animated-components/profile-card",
+    "useWhen": "Cards | A compact identity card with quick actions, for directories and member lists.",
+    "name": "profile-card",
+    "url": "https://registry.watermelon.sh/r/profile-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Returns Calculator Snippet",
+    "docs": "https://ui.watermelon.sh/animated-components/returns-calculator-snippet",
+    "useWhen": "Cards | The user should model an outcome themselves — inputs and instant results beat a static claim.",
+    "name": "returns-calculator-snippet",
+    "url": "https://registry.watermelon.sh/r/returns-calculator-snippet.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Subscription Calendar",
+    "docs": "https://ui.watermelon.sh/animated-components/subscription-calendar",
+    "useWhen": "Cards | Recurring charges must be seen on a calendar so renewals stop being a surprise.",
+    "name": "subscription-calendar",
+    "url": "https://registry.watermelon.sh/r/subscription-calendar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Trade Summary",
+    "docs": "https://ui.watermelon.sh/animated-components/trade-summary",
+    "useWhen": "Cards | Positions and performance need a dense summary a finance user can read without drilling in.",
+    "name": "trade-summary",
+    "url": "https://registry.watermelon.sh/r/trade-summary.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Minimal Carousel",
+    "docs": "https://ui.watermelon.sh/animated-components/minimal-carousel",
+    "useWhen": "Carousel | Cards expand within the carousel, so browsing and detail live in the same component.",
+    "name": "minimal-carousel",
+    "url": "https://registry.watermelon.sh/r/minimal-carousel.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Radial Carousel",
+    "docs": "https://ui.watermelon.sh/animated-components/radial-carousel",
+    "useWhen": "Carousel | Items are browsed by dragging around an arc — for showcases where a straight rail feels flat.",
+    "name": "radial-carousel",
+    "url": "https://registry.watermelon.sh/r/radial-carousel.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Wiggling Cards",
+    "docs": "https://ui.watermelon.sh/animated-components/wiggling-cards",
+    "useWhen": "Carousel | A playful brand wants the deck to react physically as the user moves through it.",
+    "name": "wiggling-cards",
+    "url": "https://registry.watermelon.sh/r/wiggling-cards.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Emoji Spree Choice Chips",
+    "docs": "https://ui.watermelon.sh/animated-components/emoji-spree-choice-chips",
+    "useWhen": "Choice Chips | Multi-select should feel rewarding — reactions, mood pickers, interest tagging.",
+    "name": "emoji-spree-choice-chips",
+    "url": "https://registry.watermelon.sh/r/emoji-spree-choice-chips.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Create Community",
+    "docs": "https://ui.watermelon.sh/animated-components/create-community",
+    "useWhen": "Dialog | Creating an entity needs name, description, and settings in one dialog rather than a wizard.",
+    "name": "create-community",
+    "url": "https://registry.watermelon.sh/r/create-community.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Dialog Stack",
+    "docs": "https://ui.watermelon.sh/animated-components/dialog-stack",
+    "useWhen": "Dialog | One dialog opens another and the stack must stay legible instead of covering itself.",
+    "name": "dialog-stack",
+    "url": "https://registry.watermelon.sh/r/dialog-stack.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Edit Profile",
+    "docs": "https://ui.watermelon.sh/animated-components/edit-profile",
+    "useWhen": "Dialog | Profile editing with validation and save actions, without leaving the current page.",
+    "name": "edit-profile",
+    "url": "https://registry.watermelon.sh/r/edit-profile.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Uniswap Dialog",
+    "docs": "https://ui.watermelon.sh/animated-components/uniswap-dialog",
+    "useWhen": "Dialog | A wallet or swap surface where expandable cards carry the flow — a proven crypto pattern.",
+    "name": "uniswap-dialog",
+    "url": "https://registry.watermelon.sh/r/uniswap-dialog.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Activities Card",
+    "docs": "https://ui.watermelon.sh/animated-components/activities-card",
+    "useWhen": "Disclosure | An activity summary expands to the full list, with a 3D header that keeps the summary anchored.",
+    "name": "activities-card",
+    "url": "https://registry.watermelon.sh/r/activities-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Add Cash Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/add-cash-disclosure",
+    "useWhen": "Disclosure | Limits and fees must be disclosed before the user confirms a deposit — regulated-flow shaped.",
+    "name": "add-cash-disclosure",
+    "url": "https://registry.watermelon.sh/r/add-cash-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Overflow",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-overflow",
+    "useWhen": "Disclosure | A row has more actions than fit, and the extra ones should spring out inline rather than in a menu.",
+    "name": "inline-overflow",
+    "url": "https://registry.watermelon.sh/r/inline-overflow.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Invite Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/invite-disclosure",
+    "useWhen": "Disclosure | Pending invitations need a badge count that expands into the actual list.",
+    "name": "invite-disclosure",
+    "url": "https://registry.watermelon.sh/r/invite-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Switch Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/switch-disclosure",
+    "useWhen": "Disclosure | A setting has sub-options that only matter when it is on, so they should appear with it.",
+    "name": "switch-disclosure",
+    "url": "https://registry.watermelon.sh/r/switch-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Task Widget Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/task-widget-disclosure",
+    "useWhen": "Disclosure | A task summary expands into per-step progress, for a dashboard widget.",
+    "name": "task-widget-disclosure",
+    "url": "https://registry.watermelon.sh/r/task-widget-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Disclosure Menu",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-disclosure-menu",
+    "useWhen": "Dropdown | Contextual options including delete, with a two-step confirm so destructive clicks cannot slip through.",
+    "name": "inline-disclosure-menu",
+    "url": "https://registry.watermelon.sh/r/inline-disclosure-menu.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Filter Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/filter-disclosure",
+    "useWhen": "Filters | Filters should stay collapsed until needed, while still showing that some are active.",
+    "name": "filter-disclosure",
+    "url": "https://registry.watermelon.sh/r/filter-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Draw Signature",
+    "docs": "https://ui.watermelon.sh/animated-components/draw-signature",
+    "useWhen": "Inputs | A signature is captured by hand, with a step-based workflow rather than a bare canvas.",
+    "name": "draw-signature",
+    "url": "https://registry.watermelon.sh/r/draw-signature.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Floating Input",
+    "docs": "https://ui.watermelon.sh/animated-components/floating-input",
+    "useWhen": "Inputs | The label must survive focus, so the field's purpose stays visible while typing.",
+    "name": "floating-input",
+    "url": "https://registry.watermelon.sh/r/floating-input.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Card Swipe",
+    "docs": "https://ui.watermelon.sh/animated-components/card-swipe",
+    "useWhen": "Interaction | Decisions are made by swiping and the throw must respect velocity, not just direction.",
+    "name": "card-swipe",
+    "url": "https://registry.watermelon.sh/r/card-swipe.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Carousel Slider",
+    "docs": "https://ui.watermelon.sh/animated-components/carousel-slider",
+    "useWhen": "Interaction | A gesture-driven card rail with spring rotation, for touch-first browsing.",
+    "name": "carousel-slider",
+    "url": "https://registry.watermelon.sh/r/carousel-slider.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Edit Badge",
+    "docs": "https://ui.watermelon.sh/animated-components/edit-badge",
+    "useWhen": "Interaction | Users customise a label's text, icon, and colour in place — tags, statuses, categories.",
+    "name": "edit-badge",
+    "url": "https://registry.watermelon.sh/r/edit-badge.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Layered Progressive Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/layered-progressive-disclosure",
+    "useWhen": "Interaction | Advanced configuration must not overwhelm on first sight, but power users still need every toggle.",
+    "name": "layered-progressive-disclosure",
+    "url": "https://registry.watermelon.sh/r/layered-progressive-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Morphing Sidebar Controls",
+    "docs": "https://ui.watermelon.sh/animated-components/morphing-sidebar-controls",
+    "useWhen": "Interaction | A sidebar carries progressive settings and presets, changing shape as options are revealed.",
+    "name": "morphing-sidebar-controls",
+    "url": "https://registry.watermelon.sh/r/morphing-sidebar-controls.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Schedule Button",
+    "docs": "https://ui.watermelon.sh/animated-components/schedule-button",
+    "useWhen": "Interaction | Publishing later needs date and time picked from the button that schedules it.",
+    "name": "schedule-button",
+    "url": "https://registry.watermelon.sh/r/schedule-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Slot Picker",
+    "docs": "https://ui.watermelon.sh/animated-components/slot-picker",
+    "useWhen": "Interaction | Availability is chosen as time slots, with toggles that make taken and free unmistakable.",
+    "name": "slot-picker",
+    "url": "https://registry.watermelon.sh/r/slot-picker.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Swap Form",
+    "docs": "https://ui.watermelon.sh/animated-components/swap-form",
+    "useWhen": "Interaction | Sign in and sign up share one surface, and switching must not feel like a page reload.",
+    "name": "swap-form",
+    "url": "https://registry.watermelon.sh/r/swap-form.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Tags",
+    "docs": "https://ui.watermelon.sh/animated-components/tags",
+    "useWhen": "Interaction | Tags are added and removed constantly, and the row must reflow smoothly and auto-scroll.",
+    "name": "tags",
+    "url": "https://registry.watermelon.sh/r/tags.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Voice Chat Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/voice-chat-disclosure",
+    "useWhen": "Interaction | A live voice call collapses to a pill with stacked avatars and speaking indicators.",
+    "name": "voice-chat-disclosure",
+    "url": "https://registry.watermelon.sh/r/voice-chat-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pin Item",
+    "docs": "https://ui.watermelon.sh/animated-components/pin-item",
+    "useWhen": "Lists | Users promote items to the top and the move must be visible, not a silent reorder.",
+    "name": "pin-item",
+    "url": "https://registry.watermelon.sh/r/pin-item.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Shuffle Pinned List",
+    "docs": "https://ui.watermelon.sh/animated-components/shuffle-pinned-item",
+    "useWhen": "Lists | The pinned item becomes a hero header, so priority is expressed by layout and not just position.",
+    "name": "shuffle-pinned-item",
+    "url": "https://registry.watermelon.sh/r/shuffle-pinned-item.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "View On Map",
+    "docs": "https://ui.watermelon.sh/animated-components/view-on-map",
+    "useWhen": "Map | A location needs pins, zoom, and directions inline, without a full mapping page.",
+    "name": "view-on-map",
+    "url": "https://registry.watermelon.sh/r/view-on-map.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Changeable Pricing Section",
+    "docs": "https://ui.watermelon.sh/animated-components/changeable-pricing-section",
+    "useWhen": "Marketing | Monthly/yearly billing toggles and plan details expand — a complete SaaS pricing surface.",
+    "name": "changeable-pricing-section",
+    "url": "https://registry.watermelon.sh/r/changeable-pricing-section.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Waveform Scrub",
+    "docs": "https://ui.watermelon.sh/animated-components/waveform-scrub",
+    "useWhen": "Media | Audio is navigated by its waveform, because a plain progress bar hides where the content is.",
+    "name": "waveform-scrub",
+    "url": "https://registry.watermelon.sh/r/waveform-scrub.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Aave Swap Component",
+    "docs": "https://ui.watermelon.sh/animated-components/aave-swap-component",
+    "useWhen": "Micro-interaction | A crypto exchange input where amounts and converted values update as the user types.",
+    "name": "aave-swap-component",
+    "url": "https://registry.watermelon.sh/r/aave-swap-component.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Card Cue",
+    "docs": "https://ui.watermelon.sh/animated-components/card-cue",
+    "useWhen": "Micro-interaction | A card needs a small cue that it can be acted on, before the user commits to touching it.",
+    "name": "card-cue",
+    "url": "https://registry.watermelon.sh/r/card-cue.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Carousel Navigator",
+    "docs": "https://ui.watermelon.sh/animated-components/carousel-navigator",
+    "useWhen": "Micro-interaction | Carousel controls adapt their background to the active slide and sync with its progress.",
+    "name": "carousel-navigator",
+    "url": "https://registry.watermelon.sh/r/carousel-navigator.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Collection Grid Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/collection-grid-disclosure",
+    "useWhen": "Micro-interaction | A grid tile expands in place to show more of a collection, keeping the grid as context.",
+    "name": "collection-grid-disclosure",
+    "url": "https://registry.watermelon.sh/r/collection-grid-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Contextual AI Bar",
+    "docs": "https://ui.watermelon.sh/animated-components/contextual-ai-bar",
+    "useWhen": "Micro-interaction | A toolbar morphs between tool icons and an AI prompt field, so both live in one bar.",
+    "name": "contextual-ai-bar",
+    "url": "https://registry.watermelon.sh/r/contextual-ai-bar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Copy Confirm",
+    "docs": "https://ui.watermelon.sh/animated-components/copy-confirm",
+    "useWhen": "Micro-interaction | A copy action must confirm visibly and reset itself, without the button changing width.",
+    "name": "copy-confirm",
+    "url": "https://registry.watermelon.sh/r/copy-confirm.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Dock Component",
+    "docs": "https://ui.watermelon.sh/animated-components/dock",
+    "useWhen": "Micro-interaction | An icon bar should magnify under the cursor, macOS-style, making small targets hittable.",
+    "name": "dock",
+    "url": "https://registry.watermelon.sh/r/dock.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Dropdown Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/dropdown-disclosure",
+    "useWhen": "Micro-interaction | Selecting an item should animate the selection into the trigger rather than closing abruptly.",
+    "name": "dropdown-disclosure",
+    "url": "https://registry.watermelon.sh/r/dropdown-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Editable Chip",
+    "docs": "https://ui.watermelon.sh/animated-components/editable-chip",
+    "useWhen": "Micro-interaction | A chip's text is corrected in place, for filters and tags that are often slightly wrong.",
+    "name": "editable-chip",
+    "url": "https://registry.watermelon.sh/r/editable-chip.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Event Reminders",
+    "docs": "https://ui.watermelon.sh/animated-components/event-reminders",
+    "useWhen": "Micro-interaction | Reminders are set and adjusted with lightweight controls, not a scheduling dialog.",
+    "name": "event-reminders",
+    "url": "https://registry.watermelon.sh/r/event-reminders.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Expand Details",
+    "docs": "https://ui.watermelon.sh/animated-components/expand-details",
+    "useWhen": "Micro-interaction | A summary row expands to full detail without pushing the rest of the list out of view.",
+    "name": "expand-details",
+    "url": "https://registry.watermelon.sh/r/expand-details.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Extended Toolbar",
+    "docs": "https://ui.watermelon.sh/animated-components/extended-toolbar",
+    "useWhen": "Micro-interaction | A toolbar reveals contextual actions for the current selection and confirms each one instantly.",
+    "name": "extended-toolbar",
+    "url": "https://registry.watermelon.sh/r/extended-toolbar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Family Wallet",
+    "docs": "https://ui.watermelon.sh/animated-components/family-wallet",
+    "useWhen": "Micro-interaction | A wallet where cards transition between stacked and detailed states — a well-known finance pattern.",
+    "name": "family-wallet",
+    "url": "https://registry.watermelon.sh/r/family-wallet.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Feature Tour",
+    "docs": "https://ui.watermelon.sh/animated-components/feature-tour",
+    "useWhen": "Micro-interaction | A new feature must be introduced in place, with focus pulled to each step and an obvious exit.",
+    "name": "feature-tour",
+    "url": "https://registry.watermelon.sh/r/feature-tour.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Feedback",
+    "docs": "https://ui.watermelon.sh/animated-components/feedback",
+    "useWhen": "Micro-interaction | Collecting a rating or comment inline, with morphing icons and a dark mode that holds up.",
+    "name": "feedback",
+    "url": "https://registry.watermelon.sh/r/feedback.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Feedback Action",
+    "docs": "https://ui.watermelon.sh/animated-components/feedback-action",
+    "useWhen": "Micro-interaction | Thumbs up/down on an answer or item, where the response must register instantly.",
+    "name": "feedback-action",
+    "url": "https://registry.watermelon.sh/r/feedback-action.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Fractional Picker",
+    "docs": "https://ui.watermelon.sh/animated-components/fractional-picker",
+    "useWhen": "Micro-interaction | A precise numeric value is dragged on a ruler with snapping — better than typing on touch.",
+    "name": "fractional-picker",
+    "url": "https://registry.watermelon.sh/r/fractional-picker.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Edit",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-edit",
+    "useWhen": "Micro-interaction | Display and edit modes are the same element, so editing never causes a layout jump.",
+    "name": "inline-edit",
+    "url": "https://registry.watermelon.sh/r/inline-edit.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Table Control",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-table-control",
+    "useWhen": "Micro-interaction | Table rows are edited in place, keeping the user's position and focus in the grid.",
+    "name": "inline-table-control",
+    "url": "https://registry.watermelon.sh/r/inline-table-control.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Inline Toast",
+    "docs": "https://ui.watermelon.sh/animated-components/inline-toast",
+    "useWhen": "Micro-interaction | Feedback belongs next to the action rather than in a screen corner, with a copy action attached.",
+    "name": "inline-toast",
+    "url": "https://registry.watermelon.sh/r/inline-toast.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Labeled Progress Indicator",
+    "docs": "https://ui.watermelon.sh/animated-components/labeled-progress-indicator",
+    "useWhen": "Micro-interaction | Progress needs a label that changes with the phase, because a bare percentage says too little.",
+    "name": "labeled-progress-indicator",
+    "url": "https://registry.watermelon.sh/r/labeled-progress-indicator.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Licence Key",
+    "docs": "https://ui.watermelon.sh/animated-components/licence-key",
+    "useWhen": "Micro-interaction | A licence key is revealed, copied, and masked again — entry and handling in one control.",
+    "name": "licence-key",
+    "url": "https://registry.watermelon.sh/r/licence-key.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "List Stack",
+    "docs": "https://ui.watermelon.sh/animated-components/list-stack",
+    "useWhen": "Micro-interaction | A long list collapses into a stack and expands on demand, saving vertical space.",
+    "name": "list-stack",
+    "url": "https://registry.watermelon.sh/r/list-stack.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pop Stepper",
+    "docs": "https://ui.watermelon.sh/animated-components/pop-stepper",
+    "useWhen": "Micro-interaction | A quantity control on touch, where each increment needs tactile visual confirmation.",
+    "name": "pop-stepper",
+    "url": "https://registry.watermelon.sh/r/pop-stepper.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Predictive Text",
+    "docs": "https://ui.watermelon.sh/animated-components/predictive-text",
+    "useWhen": "Micro-interaction | Inline completion suggests the rest of the sentence while typing, ghost-text style.",
+    "name": "predictive-text",
+    "url": "https://registry.watermelon.sh/r/predictive-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Quick Feedback",
+    "docs": "https://ui.watermelon.sh/animated-components/quick-feedback",
+    "useWhen": "Micro-interaction | A one-tap reaction must confirm in real time, for high-frequency, low-stakes input.",
+    "name": "quick-feedback",
+    "url": "https://registry.watermelon.sh/r/quick-feedback.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Quick Option Picker",
+    "docs": "https://ui.watermelon.sh/animated-components/quick-option-picker",
+    "useWhen": "Micro-interaction | A short option list rolls into view, for choices made often and quickly.",
+    "name": "quick-option-picker",
+    "url": "https://registry.watermelon.sh/r/quick-option-picker.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Quick Paste",
+    "docs": "https://ui.watermelon.sh/animated-components/quick-paste",
+    "useWhen": "Micro-interaction | Pasting is triggered by shortcut and the panel confirms what landed — codes, links, snippets.",
+    "name": "quick-paste",
+    "url": "https://registry.watermelon.sh/r/quick-paste.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Quick Switcher",
+    "docs": "https://ui.watermelon.sh/animated-components/quick-switcher",
+    "useWhen": "Micro-interaction | Two modes are switched constantly and the bar must make the current one unmistakable.",
+    "name": "quick-switcher",
+    "url": "https://registry.watermelon.sh/r/quick-switcher.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Reveal Copy",
+    "docs": "https://ui.watermelon.sh/animated-components/reveal-copy",
+    "useWhen": "Micro-interaction | Sensitive text stays hidden until revealed deliberately — keys, tokens, recovery codes.",
+    "name": "reveal-copy",
+    "url": "https://registry.watermelon.sh/r/reveal-copy.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Revealing Cards",
+    "docs": "https://ui.watermelon.sh/animated-components/revealing-cards",
+    "useWhen": "Micro-interaction | Cards uncover their content on interaction, for progressive browsing of a set.",
+    "name": "revealing-cards",
+    "url": "https://registry.watermelon.sh/r/revealing-cards.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Scroll Island",
+    "docs": "https://ui.watermelon.sh/animated-components/scroll-island",
+    "useWhen": "Micro-interaction | A floating pill carries scroll progress and contextual actions, Dynamic Island style.",
+    "name": "scroll-island",
+    "url": "https://registry.watermelon.sh/r/scroll-island.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Scrub Slider",
+    "docs": "https://ui.watermelon.sh/animated-components/scrub-slider",
+    "useWhen": "Micro-interaction | A value is scrubbed with fine control, for media position or precise ranges.",
+    "name": "scrub-slider",
+    "url": "https://registry.watermelon.sh/r/scrub-slider.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Select AI Agent",
+    "docs": "https://ui.watermelon.sh/animated-components/select-ai-agent",
+    "useWhen": "Micro-interaction | The product has several agents or models and switching must be one visible, fast choice.",
+    "name": "select-ai-agent",
+    "url": "https://registry.watermelon.sh/r/select-ai-agent.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Send Money",
+    "docs": "https://ui.watermelon.sh/animated-components/send-money",
+    "useWhen": "Micro-interaction | A transfer flow needs confirmation, status, and result states in one compact interaction.",
+    "name": "send-money",
+    "url": "https://registry.watermelon.sh/r/send-money.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Split Actions",
+    "docs": "https://ui.watermelon.sh/animated-components/split-actions",
+    "useWhen": "Micro-interaction | One control splits into related actions, keeping the primary path obvious.",
+    "name": "split-actions",
+    "url": "https://registry.watermelon.sh/r/split-actions.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Split To Edit",
+    "docs": "https://ui.watermelon.sh/animated-components/split-to-edit",
+    "useWhen": "Micro-interaction | A field splits into editable segments — codes, dates, or structured values.",
+    "name": "split-to-edit",
+    "url": "https://registry.watermelon.sh/r/split-to-edit.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Status Picker",
+    "docs": "https://ui.watermelon.sh/animated-components/status-picker",
+    "useWhen": "Micro-interaction | Status changes often (issues, tasks, availability) and the transition should confirm the new state.",
+    "name": "status-picker",
+    "url": "https://registry.watermelon.sh/r/status-picker.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Step Indicator",
+    "docs": "https://ui.watermelon.sh/animated-components/step-indicator",
+    "useWhen": "Micro-interaction | A multi-step flow needs the current stage highlighted with a tooltip naming it.",
+    "name": "step-indicator",
+    "url": "https://registry.watermelon.sh/r/step-indicator.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Step Pager",
+    "docs": "https://ui.watermelon.sh/animated-components/step-pager",
+    "useWhen": "Micro-interaction | Steps are paged through, with icons transitioning to show direction of travel.",
+    "name": "step-pager",
+    "url": "https://registry.watermelon.sh/r/step-pager.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Transaction List",
+    "docs": "https://ui.watermelon.sh/animated-components/transaction-list",
+    "useWhen": "Micro-interaction | Transactions expand to full detail in the list, so the ledger keeps its context.",
+    "name": "transaction-list",
+    "url": "https://registry.watermelon.sh/r/transaction-list.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Voice Note",
+    "docs": "https://ui.watermelon.sh/animated-components/voice-note",
+    "useWhen": "Micro-interaction | Audio messages are recorded, previewed, and deleted before sending.",
+    "name": "voice-note",
+    "url": "https://registry.watermelon.sh/r/voice-note.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Voice Transcribe",
+    "docs": "https://ui.watermelon.sh/animated-components/voice-transcribe",
+    "useWhen": "Micro-interaction | Speech becomes text live, and the user must see it appearing to trust it.",
+    "name": "voice-transcribe",
+    "url": "https://registry.watermelon.sh/r/voice-transcribe.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Command Search",
+    "docs": "https://ui.watermelon.sh/animated-components/command-search",
+    "useWhen": "Navigation | A palette with sectioned results and keyboard navigation, for apps with many destinations.",
+    "name": "command-search",
+    "url": "https://registry.watermelon.sh/r/command-search.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Journal Navigation",
+    "docs": "https://ui.watermelon.sh/animated-components/journal-navigation",
+    "useWhen": "Navigation | Entries are browsed by date or section, with transitions that keep the reader oriented.",
+    "name": "journal-navigation",
+    "url": "https://registry.watermelon.sh/r/journal-navigation.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-1",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-1",
+    "useWhen": "Navigation | A SaaS navbar with a hoverable mega menu, minimal styling.",
+    "name": "navigation-1",
+    "url": "https://registry.watermelon.sh/r/navigation-1.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-2",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-2",
+    "useWhen": "Navigation | Same mega-menu pattern, different layout and density.",
+    "name": "navigation-2",
+    "url": "https://registry.watermelon.sh/r/navigation-2.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-3",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-3",
+    "useWhen": "Navigation | Third mega-menu variant, for comparing options before committing.",
+    "name": "navigation-3",
+    "url": "https://registry.watermelon.sh/r/navigation-3.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-4",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-4",
+    "useWhen": "Navigation | A dashboard navbar: central search, action buttons, and account menu — the app-shell option.",
+    "name": "navigation-4",
+    "url": "https://registry.watermelon.sh/r/navigation-4.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-5",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-5",
+    "useWhen": "Navigation | A floating island navbar with a three-column mega menu and glass treatment.",
+    "name": "navigation-5",
+    "url": "https://registry.watermelon.sh/r/navigation-5.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-6",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-6",
+    "useWhen": "Navigation | Second floating-island variant with different column weighting.",
+    "name": "navigation-6",
+    "url": "https://registry.watermelon.sh/r/navigation-6.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation-7",
+    "docs": "https://ui.watermelon.sh/animated-components/navigation-7",
+    "useWhen": "Navigation | Third floating-island variant, heaviest of the glass treatments.",
+    "name": "navigation-7",
+    "url": "https://registry.watermelon.sh/r/navigation-7.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Tree Menu",
+    "docs": "https://ui.watermelon.sh/animated-components/tree-menu",
+    "useWhen": "Navigation | Nested navigation where drilling in should animate levels and leave a breadcrumb back.",
+    "name": "tree-menu",
+    "url": "https://registry.watermelon.sh/r/tree-menu.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "macOS Sidebar",
+    "docs": "https://ui.watermelon.sh/animated-components/macos-sidebar",
+    "useWhen": "Navigation | A collapsible sidebar that morphs on hover — for tools users keep open all day.",
+    "name": "macos-sidebar",
+    "url": "https://registry.watermelon.sh/r/macos-sidebar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Notification 1",
+    "docs": "https://ui.watermelon.sh/animated-components/notification-1",
+    "useWhen": "Notification | Inform without interrupting; first of four styling options.",
+    "name": "notification-1",
+    "url": "https://registry.watermelon.sh/r/notification-1.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Notification 2",
+    "docs": "https://ui.watermelon.sh/animated-components/notification-2",
+    "useWhen": "Notification | Second variant, different emphasis and placement.",
+    "name": "notification-2",
+    "url": "https://registry.watermelon.sh/r/notification-2.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Notification 3",
+    "docs": "https://ui.watermelon.sh/animated-components/notification-3",
+    "useWhen": "Notification | Third variant, denser for stacked notifications.",
+    "name": "notification-3",
+    "url": "https://registry.watermelon.sh/r/notification-3.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Notification 4",
+    "docs": "https://ui.watermelon.sh/animated-components/notification-4",
+    "useWhen": "Notification | Fourth variant, most prominent of the set.",
+    "name": "notification-4",
+    "url": "https://registry.watermelon.sh/r/notification-4.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Continuous Pagination",
+    "docs": "https://ui.watermelon.sh/animated-components/continuous-pagination",
+    "useWhen": "Pagination | Paging must stay responsive on mobile, with the active page clearly raised.",
+    "name": "continuous-pagination",
+    "url": "https://registry.watermelon.sh/r/continuous-pagination.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pagination",
+    "docs": "https://ui.watermelon.sh/animated-components/pagination",
+    "useWhen": "Pagination | A draggable ruler-style pager with snapping, for jumping across many pages quickly.",
+    "name": "pagination",
+    "url": "https://registry.watermelon.sh/r/pagination.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Floating Disclosure",
+    "docs": "https://ui.watermelon.sh/animated-components/floating-disclosure",
+    "useWhen": "Popover | A compact action menu that resizes to its content, with a floating close affordance.",
+    "name": "floating-disclosure",
+    "url": "https://registry.watermelon.sh/r/floating-disclosure.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Schedule Date",
+    "docs": "https://ui.watermelon.sh/animated-components/schedule-date",
+    "useWhen": "Scheduler | Date and time are picked together and confirmed in one dialog.",
+    "name": "schedule-date",
+    "url": "https://registry.watermelon.sh/r/schedule-date.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Adaptive Slider",
+    "docs": "https://ui.watermelon.sh/animated-components/adaptive-slider",
+    "useWhen": "Sliders | The track's colour carries meaning as the value changes — targets, intensity, health.",
+    "name": "adaptive-slider",
+    "url": "https://registry.watermelon.sh/r/adaptive-slider.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Knob Slider",
+    "docs": "https://ui.watermelon.sh/animated-components/knob-slider",
+    "useWhen": "Sliders | A radial dial fits where a linear track does not, and rotation suits the parameter.",
+    "name": "knob-slider",
+    "url": "https://registry.watermelon.sh/r/knob-slider.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Continuous Tabs",
+    "docs": "https://ui.watermelon.sh/animated-components/continuous-tabs",
+    "useWhen": "Tabs | Button-like tabs with a sliding pill, for filter bars and view switching.",
+    "name": "continuous-tabs",
+    "url": "https://registry.watermelon.sh/r/continuous-tabs.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Discrete Tabs",
+    "docs": "https://ui.watermelon.sh/animated-components/discrete-tabs",
+    "useWhen": "Tabs | Tabs that morph between active states, when each section is visually distinct.",
+    "name": "discrete-tabs",
+    "url": "https://registry.watermelon.sh/r/discrete-tabs.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Fluid Tabs",
+    "docs": "https://ui.watermelon.sh/animated-components/fluid-tabs",
+    "useWhen": "Tabs | A floating indicator with icon scaling — the most animated of the three tab options.",
+    "name": "fluid-tabs",
+    "url": "https://registry.watermelon.sh/r/fluid-tabs.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Frequency Selector",
+    "docs": "https://ui.watermelon.sh/animated-components/frequency-selector",
+    "useWhen": "Tabs | Recurrence is chosen (daily, weekly, monthly) and each choice reveals its own sub-options.",
+    "name": "frequency-selector",
+    "url": "https://registry.watermelon.sh/r/frequency-selector.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Morphing Discovery Bar",
+    "docs": "https://ui.watermelon.sh/animated-components/morphing-discovery-bar",
+    "useWhen": "Tabs | A discovery bar that expands into contextual actions as the user explores.",
+    "name": "morphing-discovery-bar",
+    "url": "https://registry.watermelon.sh/r/morphing-discovery-bar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Switch Mode",
+    "docs": "https://ui.watermelon.sh/animated-components/switch-mode",
+    "useWhen": "Toggle | A theme toggle with sliding icon states, when the switch should be part of the personality.",
+    "name": "switch-mode",
+    "url": "https://registry.watermelon.sh/r/switch-mode.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Gooey Menu",
+    "docs": "https://ui.watermelon.sh/animated-components/gooey-menu",
+    "useWhen": "Tooltip | A logo or mark expands into an informational tooltip, for framework and tech callouts.",
+    "name": "gooey-menu",
+    "url": "https://registry.watermelon.sh/r/gooey-menu.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Tooltip Navbar",
+    "docs": "https://ui.watermelon.sh/animated-components/tooltip-navbar",
+    "useWhen": "Tooltip | An icon-only navbar where labels appear on hover with continuous motion.",
+    "name": "tooltip-navbar",
+    "url": "https://registry.watermelon.sh/r/tooltip-navbar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Vertical Tooltip Navbar",
+    "docs": "https://ui.watermelon.sh/animated-components/vertical-tooltip-navbar",
+    "useWhen": "Tooltip | The same for a vertical rail, with clip-path reveals that do not disturb the layout.",
+    "name": "vertical-tooltip-navbar",
+    "url": "https://registry.watermelon.sh/r/vertical-tooltip-navbar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 1",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-1",
+    "useWhen": "Widget | Self-contained dashboard widget; first of nine layout options.",
+    "name": "widget-1",
+    "url": "https://registry.watermelon.sh/r/widget-1.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 2",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-2",
+    "useWhen": "Widget | Second widget layout, different data density.",
+    "name": "widget-2",
+    "url": "https://registry.watermelon.sh/r/widget-2.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 3",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-3",
+    "useWhen": "Widget | Third widget layout.",
+    "name": "widget-3",
+    "url": "https://registry.watermelon.sh/r/widget-3.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 4",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-4",
+    "useWhen": "Widget | Fourth widget layout.",
+    "name": "widget-4",
+    "url": "https://registry.watermelon.sh/r/widget-4.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 5",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-5",
+    "useWhen": "Widget | Fifth widget layout.",
+    "name": "widget-5",
+    "url": "https://registry.watermelon.sh/r/widget-5.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 6",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-6",
+    "useWhen": "Widget | Sixth widget layout.",
+    "name": "widget-6",
+    "url": "https://registry.watermelon.sh/r/widget-6.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 7",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-7",
+    "useWhen": "Widget | Seventh widget layout.",
+    "name": "widget-7",
+    "url": "https://registry.watermelon.sh/r/widget-7.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 8",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-8",
+    "useWhen": "Widget | Eighth widget layout.",
+    "name": "widget-8",
+    "url": "https://registry.watermelon.sh/r/widget-8.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget 9",
+    "docs": "https://ui.watermelon.sh/animated-components/widget-9",
+    "useWhen": "Widget | Ninth widget layout.",
+    "name": "widget-9",
+    "url": "https://registry.watermelon.sh/r/widget-9.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Calendar Widget",
+    "docs": "https://ui.watermelon.sh/animated-components/calendar-widget",
+    "useWhen": "Widgets | A dashboard calendar where progressive blur keeps focus on the selected range.",
+    "name": "calendar-widget",
+    "url": "https://registry.watermelon.sh/r/calendar-widget.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Fund Widget",
+    "docs": "https://ui.watermelon.sh/animated-components/fund-widget",
+    "useWhen": "Widgets | A fund or balance widget with 3D transforms, for finance dashboards.",
+    "name": "fund-widget",
+    "url": "https://registry.watermelon.sh/r/fund-widget.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pricing Widget",
+    "docs": "https://ui.watermelon.sh/animated-components/pricing-widget",
+    "useWhen": "Widgets | Prices update dynamically as options change, inside a compact widget.",
+    "name": "pricing-widget",
+    "url": "https://registry.watermelon.sh/r/pricing-widget.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Progressive Input Stack",
+    "docs": "https://ui.watermelon.sh/animated-components/progressive-input-stack",
+    "useWhen": "Widgets | Form fields appear as earlier ones are completed, so a long form never looks long.",
+    "name": "progressive-input-stack",
+    "url": "https://registry.watermelon.sh/r/progressive-input-stack.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Range Selection Slider",
+    "docs": "https://ui.watermelon.sh/animated-components/range-selection-slider",
+    "useWhen": "Widgets | A two-handle range with immediate feedback, for filters and budgets.",
+    "name": "range-selection-slider",
+    "url": "https://registry.watermelon.sh/r/range-selection-slider.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Run Widget",
+    "docs": "https://ui.watermelon.sh/animated-components/run-widget",
+    "useWhen": "Widgets | A fitness or activity metric where the number transitions as it updates.",
+    "name": "run-widget",
+    "url": "https://registry.watermelon.sh/r/run-widget.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Show QR",
+    "docs": "https://ui.watermelon.sh/animated-components/show-qr",
+    "useWhen": "Widgets | A QR code is revealed on demand — tickets, payments, device pairing.",
+    "name": "show-qr",
+    "url": "https://registry.watermelon.sh/r/show-qr.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Swap Currency Card",
+    "docs": "https://ui.watermelon.sh/animated-components/swap-currency-card",
+    "useWhen": "Widgets | Currency conversion with instant confirmation of the direction being swapped.",
+    "name": "swap-currency-card",
+    "url": "https://registry.watermelon.sh/r/swap-currency-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Weight Widget",
+    "docs": "https://ui.watermelon.sh/animated-components/weight-widget",
+    "useWhen": "Widgets | A sliding scale for precise input, where dragging beats typing on touch.",
+    "name": "weight-widget",
+    "url": "https://registry.watermelon.sh/r/weight-widget.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Share Sheet",
+    "docs": "https://ui.watermelon.sh/animated-components/share-sheet",
+    "useWhen": "Widgets | Sharing expands to a list of people, so the common case is one tap.",
+    "name": "share-sheet",
+    "url": "https://registry.watermelon.sh/r/share-sheet.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Hero",
+    "docs": "https://ui.watermelon.sh/blocks/hero",
+    "useWhen": "43 blocks — the widest set: pick a hero shape before designing one, since it decides the page's rhythm.",
+    "name": "hero",
+    "url": "https://registry.watermelon.sh/r/hero.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Footer",
+    "docs": "https://ui.watermelon.sh/blocks/footer",
+    "useWhen": "31 blocks — footers carry navigation, legal, and newsletter duties and are always underestimated.",
+    "name": "footer",
+    "url": "https://registry.watermelon.sh/r/footer.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Auth",
+    "docs": "https://ui.watermelon.sh/blocks/auth",
+    "useWhen": "13 blocks — complete sign-in and sign-up screens, including split-image and centred layouts.",
+    "name": "auth",
+    "url": "https://registry.watermelon.sh/r/auth.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Announcement",
+    "docs": "https://ui.watermelon.sh/blocks/Announcement",
+    "useWhen": "9 blocks — top-of-page banners for launches, maintenance, or migration notices.",
+    "name": "Announcement",
+    "url": "https://registry.watermelon.sh/r/Announcement.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Widget",
+    "docs": "https://ui.watermelon.sh/blocks/widget",
+    "useWhen": "9 blocks — self-contained dashboard sections rather than page-width blocks.",
+    "name": "widget",
+    "url": "https://registry.watermelon.sh/r/widget.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Contact",
+    "docs": "https://ui.watermelon.sh/blocks/contact",
+    "useWhen": "7 blocks — contact sections combining form, address, and map.",
+    "name": "contact",
+    "url": "https://registry.watermelon.sh/r/contact.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Error",
+    "docs": "https://ui.watermelon.sh/blocks/Error",
+    "useWhen": "7 blocks — 404 and error screens that still offer a way forward.",
+    "name": "Error",
+    "url": "https://registry.watermelon.sh/r/Error.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "FAQ",
+    "docs": "https://ui.watermelon.sh/blocks/FAQ",
+    "useWhen": "6 blocks — objection handling near the bottom of a landing page.",
+    "name": "FAQ",
+    "url": "https://registry.watermelon.sh/r/FAQ.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "CTA",
+    "docs": "https://ui.watermelon.sh/blocks/CTA",
+    "useWhen": "5 blocks — the closing ask, in several levels of insistence.",
+    "name": "CTA",
+    "url": "https://registry.watermelon.sh/r/CTA.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Feature",
+    "docs": "https://ui.watermelon.sh/blocks/Feature",
+    "useWhen": "5 blocks — feature sections in grid, alternating, and list arrangements.",
+    "name": "Feature",
+    "url": "https://registry.watermelon.sh/r/Feature.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "File Upload",
+    "docs": "https://ui.watermelon.sh/blocks/file-upload",
+    "useWhen": "5 blocks — upload sections; for real document workflows see [Extend UI](#extend-ui).",
+    "name": "file-upload",
+    "url": "https://registry.watermelon.sh/r/file-upload.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Integrations",
+    "docs": "https://ui.watermelon.sh/blocks/integrations",
+    "useWhen": "5 blocks — showing what you connect to, when the ecosystem is part of the pitch.",
+    "name": "integrations",
+    "url": "https://registry.watermelon.sh/r/integrations.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Newsletter",
+    "docs": "https://ui.watermelon.sh/blocks/newsletter",
+    "useWhen": "5 blocks — email capture as a section rather than a lone input.",
+    "name": "newsletter",
+    "url": "https://registry.watermelon.sh/r/newsletter.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Pricing",
+    "docs": "https://ui.watermelon.sh/blocks/pricing",
+    "useWhen": "5 blocks — plan comparison including the billing toggle.",
+    "name": "pricing",
+    "url": "https://registry.watermelon.sh/r/pricing.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Team",
+    "docs": "https://ui.watermelon.sh/blocks/Team",
+    "useWhen": "5 blocks — people sections for about and careers pages.",
+    "name": "Team",
+    "url": "https://registry.watermelon.sh/r/Team.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Blog",
+    "docs": "https://ui.watermelon.sh/blocks/Blog",
+    "useWhen": "4 blocks — post listings and article layouts.",
+    "name": "Blog",
+    "url": "https://registry.watermelon.sh/r/Blog.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Career",
+    "docs": "https://ui.watermelon.sh/blocks/Career",
+    "useWhen": "4 blocks — open-roles sections with filtering by team or location.",
+    "name": "Career",
+    "url": "https://registry.watermelon.sh/r/Career.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Notification",
+    "docs": "https://ui.watermelon.sh/blocks/notification",
+    "useWhen": "4 blocks — in-page notification sections rather than toasts.",
+    "name": "notification",
+    "url": "https://registry.watermelon.sh/r/notification.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Stats",
+    "docs": "https://ui.watermelon.sh/blocks/Stats",
+    "useWhen": "4 blocks — metric rows for social proof.",
+    "name": "Stats",
+    "url": "https://registry.watermelon.sh/r/Stats.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Testimonials",
+    "docs": "https://ui.watermelon.sh/blocks/testimonials",
+    "useWhen": "4 blocks — quote sections in grid and carousel forms.",
+    "name": "testimonials",
+    "url": "https://registry.watermelon.sh/r/testimonials.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Bento",
+    "docs": "https://ui.watermelon.sh/blocks/Bento",
+    "useWhen": "2 blocks — mixed-size feature grids where items differ in importance.",
+    "name": "Bento",
+    "url": "https://registry.watermelon.sh/r/Bento.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Navigation",
+    "docs": "https://ui.watermelon.sh/blocks/navigation",
+    "useWhen": "7 blocks — full navbars, complementing the animated navigation components above.",
+    "name": "navigation",
+    "url": "https://registry.watermelon.sh/r/navigation.json",
+    "via": "probe"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Agndex Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/agndex-dashboard",
+    "useWhen": "A developer portal: indexes, API credentials, billing, and project settings, in light and dark.",
+    "name": "agndex-dashboard",
+    "url": "https://registry.watermelon.sh/r/agndex-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Astrix Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/astrix-dashboard",
+    "useWhen": "An AI-in-the-loop review workspace — classification metrics, a live pipeline, and a human review stream.",
+    "name": "astrix-dashboard",
+    "url": "https://registry.watermelon.sh/r/astrix-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Demostack Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/demostack-dashboard",
+    "useWhen": "A multi-tenant workspace with organisation switching, resource discovery, and team filtering.",
+    "name": "demostack-dashboard",
+    "url": "https://registry.watermelon.sh/r/demostack-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Gridline Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/gridline-dashboard",
+    "useWhen": "Heavy operational tooling: network modelling, asset planning, and stakeholder workflows.",
+    "name": "gridline-dashboard",
+    "url": "https://registry.watermelon.sh/r/gridline-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Jobtracker Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/jobtracker-dashboard",
+    "useWhen": "A field-service or agency tool: customer records, job pipelines, estimates with drag-and-drop line items.",
+    "name": "jobtracker-dashboard",
+    "url": "https://registry.watermelon.sh/r/jobtracker-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Library Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/library-dashboard",
+    "useWhen": "Inventory and circulation: collection metrics, charts, branch switching, and alerts.",
+    "name": "library-dashboard",
+    "url": "https://registry.watermelon.sh/r/library-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Portfolio Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/portfolio-dashboard",
+    "useWhen": "Task management sorted by priority and category — the general-purpose starting point.",
+    "name": "portfolio-dashboard",
+    "url": "https://registry.watermelon.sh/r/portfolio-dashboard.json",
+    "via": "index"
+  },
+  {
+    "resource": "Watermelon UI",
+    "alias": "watermelon",
+    "component": "Web3 Dashboard",
+    "docs": "https://ui.watermelon.sh/dashboard/web3-dashboard",
+    "useWhen": "The same task layout with a Web3 treatment.",
+    "name": "web3-dashboard",
+    "url": "https://registry.watermelon.sh/r/web3-dashboard.json",
+    "via": "index"
+  },
+  {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Neon Drift",
