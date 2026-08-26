@@ -104,3 +104,31 @@ export const EXCLUDED_RESOURCES: Record<string, string> = {
   supabase:
     "Every component needs a live Supabase project and the Next.js server, client, and middleware clients. There is nothing to render without a backend, which is also what CONTRIBUTING.md rules out.",
 }
+
+/**
+ * Registry items whose file name does not follow from the item name.
+ *
+ * Keyed by `<alias>:<item>`, valued by the path inside the namespace.
+ */
+export const ITEM_FILES: Record<string, string> = {
+  "aicss:orbs": "Orb.tsx",
+  "aicss:task-list": "TodoList.tsx",
+  "aicss:ai-agent-input": "PromptInput.tsx",
+  "ncdai:apple-hello-effect": "apple-hello-effect-english.tsx",
+  "extend:docx-editor-block": "blocks/docx-editor.tsx",
+}
+
+/**
+ * Installed items that are not components, and so get no story.
+ *
+ * Tokens, hooks, and style-only items are real registry items and install
+ * correctly; there is simply nothing to render.
+ */
+export const NOT_RENDERABLE: Record<string, string> = {
+  "ncdai:haptic": "A Vibration API helper, published as lib/haptic.ts.",
+  "ncdai:testimonials-marquee": "A style item; it installs no component file.",
+  "ncdai:theme-toggle-effect-circle": "A style item; it installs no component file.",
+  "fluid:springs": "Shared spring constants, published as lib/springs.ts.",
+  "fluid:surfaces": "Shared surface class names, published as lib/surface-classes.ts.",
+  "dotmatrix:all": "An aggregate item that installs no component of its own.",
+}

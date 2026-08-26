@@ -1,0 +1,110 @@
+/**
+ * Writes one story per README component, into `src/stories/<alias>/`.
+ *
+ * Controls are not declared here. Storybook's react-docgen reads the props off
+ * the component itself, so a hand-written `argTypes` block would be a second
+ * copy of the component's own types, going stale the moment the registry
+ * updates. What the generator does add is the part docgen cannot know: which
+ * registry the component came from, the README's reason to reach for it, and a
+ * link back to its documentation.
+ *
+ * Hand-written stories win. Any component that already has one under
+ * `src/stories/` is left alone, so the curated variant stories survive a
+ * regeneration.
+ *
+ * Usage: bun scripts/generate-stories.ts [alias] [--force]
+ */
+import { mkdirSync, readFileSync, existsSync, writeFileSync, rmSync } from "node:fs"
+
+import { locate, pascal } from "./locate-components"
+import { BROKEN, EXCLUDED_RESOURCES, NOT_RENDERABLE, keyFor } from "./overrides"
+import type { ManifestItem } from "./resolve-components"
+
+const GENERATED = "src/stories/generated"
+
+/** Components already covered by a hand-written story, by `<alias>:<item>`. */
+const CURATED = new Set([
+  "magicui:border-beam",
+  "magicui:shimmer-button",
+  "magicui:marquee",
+  "magicui:number-ticker",
+  "magicui:animated-gradient-text",
+  "magicui:animated-circular-progress-bar",
+  "magicui:terminal",
+  "magicui:dock",
+  "ncdai:copy-button",
+  "dotmatrix:dotm-square-1",
+])
+
+const importPath = (path: string) => `@/${path.replace(/^src\//, "").replace(/\.tsx?$/, "")}`
+
+/** Escapes a value for a single-quoted TypeScript string literal. */
+const quote = (value: string) => `'${value.replace(/\\/g, "\\\\").replace(/'/g, "\\'")}'`
+
+/** Wraps lines in a JSDoc block, neutralising any comment terminator inside them. */
+const jsdoc = (lines: string[]) =>
+  ["/**", ...lines.map((l) => ` * ${l.replaceAll("*/", "*\\/")}`.trimEnd()), " */"].join("\n")
+
+const storySource = (item: ManifestItem, component: string, from: string, isDefault: boolean) =>
+  `${jsdoc([
+    item.useWhen,
+    "",
+    `**Registry:** ${item.resource} — \`@${item.alias}/${item.name}\` ([docs](${item.docs}))`,
+    "",
+    "Controls come from the component's own props. Anything the registry types",
+    "is editable in the Controls panel.",
+  ])}
+import type { Meta, StoryObj } from '@storybook/react-vite'
+
+${isDefault ? `import ${component} from '${from}'` : `import { ${component} } from '${from}'`}
+
+const meta: Meta<typeof ${component}> = {
+  title: ${quote(`${item.resource}/${item.component}`)},
+  component: ${component},
+  tags: ['autodocs'],
+}
+
+export default meta
+type Story = StoryObj<typeof ${component}>
+
+export const Default: Story = {}
+`
+
+const [aliasFilter, ...flags] = process.argv.slice(2)
+if (flags.includes("--force") || aliasFilter === "--force") rmSync(GENERATED, { recursive: true, force: true })
+
+const manifest: ManifestItem[] = JSON.parse(readFileSync("scripts/manifest.json", "utf8"))
+const wanted = manifest.filter((item) => {
+  if (!item.name) return false
+  if (aliasFilter && !aliasFilter.startsWith("--") && item.alias !== aliasFilter) return false
+  const key = keyFor(item.alias, item.name)
+  return !EXCLUDED_RESOURCES[item.alias] && !BROKEN[key] && !NOT_RENDERABLE[key] && !CURATED.has(key)
+})
+
+let written = 0
+const unlocated: string[] = []
+
+for (const item of wanted) {
+  const located = await locate(item.alias, item.name as string)
+  if (!located) {
+    unlocated.push(`@${item.alias}/${item.name}`)
+    continue
+  }
+
+  // Prefer the export whose name matches the item, else the first component.
+  const preferred = pascal(item.name as string)
+  const named = located.exports.find((e) => e === preferred) ?? located.exports[0]
+  const component = named ?? (located.defaultExport as string)
+  const isDefault = !named && Boolean(located.defaultExport)
+
+  const dir = `${GENERATED}/${item.alias}`
+  mkdirSync(dir, { recursive: true })
+  const path = `${dir}/${pascal(item.name as string)}.stories.tsx`
+  if (existsSync(path) && !flags.includes("--force")) continue
+
+  writeFileSync(path, storySource(item, component, importPath(located.path), isDefault))
+  written++
+}
+
+console.log(`wrote ${written} stories into ${GENERATED}`)
+for (const name of unlocated) console.log(`  UNLOCATED ${name}`)
