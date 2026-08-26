@@ -47,6 +47,8 @@ export const REGISTRIES: Registry[] = [
   { resource: "interior.dev", alias: "interior", url: "https://interior.dev/r/{name}.json" },
   { resource: "Magic UI", alias: "magicui", url: "https://magicui.design/r/{name}.json" },
   { resource: "Unlumen UI", alias: "unlumen", url: "https://ui.unlumen.com/r/{name}.json" },
+  // Only ReUI's 22 free components resolve; the rest answer 401 without a licence key.
+  { resource: "ReUI", alias: "reui", url: "https://reui.io/r/{name}.json" },
   {
     resource: "Supabase UI",
     alias: "supabase",

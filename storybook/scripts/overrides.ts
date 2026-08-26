@@ -44,6 +44,14 @@ export const BROKEN: Record<string, string> = {
   "dotmatrix:dotm-3x3-9":
     "Imports snakePath3NormFromIndex and snakePath3OrderValue, neither of which its own core module exports.",
   "unlumen:pixel": "Answers 401; a paid component behind a licence key.",
+  "reui:data-grid":
+    "Free itself, but built on ReUI's licensed Popover, Checkbox, and Select, which expect props the stock shadcn versions do not have. Needs REUI_LICENSE_KEY.",
+  "reui:filters":
+    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
+  "reui:event-calendar":
+    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
+  "reui:gantt":
+    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
   "unlumen:glow":
     "Imports buttonVariants from its own primitives/button, which exports only Button and ButtonProps.",
   "unlumen:refresh":

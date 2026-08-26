@@ -166,12 +166,30 @@ const before = await listSrc()
 const original = readConfig()
 writeConfig({ ...original, aliases: { ...original.aliases, ...aliasesFor(alias) } })
 
-const failed: string[] = []
+/**
+ * Installs one at a time, pausing between attempts.
+ *
+ * ReUI rate-limits, and a rate-limited response is indistinguishable from a
+ * missing item at the CLI's exit code. Spacing the retries tells them apart.
+ */
+const installEach = async (items: string[], pauseMs: number) => {
+  const failed: string[] = []
+  for (const target of items) {
+    if (!(await shadcn(["add", target, "--yes", "--overwrite"])).ok) failed.push(target)
+    if (pauseMs) await Bun.sleep(pauseMs)
+  }
+  return failed
+}
+
+let failed: string[] = []
 try {
   if (!(await shadcn(["add", ...targets, "--yes", "--overwrite"])).ok) {
     console.log(`${alias}: batch failed, retrying one at a time`)
-    for (const target of targets) {
-      if (!(await shadcn(["add", target, "--yes", "--overwrite"])).ok) failed.push(target)
+    failed = await installEach(targets, 0)
+
+    if (failed.length) {
+      console.log(`${alias}: ${failed.length} failed, retrying them slowly`)
+      failed = await installEach(failed, 1500)
     }
   }
 } finally {

@@ -32,7 +32,7 @@ export type ManifestItem = {
   reason?: string
 }
 
-const CONCURRENCY = 12
+const CONCURRENCY = 6
 
 const mapWithLimit = async <T, R>(items: T[], limit: number, fn: (item: T) => Promise<R>) => {
   const results: R[] = new Array(items.length)
@@ -48,11 +48,26 @@ const mapWithLimit = async <T, R>(items: T[], limit: number, fn: (item: T) => Pr
   return results
 }
 
-const exists = async (url: string) => {
+/** A registry that answers 401 or 402 has the item; it is behind a licence. */
+const LICENSED = new Set([401, 402, 403])
+
+/**
+ * A status for one item, retrying the ones a rate limiter also uses.
+ *
+ * ReUI answers 401 for a licensed item and, under load, for a free one too.
+ * Taking the first 401 at face value marked all 22 of its free components as
+ * licensed, so a 401 or 429 is retried on its own before it counts.
+ */
+const statusOf = async (url: string, attempt = 0): Promise<number> => {
   try {
-    return (await fetch(url, { redirect: "follow" })).ok
+    const status = (await fetch(url, { redirect: "follow" })).status
+    if ((LICENSED.has(status) || status === 429) && attempt < 2) {
+      await Bun.sleep(500 * (attempt + 1))
+      return statusOf(url, attempt + 1)
+    }
+    return status
   } catch {
-    return false
+    return 0
   }
 }
 
@@ -118,9 +133,22 @@ const manifest: ManifestItem[] = await mapWithLimit(candidates, CONCURRENCY, asy
     if (name) return { ...base, name, url: itemUrl(c.registry, name), via: "index" as const }
   }
 
+  let licensed = false
   for (const name of names) {
     const url = itemUrl(c.registry, name)
-    if (await exists(url)) return { ...base, name, url, via: "probe" as const }
+    const status = await statusOf(url)
+    if (status === 200) return { ...base, name, url, via: "probe" as const }
+    if (LICENSED.has(status)) licensed = true
+  }
+
+  if (licensed) {
+    return {
+      ...base,
+      name: null,
+      url: null,
+      via: "skipped" as const,
+      reason: "Behind a licence key; the registry answers 401 without one.",
+    }
   }
 
   return { ...base, name: null, url: null, via: "unresolved" as const }
