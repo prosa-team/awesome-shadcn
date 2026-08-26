@@ -3,3270 +3,3275 @@
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Thinking State",
-    "name": "thinking-state",
-    "url": "https://www.aicss.dev/r/thinking-state.json",
     "docs": "https://www.aicss.dev/components/thinking-state",
     "useWhen": "The agent is between turns and the user has nothing to look at. Smallest honest signal: work is happening, no detail claimed.",
-    "status": 200
+    "name": "thinking-state",
+    "url": "https://www.aicss.dev/r/thinking-state.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Thinking + Reasoning",
-    "name": "thinking-reasoning",
-    "url": "https://www.aicss.dev/r/thinking-reasoning.json",
     "docs": "https://www.aicss.dev/components/thinking-reasoning",
     "useWhen": "Reasoning is long enough that showing it all costs attention, but hiding it costs trust. Collapsed by default, expandable for the user who wants the chain.",
-    "status": 200
+    "name": "thinking-reasoning",
+    "url": "https://www.aicss.dev/r/thinking-reasoning.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Orbs",
-    "name": "orbs",
-    "url": "https://www.aicss.dev/r/orbs.json",
     "docs": "https://www.aicss.dev/components/orbs",
     "useWhen": "A thinking state that shares a chat line with an avatar and must read as alive at 20–64px instead of as a stalled spinner.",
-    "status": 200
+    "name": "orbs",
+    "url": "https://www.aicss.dev/r/orbs.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Web Search",
-    "name": "web-search",
-    "url": "https://www.aicss.dev/r/web-search.json",
     "docs": "https://www.aicss.dev/components/web-search",
     "useWhen": "The agent left the conversation to fetch sources, and the user should see the query and the hits before the answer arrives.",
-    "status": 404
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Removed upstream. The README's link 404s and the component is gone from the AICSS index."
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "File Diff",
-    "name": "file-diff",
-    "url": "https://www.aicss.dev/r/file-diff.json",
     "docs": "https://www.aicss.dev/components/file-diff",
     "useWhen": "The agent edited code and the user must approve or audit the exact lines — inline `+`/`-` with the surrounding context, not a prose summary.",
-    "status": 200
+    "name": "file-diff",
+    "url": "https://www.aicss.dev/r/file-diff.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Image Generation",
-    "name": "image-generation",
-    "url": "https://www.aicss.dev/r/image-generation.json",
     "docs": "https://www.aicss.dev/components/image-generation",
     "useWhen": "Generation takes seconds and the layout must reserve the final image's box now, so the transcript does not jump when it resolves.",
-    "status": 200
+    "name": "image-generation",
+    "url": "https://www.aicss.dev/r/image-generation.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Text Response",
-    "name": "text-response",
-    "url": "https://www.aicss.dev/r/text-response.json",
     "docs": "https://www.aicss.dev/components/text-response",
     "useWhen": "The finished, non-streamed reply: markdown, bold, inline code, sane spacing. The default block every other one falls back to.",
-    "status": 200
+    "name": "text-response",
+    "url": "https://www.aicss.dev/r/text-response.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Streaming Text",
-    "name": "streaming-text",
-    "url": "https://www.aicss.dev/r/streaming-text.json",
     "docs": "https://www.aicss.dev/components/streaming-text",
     "useWhen": "Tokens arrive over a socket and perceived latency matters more than a clean paint.",
-    "status": 200
+    "name": "streaming-text",
+    "url": "https://www.aicss.dev/r/streaming-text.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Inline Citations",
-    "name": "inline-citations",
-    "url": "https://www.aicss.dev/r/inline-citations.json",
     "docs": "https://www.aicss.dev/components/inline-citations",
     "useWhen": "The answer makes factual claims and each one needs an attributable source at the exact sentence, not a link dump at the end.",
-    "status": 200
+    "name": "inline-citations",
+    "url": "https://www.aicss.dev/r/inline-citations.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Code Block",
-    "name": "code-block",
-    "url": "https://www.aicss.dev/r/code-block.json",
     "docs": "https://www.aicss.dev/components/code-block",
     "useWhen": "Agent output is code the user will copy — filename header, highlighting, copy button, no accidental markdown mangling.",
-    "status": 200
+    "name": "code-block",
+    "url": "https://www.aicss.dev/r/code-block.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "To-do List",
-    "name": "task-list",
-    "url": "https://www.aicss.dev/r/task-list.json",
     "docs": "https://www.aicss.dev/components/task-list",
     "useWhen": "A multi-step plan runs longer than one turn and the user needs to see what is done, running, and still queued.",
-    "status": 200
+    "name": "task-list",
+    "url": "https://www.aicss.dev/r/task-list.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Data Table",
-    "name": "data-table",
-    "url": "https://www.aicss.dev/r/data-table.json",
     "docs": "https://www.aicss.dev/components/data-table",
     "useWhen": "Structured tool output belongs in rows and columns; a markdown table would lose alignment and overflow on mobile.",
-    "status": 200
+    "name": "data-table",
+    "url": "https://www.aicss.dev/r/data-table.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "Comparison Table",
-    "name": "comparison-table",
-    "url": "https://www.aicss.dev/r/comparison-table.json",
     "docs": "https://www.aicss.dev/components/comparison-table",
     "useWhen": "The agent's answer is a recommendation between options and the user should be able to check the criteria side by side.",
-    "status": 200
+    "name": "comparison-table",
+    "url": "https://www.aicss.dev/r/comparison-table.json",
+    "via": "probe"
   },
   {
     "resource": "AICSS",
     "alias": "aicss",
     "component": "AI Agent Input",
-    "name": "ai-agent-input",
-    "url": "https://www.aicss.dev/r/ai-agent-input.json",
     "docs": "https://www.aicss.dev/components/ai-agent-input",
     "useWhen": "The composer needs agent affordances — multiline, submit-on-enter, attachments — and a plain `Textarea` would need all of it rebuilt.",
-    "status": 200
+    "name": "ai-agent-input",
+    "url": "https://www.aicss.dev/r/ai-agent-input.json",
+    "via": "probe"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Apple Hello Effect",
-    "name": "apple-hello-effect",
-    "url": "https://chanhdai.com/r/apple-hello-effect.json",
     "docs": "https://chanhdai.com/components/apple-hello-effect",
     "useWhen": "A landing or splash screen needs one memorable opening beat, and a handwritten \"hello\" drawing itself earns more attention than a fade-in headline.",
-    "status": 200
+    "name": "apple-hello-effect",
+    "url": "https://chanhdai.com/r/apple-hello-effect.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Brand Assets Menu",
-    "name": "brand-assets-menu",
-    "url": "https://chanhdai.com/r/brand-assets-menu.json",
     "docs": "https://chanhdai.com/components/brand-assets-menu",
     "useWhen": "Press and partners keep asking for your logo files. Right-click the mark, copy the SVG, or jump to the brand guidelines.",
-    "status": 200
+    "name": "brand-assets-menu",
+    "url": "https://chanhdai.com/r/brand-assets-menu.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Chevrons Up Down Icon",
-    "name": "chevrons-up-down-icon",
-    "url": "https://chanhdai.com/r/chevrons-up-down-icon.json",
     "docs": "https://chanhdai.com/components/chevrons-up-down-icon",
     "useWhen": "A sort control or select trigger where the icon should morph between up and down instead of swapping frames.",
-    "status": 200
+    "name": "chevrons-up-down-icon",
+    "url": "https://chanhdai.com/r/chevrons-up-down-icon.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Code Block Command",
-    "name": "code-block-command",
-    "url": "https://chanhdai.com/r/code-block-command.json",
     "docs": "https://chanhdai.com/components/code-block-command",
     "useWhen": "Docs show an install snippet across npm, pnpm, yarn, and bun, and the package-manager tabs plus copy button should already work.",
-    "status": 200
+    "name": "code-block-command",
+    "url": "https://chanhdai.com/r/code-block-command.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Consent Manager",
-    "name": "consent-manager",
-    "url": "https://chanhdai.com/r/consent-manager.json",
     "docs": "https://chanhdai.com/components/consent-manager",
     "useWhen": "You need a cookie banner that respects the design instead of a vendor widget bolted on top — GDPR categories with per-category opt-in.",
-    "status": 200
+    "name": "consent-manager",
+    "url": "https://chanhdai.com/r/consent-manager.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Copy Button",
-    "name": "copy-button",
-    "url": "https://chanhdai.com/r/copy-button.json",
     "docs": "https://chanhdai.com/components/copy-button",
     "useWhen": "Any copyable value where the button must confirm the copy landed and reset itself afterwards.",
-    "status": 200
+    "name": "copy-button",
+    "url": "https://chanhdai.com/r/copy-button.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Dot Grid Spotlight",
-    "name": "dot-grid-spotlight",
-    "url": "https://chanhdai.com/r/dot-grid-spotlight.json",
     "docs": "https://chanhdai.com/components/dot-grid-spotlight",
     "useWhen": "A hero or section background that should react to the pointer without becoming the subject of the page.",
-    "status": 200
+    "name": "dot-grid-spotlight",
+    "url": "https://chanhdai.com/r/dot-grid-spotlight.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Elastic Slider",
-    "name": "elastic-slider",
-    "url": "https://chanhdai.com/r/elastic-slider.json",
     "docs": "https://chanhdai.com/components/elastic-slider",
     "useWhen": "A volume or intensity control that should feel rubbery at the ends, so hitting the limit is felt and not just displayed.",
-    "status": 200
+    "name": "elastic-slider",
+    "url": "https://chanhdai.com/r/elastic-slider.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Fluid Gradient Text",
-    "name": "fluid-gradient-text",
-    "url": "https://chanhdai.com/r/fluid-gradient-text.json",
     "docs": "https://chanhdai.com/components/fluid-gradient-text",
     "useWhen": "A headline where the gradient follows the cursor across the words — interactive emphasis instead of a static gradient fill.",
-    "status": 200
+    "name": "fluid-gradient-text",
+    "url": "https://chanhdai.com/r/fluid-gradient-text.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "GitHub Contributions",
-    "name": "github-contributions",
-    "url": "https://chanhdai.com/r/github-contributions.json",
     "docs": "https://chanhdai.com/components/github-contributions",
     "useWhen": "A developer profile or team page proving activity over time, using the grid everyone already knows how to read.",
-    "status": 200
+    "name": "github-contributions",
+    "url": "https://chanhdai.com/r/github-contributions.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "GitHub Stars",
-    "name": "github-stars",
-    "url": "https://chanhdai.com/r/github-stars.json",
     "docs": "https://chanhdai.com/components/github-stars",
     "useWhen": "An open-source project page where the live star count is the social proof, fetched rather than hard-coded.",
-    "status": 200
+    "name": "github-stars",
+    "url": "https://chanhdai.com/r/github-stars.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Glow Card Grid",
-    "name": "glow-card-grid",
-    "url": "https://chanhdai.com/r/glow-card-grid.json",
     "docs": "https://chanhdai.com/components/glow-card-grid",
     "useWhen": "A feature grid where hovering one card should light its border and leave neighbours calm.",
-    "status": 200
+    "name": "glow-card-grid",
+    "url": "https://chanhdai.com/r/glow-card-grid.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Haptic Feedback",
-    "name": "haptic",
-    "url": "https://chanhdai.com/r/haptic.json",
     "docs": "https://chanhdai.com/components/haptic",
     "useWhen": "A mobile web app where confirmations should be felt, not only seen, on devices that support the Vibration API.",
-    "status": 200
+    "name": "haptic",
+    "url": "https://chanhdai.com/r/haptic.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Icon Swap",
-    "name": "icon-swap",
-    "url": "https://chanhdai.com/r/icon-swap.json",
     "docs": "https://chanhdai.com/components/icon-swap",
     "useWhen": "An icon changes meaning mid-interaction (play/pause, copy/copied) and should scale-blur across instead of popping.",
-    "status": 200
+    "name": "icon-swap",
+    "url": "https://chanhdai.com/r/icon-swap.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Line Nav",
-    "name": "line-nav",
-    "url": "https://chanhdai.com/r/line-nav.json",
     "docs": "https://chanhdai.com/components/line-nav",
     "useWhen": "A long vertical nav where the active item must stay findable — its marker extends and it scrolls itself into view on mount.",
-    "status": 200
+    "name": "line-nav",
+    "url": "https://chanhdai.com/r/line-nav.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Logos Carousel",
-    "name": "logos-carousel",
-    "url": "https://chanhdai.com/r/logos-carousel.json",
     "docs": "https://chanhdai.com/components/logos-carousel",
     "useWhen": "More customer logos than fit the row: cycle them column by column in a staggered wave rather than scrolling a marquee.",
-    "status": 200
+    "name": "logos-carousel",
+    "url": "https://chanhdai.com/r/logos-carousel.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Middle Truncation",
-    "name": "middle-truncation",
-    "url": "https://chanhdai.com/r/middle-truncation.json",
     "docs": "https://chanhdai.com/components/middle-truncation",
     "useWhen": "File paths, wallet addresses, or hashes where the tail identifies the item, so trailing `…` would destroy the information.",
-    "status": 200
+    "name": "middle-truncation",
+    "url": "https://chanhdai.com/r/middle-truncation.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Mobius Loop Icon",
-    "name": "mobius-loop-icon",
-    "url": "https://chanhdai.com/r/mobius-loop-icon.json",
     "docs": "https://chanhdai.com/components/mobius-loop-icon",
     "useWhen": "A looping or \"always on\" concept needs a mark that morphs between circle and infinity rather than a static glyph.",
-    "status": 200
+    "name": "mobius-loop-icon",
+    "url": "https://chanhdai.com/r/mobius-loop-icon.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "React Wheel Picker",
-    "name": "react-wheel-picker",
-    "url": "https://chanhdai.com/r/react-wheel-picker.json",
     "docs": "https://chanhdai.com/components/react-wheel-picker",
     "useWhen": "A mobile web flow where a native-feeling iOS wheel beats a dropdown for dates, times, or durations.",
-    "status": 404
+    "name": "wheel-picker",
+    "url": "https://chanhdai.com/r/wheel-picker.json",
+    "via": "override"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Scroll Fade Effect",
-    "name": "scroll-fade-effect",
-    "url": "https://chanhdai.com/r/scroll-fade-effect.json",
     "docs": "https://chanhdai.com/components/scroll-fade-effect",
     "useWhen": "A scroll container whose hard cut-off makes it look broken — the fade signals there is more without adding a scrollbar.",
-    "status": 200
+    "name": "scroll-fade-effect",
+    "url": "https://chanhdai.com/r/scroll-fade-effect.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Share Menu",
-    "name": "share-menu",
-    "url": "https://chanhdai.com/r/share-menu.json",
     "docs": "https://chanhdai.com/components/share-menu",
     "useWhen": "An article or product page where sharing must cover copy-link, X, LinkedIn, and the native share sheet in one control.",
-    "status": 200
+    "name": "share-menu",
+    "url": "https://chanhdai.com/r/share-menu.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Shimmering Text",
-    "name": "shimmering-text",
-    "url": "https://chanhdai.com/r/shimmering-text.json",
     "docs": "https://chanhdai.com/components/shimmering-text",
     "useWhen": "One label (\"New\", \"Pro\", a loading heading) should draw the eye with a slow sweep and no layout impact.",
-    "status": 200
+    "name": "shimmering-text",
+    "url": "https://chanhdai.com/r/shimmering-text.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Slide to Unlock",
-    "name": "slide-to-unlock",
-    "url": "https://chanhdai.com/r/slide-to-unlock.json",
     "docs": "https://chanhdai.com/components/slide-to-unlock",
     "useWhen": "A consequential action where a click is too cheap and a confirm dialog is too heavy — the gesture is the confirmation.",
-    "status": 200
+    "name": "slide-to-unlock",
+    "url": "https://chanhdai.com/r/slide-to-unlock.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Spinning Circular Text",
-    "name": "spinning-circular-text",
-    "url": "https://chanhdai.com/r/spinning-circular-text.json",
     "docs": "https://chanhdai.com/components/spinning-circular-text",
     "useWhen": "A badge, seal, or scroll cue where text on a rotating circle carries the brand mark.",
-    "status": 200
+    "name": "spinning-circular-text",
+    "url": "https://chanhdai.com/r/spinning-circular-text.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Spotlight Logo",
-    "name": "spotlight-logo",
-    "url": "https://chanhdai.com/r/spotlight-logo.json",
     "docs": "https://chanhdai.com/components/spotlight-logo",
     "useWhen": "The logomark itself is the interaction: highlight tracks the cursor, press morphs the paths, reduced motion respected.",
-    "status": 200
+    "name": "spotlight-logo",
+    "url": "https://chanhdai.com/r/spotlight-logo.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Testimonial",
-    "name": "testimonial",
-    "url": "https://chanhdai.com/r/testimonial.json",
     "docs": "https://chanhdai.com/components/testimonial",
     "useWhen": "One quote, quietly presented, when the section is not about testimonials.",
-    "status": 200
+    "name": "testimonial",
+    "url": "https://chanhdai.com/r/testimonial.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Testimonial 2",
-    "name": "testimonial-2",
-    "url": "https://chanhdai.com/r/testimonial-2.json",
     "docs": "https://chanhdai.com/components/testimonial-2",
     "useWhen": "A quote that must be verifiable — author, role, and a link back to the original post.",
-    "status": 200
+    "name": "testimonial-2",
+    "url": "https://chanhdai.com/r/testimonial-2.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Testimonial Spotlight",
-    "name": "testimonial-spotlight",
-    "url": "https://chanhdai.com/r/testimonial-spotlight.json",
     "docs": "https://chanhdai.com/components/testimonial-spotlight",
     "useWhen": "One customer story deserves editorial weight and should not sit in a grid of equals.",
-    "status": 200
+    "name": "testimonial-spotlight",
+    "url": "https://chanhdai.com/r/testimonial-spotlight.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Testimonials Marquee",
-    "name": "testimonials-marquee",
-    "url": "https://chanhdai.com/r/testimonials-marquee.json",
     "docs": "https://chanhdai.com/components/testimonials-marquee",
     "useWhen": "You have thirty quotes and want the volume itself to read as proof, in a strip that keeps moving.",
-    "status": 200
+    "name": "testimonials-marquee",
+    "url": "https://chanhdai.com/r/testimonials-marquee.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Text Flip",
-    "name": "text-flip",
-    "url": "https://chanhdai.com/r/text-flip.json",
     "docs": "https://chanhdai.com/components/text-flip",
     "useWhen": "A hero headline that names several audiences or use cases by rotating the last word.",
-    "status": 200
+    "name": "text-flip",
+    "url": "https://chanhdai.com/r/text-flip.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Theme Switcher",
-    "name": "theme-switcher",
-    "url": "https://chanhdai.com/r/theme-switcher.json",
     "docs": "https://chanhdai.com/components/theme-switcher",
     "useWhen": "Three-way light/dark/system choice that must be explicit, because a two-state toggle cannot express \"system\".",
-    "status": 200
+    "name": "theme-switcher",
+    "url": "https://chanhdai.com/r/theme-switcher.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Theme Toggle Effect",
-    "name": "theme-toggle-effect",
-    "url": "https://chanhdai.com/r/theme-toggle-effect.json",
     "docs": "https://chanhdai.com/components/theme-toggle-effect",
     "useWhen": "Theme switching should feel deliberate — the new theme wipes in from the button using the View Transitions API.",
-    "status": 404
+    "name": "theme-toggle-effect-circle",
+    "url": "https://chanhdai.com/r/theme-toggle-effect-circle.json",
+    "via": "override"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Timescale",
-    "name": "timescale",
-    "url": "https://chanhdai.com/r/timescale.json",
     "docs": "https://chanhdai.com/components/timescale",
     "useWhen": "Milestones plotted against a real time axis, where the *gaps* between events carry meaning a plain list would flatten.",
-    "status": 200
+    "name": "timescale",
+    "url": "https://chanhdai.com/r/timescale.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "TOC Minimap",
-    "name": "toc-minimap",
-    "url": "https://chanhdai.com/r/toc-minimap.json",
     "docs": "https://chanhdai.com/components/toc-minimap",
     "useWhen": "Long-form docs where a full table of contents costs too much width but the reader still needs position and jump targets.",
-    "status": 200
+    "name": "toc-minimap",
+    "url": "https://chanhdai.com/r/toc-minimap.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Twemoji",
-    "name": "twemoji",
-    "url": "https://chanhdai.com/r/twemoji.json",
     "docs": "https://chanhdai.com/components/twemoji",
     "useWhen": "Emoji appear in user-generated content and must render identically on Windows, Android, and iOS.",
-    "status": 200
+    "name": "twemoji",
+    "url": "https://chanhdai.com/r/twemoji.json",
+    "via": "index"
   },
   {
     "resource": "Chánh Đại Components",
     "alias": "ncdai",
     "component": "Work Experience",
-    "name": "work-experience-component",
-    "url": "https://chanhdai.com/r/work-experience-component.json",
     "docs": "https://chanhdai.com/components/work-experience-component",
     "useWhen": "A CV or about page with roles, dates, and nested projects that should collapse instead of running to three screens.",
-    "status": 404
+    "name": "work-experience",
+    "url": "https://chanhdai.com/r/work-experience.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "PDF Viewer",
-    "name": "pdf-viewer",
-    "url": "https://ui.extend.ai/r/pdf-viewer.json",
     "docs": "https://ui.extend.ai/ui/docs/components/pdf-viewer",
     "useWhen": "Users must read the source PDF next to extracted data — sending them to a download breaks the review loop.",
-    "status": 200
+    "name": "pdf-viewer",
+    "url": "https://ui.extend.ai/r/pdf-viewer.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "DOCX Viewer",
-    "name": "docx-viewer",
-    "url": "https://ui.extend.ai/r/docx-viewer.json",
     "docs": "https://ui.extend.ai/ui/docs/components/docx-viewer",
     "useWhen": "Word files arrive from clients and must be readable in-app without a Microsoft round trip.",
-    "status": 200
+    "name": "docx-viewer",
+    "url": "https://ui.extend.ai/r/docx-viewer.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "DOCX Editor",
-    "name": "docx-editor",
-    "url": "https://ui.extend.ai/r/docx-editor.json",
     "docs": "https://ui.extend.ai/ui/docs/components/docx-editor",
     "useWhen": "Users have to change the Word document itself and hand it back, not just comment on it.",
-    "status": 200
+    "name": "docx-editor",
+    "url": "https://ui.extend.ai/r/docx-editor.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "XLSX Viewer",
-    "name": "xlsx-viewer",
-    "url": "https://ui.extend.ai/r/xlsx-viewer.json",
     "docs": "https://ui.extend.ai/ui/docs/components/xlsx-viewer",
     "useWhen": "A spreadsheet needs inspecting with its sheets and formatting intact, before anything is imported.",
-    "status": 200
+    "name": "xlsx-viewer",
+    "url": "https://ui.extend.ai/r/xlsx-viewer.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "XLSX Editor",
-    "name": "xlsx-editor",
-    "url": "https://ui.extend.ai/r/xlsx-editor.json",
     "docs": "https://ui.extend.ai/ui/docs/components/xlsx-editor",
     "useWhen": "Cell values must be corrected in place — typically fixing what an extraction model got wrong.",
-    "status": 200
+    "name": "xlsx-editor",
+    "url": "https://ui.extend.ai/r/xlsx-editor.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "PPTX Viewer",
-    "name": "pptx-viewer",
-    "url": "https://ui.extend.ai/r/pptx-viewer.json",
     "docs": "https://ui.extend.ai/ui/docs/components/pptx-viewer",
     "useWhen": "Slide decks are part of the intake and users need to page through them without PowerPoint.",
-    "status": 200
+    "name": "pptx-viewer",
+    "url": "https://ui.extend.ai/r/pptx-viewer.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "CSV/TSV Viewer",
-    "name": "csv-tsv-viewer",
-    "url": "https://ui.extend.ai/r/csv-tsv-viewer.json",
     "docs": "https://ui.extend.ai/ui/docs/components/csv-tsv-viewer",
     "useWhen": "A delimited file needs previewing as a table before import, so bad delimiters and headers surface early.",
-    "status": 404
+    "name": "csv-viewer",
+    "url": "https://ui.extend.ai/r/csv-viewer.json",
+    "via": "override"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Document Viewer Sidebar",
-    "name": "document-viewer-sidebar",
-    "url": "https://ui.extend.ai/r/document-viewer-sidebar.json",
     "docs": "https://ui.extend.ai/ui/docs/components/document-viewer-sidebar",
     "useWhen": "A long document needs page thumbnails and jump targets, because scrolling 200 pages is not navigation.",
-    "status": 200
+    "name": "document-viewer-sidebar",
+    "url": "https://ui.extend.ai/r/document-viewer-sidebar.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Document Splits",
-    "name": "document-splits",
-    "url": "https://ui.extend.ai/r/document-splits.json",
     "docs": "https://ui.extend.ai/ui/docs/components/document-splits",
     "useWhen": "One scanned batch holds many logical documents and a human must confirm where each one starts.",
-    "status": 200
+    "name": "document-splits",
+    "url": "https://ui.extend.ai/r/document-splits.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "File Upload",
-    "name": "file-upload",
-    "url": "https://ui.extend.ai/r/file-upload.json",
     "docs": "https://ui.extend.ai/ui/docs/components/file-upload",
     "useWhen": "Intake is document-heavy: many files, real formats, per-file progress and errors.",
-    "status": 200
+    "name": "file-upload",
+    "url": "https://ui.extend.ai/r/file-upload.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "File Thumbnail",
-    "name": "file-thumbnail",
-    "url": "https://ui.extend.ai/r/file-thumbnail.json",
     "docs": "https://ui.extend.ai/ui/docs/components/file-thumbnail",
     "useWhen": "A list of uploads is unusable as filenames alone — users recognise documents by how they look.",
-    "status": 200
+    "name": "file-thumbnail",
+    "url": "https://ui.extend.ai/r/file-thumbnail.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "File System",
-    "name": "file-system",
-    "url": "https://ui.extend.ai/r/file-system.json",
     "docs": "https://ui.extend.ai/ui/docs/components/file-system",
     "useWhen": "Documents live in folders users browse, move, and organise, rather than a flat list.",
-    "status": 200
+    "name": "file-system",
+    "url": "https://ui.extend.ai/r/file-system.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Schema Builder",
-    "name": "schema-builder",
-    "url": "https://ui.extend.ai/r/schema-builder.json",
     "docs": "https://ui.extend.ai/ui/docs/components/schema-builder",
     "useWhen": "Users define what to extract themselves, so the product does not need a developer for every new document type.",
-    "status": 200
+    "name": "schema-builder",
+    "url": "https://ui.extend.ai/r/schema-builder.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Bounding Box Citations",
-    "name": "bounding-box-citations",
-    "url": "https://ui.extend.ai/r/bounding-box-citations.json",
     "docs": "https://ui.extend.ai/ui/docs/components/bounding-box-citations",
     "useWhen": "Every extracted value must point back to the exact place on the page — the difference between an audit trail and a guess.",
-    "status": 200
+    "name": "bounding-box-citations",
+    "url": "https://ui.extend.ai/r/bounding-box-citations.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "E-Signature",
-    "name": "e-signature",
-    "url": "https://ui.extend.ai/r/e-signature.json",
     "docs": "https://ui.extend.ai/ui/docs/components/e-signature",
     "useWhen": "A document flow ends in a signature and a third-party signing vendor would be too much machinery.",
-    "status": 200
+    "name": "e-signature",
+    "url": "https://ui.extend.ai/r/e-signature.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Layout Blocks",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#layout-blocks",
     "useWhen": "You need the whole document-agent shell — viewer, sidebar, extraction panel — arranged and wired.",
-    "status": 404
+    "name": "layout-blocks",
+    "url": "https://ui.extend.ai/r/layout-blocks.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Bounding Box Citations Block",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#bounding-box-citations",
     "useWhen": "The full citation review screen: extracted fields on one side, highlighted source on the other.",
-    "status": 404
+    "name": "bounding-box-citations",
+    "url": "https://ui.extend.ai/r/bounding-box-citations.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "Excel Document Splits",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#excel-document-splits",
     "useWhen": "Split review for spreadsheets, where the boundary is a sheet or row range rather than a page.",
-    "status": 404
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Documented as an anchor on the blocks page with no registry item behind it."
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "PDF Dropzone",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#pdf-dropzone",
     "useWhen": "A focused single-purpose screen: drop a PDF, see it, act on it. Good first screen of a document product.",
-    "status": 404
+    "name": "pdf-dropzone",
+    "url": "https://ui.extend.ai/r/pdf-dropzone.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "DOCX Editor Block",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#docx-editor-block",
     "useWhen": "The editing screen around the DOCX editor, including file state and save actions.",
-    "status": 404
+    "name": "docx-editor-block",
+    "url": "https://ui.extend.ai/r/docx-editor-block.json",
+    "via": "index"
   },
   {
     "resource": "Extend UI",
     "alias": "extend",
     "component": "E-Signature Block",
-    "name": "blocks",
-    "url": "https://ui.extend.ai/r/blocks.json",
     "docs": "https://ui.extend.ai/ui/blocks#e-signature",
     "useWhen": "The complete signing screen: document, signer fields, and confirmation.",
-    "status": 404
+    "name": "e-signature",
+    "url": "https://ui.extend.ai/r/e-signature.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Accordion",
-    "name": "accordion",
-    "url": "https://www.fluidfunctionalism.com/r/accordion.json",
     "docs": "https://www.fluidfunctionalism.com/docs/accordion",
     "useWhen": "Sections open and close often enough that a jumpy height transition becomes the thing users notice.",
-    "status": 200
+    "name": "accordion",
+    "url": "https://www.fluidfunctionalism.com/r/accordion.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "AskUserQuestions",
-    "name": "ask-user-questions",
-    "url": "https://www.fluidfunctionalism.com/r/ask-user-questions.json",
     "docs": "https://www.fluidfunctionalism.com/docs/ask-user-questions",
     "useWhen": "An agent or wizard must ask a real question mid-flow: preset options, a skip path, and a free-text answer, without a modal.",
-    "status": 200
+    "name": "ask-user-questions",
+    "url": "https://www.fluidfunctionalism.com/r/ask-user-questions.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Badge",
-    "name": "badge",
-    "url": "https://www.fluidfunctionalism.com/r/badge.json",
     "docs": "https://www.fluidfunctionalism.com/docs/badge",
     "useWhen": "Status labels sit beside these controls and stock shadcn badges would look flat next to them.",
-    "status": 200
+    "name": "badge",
+    "url": "https://www.fluidfunctionalism.com/r/badge.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Button",
-    "name": "button",
-    "url": "https://www.fluidfunctionalism.com/r/button.json",
     "docs": "https://www.fluidfunctionalism.com/docs/button",
     "useWhen": "The primary action should confirm the press physically — the baseline this whole set is tuned against.",
-    "status": 200
+    "name": "button",
+    "url": "https://www.fluidfunctionalism.com/r/button.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Card",
-    "name": "card",
-    "url": "https://www.fluidfunctionalism.com/r/card.json",
     "docs": "https://www.fluidfunctionalism.com/docs/card",
     "useWhen": "A container that has to hold the set's surface treatment, so nested controls do not look pasted on.",
-    "status": 200
+    "name": "card",
+    "url": "https://www.fluidfunctionalism.com/r/card.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "ChatMessage",
-    "name": "chat-message",
-    "url": "https://www.fluidfunctionalism.com/r/chat-message.json",
     "docs": "https://www.fluidfunctionalism.com/docs/chat-message",
     "useWhen": "A conversation surface built from the same system as the rest of the app, instead of an imported chat kit.",
-    "status": 200
+    "name": "chat-message",
+    "url": "https://www.fluidfunctionalism.com/r/chat-message.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "CheckboxGroup",
-    "name": "checkbox-group",
-    "url": "https://www.fluidfunctionalism.com/r/checkbox-group.json",
     "docs": "https://www.fluidfunctionalism.com/docs/checkbox-group",
     "useWhen": "Several related settings are toggled in one sitting and each change must register instantly.",
-    "status": 200
+    "name": "checkbox-group",
+    "url": "https://www.fluidfunctionalism.com/r/checkbox-group.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "ColorPicker",
-    "name": "color-picker",
-    "url": "https://www.fluidfunctionalism.com/r/color-picker.json",
     "docs": "https://www.fluidfunctionalism.com/docs/color-picker",
     "useWhen": "Users pick a brand or label colour and need to see the result while dragging, not after releasing.",
-    "status": 200
+    "name": "color-picker",
+    "url": "https://www.fluidfunctionalism.com/r/color-picker.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Dialog",
-    "name": "dialog",
-    "url": "https://www.fluidfunctionalism.com/r/dialog.json",
     "docs": "https://www.fluidfunctionalism.com/docs/dialog",
     "useWhen": "A modal that must not feel abrupt — it should arrive from and return to its trigger.",
-    "status": 200
+    "name": "dialog",
+    "url": "https://www.fluidfunctionalism.com/r/dialog.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Dropdown",
-    "name": "dropdown",
-    "url": "https://www.fluidfunctionalism.com/r/dropdown.json",
     "docs": "https://www.fluidfunctionalism.com/docs/dropdown",
     "useWhen": "Grouped actions behind one trigger, with a highlight that travels between items rather than blinking.",
-    "status": 200
+    "name": "dropdown",
+    "url": "https://www.fluidfunctionalism.com/r/dropdown.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "InputCopy",
-    "name": "input-copy",
-    "url": "https://www.fluidfunctionalism.com/r/input-copy.json",
     "docs": "https://www.fluidfunctionalism.com/docs/input-copy",
     "useWhen": "An API key, install command, or invite URL is shown to be copied, so the field and the copy action belong together.",
-    "status": 200
+    "name": "input-copy",
+    "url": "https://www.fluidfunctionalism.com/r/input-copy.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "InputGroup",
-    "name": "input-group",
-    "url": "https://www.fluidfunctionalism.com/r/input-group.json",
     "docs": "https://www.fluidfunctionalism.com/docs/input-group",
     "useWhen": "Related fields (currency + amount, protocol + host) read as one control instead of three inputs in a row.",
-    "status": 200
+    "name": "input-group",
+    "url": "https://www.fluidfunctionalism.com/r/input-group.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "InputMessage",
-    "name": "input-message",
-    "url": "https://www.fluidfunctionalism.com/r/input-message.json",
     "docs": "https://www.fluidfunctionalism.com/docs/input-message",
     "useWhen": "A chat composer with send and attachments, matching the rest of the system's motion.",
-    "status": 200
+    "name": "input-message",
+    "url": "https://www.fluidfunctionalism.com/r/input-message.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "RadioGroup",
-    "name": "radio-group",
-    "url": "https://www.fluidfunctionalism.com/r/radio-group.json",
     "docs": "https://www.fluidfunctionalism.com/docs/radio-group",
     "useWhen": "An exclusive choice where the selection should visibly move between options, making the swap legible.",
-    "status": 200
+    "name": "radio-group",
+    "url": "https://www.fluidfunctionalism.com/r/radio-group.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Select",
-    "name": "select",
-    "url": "https://www.fluidfunctionalism.com/r/select.json",
     "docs": "https://www.fluidfunctionalism.com/docs/select",
     "useWhen": "A single choice from a longer list — roles, modes, environments — inside a settings surface.",
-    "status": 200
+    "name": "select",
+    "url": "https://www.fluidfunctionalism.com/r/select.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Slider",
-    "name": "slider",
-    "url": "https://www.fluidfunctionalism.com/r/slider.json",
     "docs": "https://www.fluidfunctionalism.com/docs/slider",
     "useWhen": "A value is tuned by feel, not typed, and the handle must track the pointer without lag.",
-    "status": 200
+    "name": "slider",
+    "url": "https://www.fluidfunctionalism.com/r/slider.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Switch",
-    "name": "switch",
-    "url": "https://www.fluidfunctionalism.com/r/switch.json",
     "docs": "https://www.fluidfunctionalism.com/docs/switch",
     "useWhen": "An instant-effect setting where the toggle itself is the confirmation, since there is no save button.",
-    "status": 200
+    "name": "switch",
+    "url": "https://www.fluidfunctionalism.com/r/switch.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Table",
-    "name": "table",
-    "url": "https://www.fluidfunctionalism.com/r/table.json",
     "docs": "https://www.fluidfunctionalism.com/docs/table",
     "useWhen": "A small table inside a settings or detail panel, where a full data grid would be overkill.",
-    "status": 200
+    "name": "table",
+    "url": "https://www.fluidfunctionalism.com/r/table.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Tabs",
-    "name": "tabs",
-    "url": "https://www.fluidfunctionalism.com/r/tabs.json",
     "docs": "https://www.fluidfunctionalism.com/docs/tabs",
     "useWhen": "Primary section switching where the indicator should carry the eye across.",
-    "status": 200
+    "name": "tabs",
+    "url": "https://www.fluidfunctionalism.com/r/tabs.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "TabsSubtle",
-    "name": "tabs-subtle",
-    "url": "https://www.fluidfunctionalism.com/r/tabs-subtle.json",
     "docs": "https://www.fluidfunctionalism.com/docs/tabs-subtle",
     "useWhen": "Secondary switching inside a panel that already has tabs above it, so the two levels stay distinguishable.",
-    "status": 200
+    "name": "tabs-subtle",
+    "url": "https://www.fluidfunctionalism.com/r/tabs-subtle.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "ThinkingIndicator",
-    "name": "thinking-indicator",
-    "url": "https://www.fluidfunctionalism.com/r/thinking-indicator.json",
     "docs": "https://www.fluidfunctionalism.com/docs/thinking-indicator",
     "useWhen": "Background work is running and the app needs a house-style waiting state instead of a foreign spinner.",
-    "status": 200
+    "name": "thinking-indicator",
+    "url": "https://www.fluidfunctionalism.com/r/thinking-indicator.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "ThinkingSteps",
-    "name": "thinking-steps",
-    "url": "https://www.fluidfunctionalism.com/r/thinking-steps.json",
     "docs": "https://www.fluidfunctionalism.com/docs/thinking-steps",
     "useWhen": "The wait is long enough that the user should see *which* step is running, not just that something is.",
-    "status": 200
+    "name": "thinking-steps",
+    "url": "https://www.fluidfunctionalism.com/r/thinking-steps.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Tooltip",
-    "name": "tooltip",
-    "url": "https://www.fluidfunctionalism.com/r/tooltip.json",
     "docs": "https://www.fluidfunctionalism.com/docs/tooltip",
     "useWhen": "Dense controls need labels on hover, with delays tuned so passing the cursor over a toolbar does not flash.",
-    "status": 200
+    "name": "tooltip",
+    "url": "https://www.fluidfunctionalism.com/r/tooltip.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Surfaces",
-    "name": "surfaces",
-    "url": "https://www.fluidfunctionalism.com/r/surfaces.json",
     "docs": "https://www.fluidfunctionalism.com/docs/surfaces",
     "useWhen": "Read before mixing this set into an existing app — it defines the elevation and background rules everything else assumes.",
-    "status": 200
+    "name": "surfaces",
+    "url": "https://www.fluidfunctionalism.com/r/surfaces.json",
+    "via": "index"
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Scrollbars",
-    "name": "scrollbars",
-    "url": "https://www.fluidfunctionalism.com/r/scrollbars.json",
     "docs": "https://www.fluidfunctionalism.com/docs/scrollbars",
     "useWhen": "Default scrollbars break the surface treatment in panels and dropdowns.",
-    "status": 404
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "A styling recipe built from the surface classes, not an installable component."
   },
   {
     "resource": "Fluid Functionalism",
     "alias": "fluid",
     "component": "Motion",
-    "name": "motion",
-    "url": "https://www.fluidfunctionalism.com/r/motion.json",
     "docs": "https://www.fluidfunctionalism.com/docs/motion",
     "useWhen": "You extend the set with your own components and need the same spring constants, or you must audit reduced-motion behaviour.",
-    "status": 404
+    "name": "springs",
+    "url": "https://www.fluidfunctionalism.com/r/springs.json",
+    "via": "override"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Accordion",
-    "name": "accordion",
-    "url": "https://interior.dev/r/accordion.json",
     "docs": "https://interior.dev/docs/accordion",
     "useWhen": "You need an accordion with height-auto animation done correctly.",
-    "status": 200
+    "name": "accordion",
+    "url": "https://interior.dev/r/accordion.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Blur-up Image",
-    "name": "blur-up-image",
-    "url": "https://interior.dev/r/blur-up-image.json",
     "docs": "https://interior.dev/docs/blur-up-image",
     "useWhen": "You need images that resolve from a blurred placeholder into the full photo.",
-    "status": 200
+    "name": "blur-up-image",
+    "url": "https://interior.dev/r/blur-up-image.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Collapsible Banner",
-    "name": "collapsible-banner",
-    "url": "https://interior.dev/r/collapsible-banner.json",
     "docs": "https://interior.dev/docs/collapsible-banner",
     "useWhen": "You need a banner that collapses to its title or dismisses entirely.",
-    "status": 200
+    "name": "collapsible-banner",
+    "url": "https://interior.dev/r/collapsible-banner.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Command Palette",
-    "name": "command-palette",
-    "url": "https://interior.dev/r/command-palette.json",
     "docs": "https://interior.dev/docs/command-palette",
     "useWhen": "You need a command palette whose results reorder live as you type.",
-    "status": 200
+    "name": "command-palette",
+    "url": "https://interior.dev/r/command-palette.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Context Menu",
-    "name": "context-menu",
-    "url": "https://interior.dev/r/context-menu.json",
     "docs": "https://interior.dev/docs/context-menu",
     "useWhen": "You need a right-click menu that opens from the pointer, not the corner.",
-    "status": 200
+    "name": "context-menu",
+    "url": "https://interior.dev/r/context-menu.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Copy Button",
-    "name": "copy-button",
-    "url": "https://interior.dev/r/copy-button.json",
     "docs": "https://interior.dev/docs/copy-button",
     "useWhen": "You need a copy interaction that locks its width and reverts after a timeout.",
-    "status": 200
+    "name": "copy-button",
+    "url": "https://interior.dev/r/copy-button.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Drawer",
-    "name": "drawer",
-    "url": "https://interior.dev/r/drawer.json",
     "docs": "https://interior.dev/docs/drawer",
     "useWhen": "You need a side panel that keeps its scroll position and state.",
-    "status": 200
+    "name": "drawer",
+    "url": "https://interior.dev/r/drawer.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Dropdown",
-    "name": "dropdown",
-    "url": "https://interior.dev/r/dropdown.json",
     "docs": "https://interior.dev/docs/dropdown",
     "useWhen": "You need a dropdown menu whose active highlight travels between items.",
-    "status": 200
+    "name": "dropdown",
+    "url": "https://interior.dev/r/dropdown.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Expanding Search",
-    "name": "expanding-search",
-    "url": "https://interior.dev/r/expanding-search.json",
     "docs": "https://interior.dev/docs/expanding-search",
     "useWhen": "You need a search icon that expands into a focused field.",
-    "status": 200
+    "name": "expanding-search",
+    "url": "https://interior.dev/r/expanding-search.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Filter Grid",
-    "name": "filter-grid",
-    "url": "https://interior.dev/r/filter-grid.json",
     "docs": "https://interior.dev/docs/filter-grid",
     "useWhen": "You need a grid that rearranges on filter instead of blinking.",
-    "status": 200
+    "name": "filter-grid",
+    "url": "https://interior.dev/r/filter-grid.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Floating Label",
-    "name": "floating-label",
-    "url": "https://interior.dev/r/floating-label.json",
     "docs": "https://interior.dev/docs/floating-label",
     "useWhen": "You need form labels that float out of the way instead of disappearing on focus.",
-    "status": 200
+    "name": "floating-label",
+    "url": "https://interior.dev/r/floating-label.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Hide on Scroll",
-    "name": "hide-on-scroll",
-    "url": "https://interior.dev/r/hide-on-scroll.json",
     "docs": "https://interior.dev/docs/hide-on-scroll",
     "useWhen": "You need a toolbar that hides on scroll down and yields to content.",
-    "status": 200
+    "name": "hide-on-scroll",
+    "url": "https://interior.dev/r/hide-on-scroll.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Hold to Confirm",
-    "name": "hold-to-confirm",
-    "url": "https://interior.dev/r/hold-to-confirm.json",
     "docs": "https://interior.dev/docs/hold-to-confirm",
     "useWhen": "You need a hold gesture that guards a destructive action from accidental clicks.",
-    "status": 200
+    "name": "hold-to-confirm",
+    "url": "https://interior.dev/r/hold-to-confirm.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Icon Morph",
-    "name": "icon-morph",
-    "url": "https://interior.dev/r/icon-morph.json",
     "docs": "https://interior.dev/docs/icon-morph",
     "useWhen": "You need a play/pause or menu/close icon that morphs between states instead of swapping.",
-    "status": 200
+    "name": "icon-morph",
+    "url": "https://interior.dev/r/icon-morph.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Inline Validation",
-    "name": "inline-validation",
-    "url": "https://interior.dev/r/inline-validation.json",
     "docs": "https://interior.dev/docs/inline-validation",
     "useWhen": "You need inline form error messages that don't shove the layout around.",
-    "status": 200
+    "name": "inline-validation",
+    "url": "https://interior.dev/r/inline-validation.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Lightbox",
-    "name": "lightbox",
-    "url": "https://interior.dev/r/lightbox.json",
     "docs": "https://interior.dev/docs/lightbox",
     "useWhen": "You need an image lightbox that zooms in and returns to its origin on close.",
-    "status": 200
+    "name": "lightbox",
+    "url": "https://interior.dev/r/lightbox.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Like Burst",
-    "name": "like-burst",
-    "url": "https://interior.dev/r/like-burst.json",
     "docs": "https://interior.dev/docs/like-burst",
     "useWhen": "You need an optimistic like/favorite animation that stays correct under rapid taps.",
-    "status": 200
+    "name": "like-burst",
+    "url": "https://interior.dev/r/like-burst.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Live Activity",
-    "name": "live-activity",
-    "url": "https://interior.dev/r/live-activity.json",
     "docs": "https://interior.dev/docs/live-activity",
     "useWhen": "You need a compact, persistent indicator for ongoing system work.",
-    "status": 200
+    "name": "live-activity",
+    "url": "https://interior.dev/r/live-activity.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Load More",
-    "name": "load-more",
-    "url": "https://interior.dev/r/load-more.json",
     "docs": "https://interior.dev/docs/load-more",
     "useWhen": "You need infinite-scroll loading that starts before the user hits the bottom.",
-    "status": 200
+    "name": "load-more",
+    "url": "https://interior.dev/r/load-more.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Loading Button",
-    "name": "loading-button",
-    "url": "https://interior.dev/r/loading-button.json",
     "docs": "https://interior.dev/docs/loading-button",
     "useWhen": "You need a submit button that shows a loading state without resizing.",
-    "status": 200
+    "name": "loading-button",
+    "url": "https://interior.dev/r/loading-button.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Logo Marquee",
-    "name": "logo-marquee",
-    "url": "https://interior.dev/r/logo-marquee.json",
     "docs": "https://interior.dev/docs/logo-marquee",
     "useWhen": "You need a logo marquee that pauses when the user looks at it.",
-    "status": 200
+    "name": "logo-marquee",
+    "url": "https://interior.dev/r/logo-marquee.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Long Press",
-    "name": "long-press",
-    "url": "https://interior.dev/r/long-press.json",
     "docs": "https://interior.dev/docs/long-press",
     "useWhen": "You need a long-press gesture confirmed by hold time and cancelled by any interruption.",
-    "status": 200
+    "name": "long-press",
+    "url": "https://interior.dev/r/long-press.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Modal",
-    "name": "modal",
-    "url": "https://interior.dev/r/modal.json",
     "docs": "https://interior.dev/docs/modal",
     "useWhen": "You need a modal with backdrop, scroll lock, and focus trap handled correctly.",
-    "status": 200
+    "name": "modal",
+    "url": "https://interior.dev/r/modal.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "New Items Pill",
-    "name": "new-items-pill",
-    "url": "https://interior.dev/r/new-items-pill.json",
     "docs": "https://interior.dev/docs/new-items-pill",
     "useWhen": "You need a \"new content\" pill that appears without stealing the user's scroll position.",
-    "status": 200
+    "name": "new-items-pill",
+    "url": "https://interior.dev/r/new-items-pill.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "OTP Input",
-    "name": "otp-input",
-    "url": "https://interior.dev/r/otp-input.json",
     "docs": "https://interior.dev/docs/otp-input",
     "useWhen": "You need a one-time-code input with auto-advance, paste, and error recovery.",
-    "status": 200
+    "name": "otp-input",
+    "url": "https://interior.dev/r/otp-input.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Pagination",
-    "name": "pagination",
-    "url": "https://interior.dev/r/pagination.json",
     "docs": "https://interior.dev/docs/pagination",
     "useWhen": "You need pagination where the visible window moves without the row jumping.",
-    "status": 200
+    "name": "pagination",
+    "url": "https://interior.dev/r/pagination.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Password Strength",
-    "name": "password-strength",
-    "url": "https://interior.dev/r/password-strength.json",
     "docs": "https://interior.dev/docs/password-strength",
     "useWhen": "You need a strength meter that reads segment by segment as the user types.",
-    "status": 200
+    "name": "password-strength",
+    "url": "https://interior.dev/r/password-strength.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Poll Results",
-    "name": "poll-results",
-    "url": "https://interior.dev/r/poll-results.json",
     "docs": "https://interior.dev/docs/poll-results",
     "useWhen": "You need poll or vote result bars where the winner animates in last.",
-    "status": 200
+    "name": "poll-results",
+    "url": "https://interior.dev/r/poll-results.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Popover",
-    "name": "popover",
-    "url": "https://interior.dev/r/popover.json",
     "docs": "https://interior.dev/docs/popover",
     "useWhen": "You need a popover that knows its trigger origin and flips on collision.",
-    "status": 200
+    "name": "popover",
+    "url": "https://interior.dev/r/popover.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Presence Avatars",
-    "name": "presence-avatars",
-    "url": "https://interior.dev/r/presence-avatars.json",
     "docs": "https://interior.dev/docs/presence-avatars",
     "useWhen": "You need an avatar stack that animates as people join or leave.",
-    "status": 200
+    "name": "presence-avatars",
+    "url": "https://interior.dev/r/presence-avatars.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Press Depth",
-    "name": "press-depth",
-    "url": "https://interior.dev/r/press-depth.json",
     "docs": "https://interior.dev/docs/press-depth",
     "useWhen": "You need buttons that visually confirm a press landed.",
-    "status": 200
+    "name": "press-depth",
+    "url": "https://interior.dev/r/press-depth.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Progress Bar",
-    "name": "progress-bar",
-    "url": "https://interior.dev/r/progress-bar.json",
     "docs": "https://interior.dev/docs/progress-bar",
     "useWhen": "You need a progress bar that moves from indeterminate to determinate cleanly.",
-    "status": 200
+    "name": "progress-bar",
+    "url": "https://interior.dev/r/progress-bar.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Reading Progress",
-    "name": "reading-progress",
-    "url": "https://interior.dev/r/reading-progress.json",
     "docs": "https://interior.dev/docs/reading-progress",
     "useWhen": "You need a reading-progress indicator showing how much content is left.",
-    "status": 200
+    "name": "reading-progress",
+    "url": "https://interior.dev/r/reading-progress.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Reorder List",
-    "name": "reorder-list",
-    "url": "https://interior.dev/r/reorder-list.json",
     "docs": "https://interior.dev/docs/reorder-list",
     "useWhen": "You need a drag-to-reorder list where the gap itself is the drop target.",
-    "status": 200
+    "name": "reorder-list",
+    "url": "https://interior.dev/r/reorder-list.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Ripple",
-    "name": "ripple",
-    "url": "https://interior.dev/r/ripple.json",
     "docs": "https://interior.dev/docs/ripple",
     "useWhen": "You need pointer-origin touch feedback on tap targets.",
-    "status": 200
+    "name": "ripple",
+    "url": "https://interior.dev/r/ripple.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Scroll Spy",
-    "name": "scroll-spy",
-    "url": "https://interior.dev/r/scroll-spy.json",
     "docs": "https://interior.dev/docs/scroll-spy",
     "useWhen": "You need navigation that highlights the section actually in view.",
-    "status": 200
+    "name": "scroll-spy",
+    "url": "https://interior.dev/r/scroll-spy.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Segmented Control",
-    "name": "segmented-control",
-    "url": "https://interior.dev/r/segmented-control.json",
     "docs": "https://interior.dev/docs/segmented-control",
     "useWhen": "You need a segmented control where the thumb slides and the label inverts through it.",
-    "status": 200
+    "name": "segmented-control",
+    "url": "https://interior.dev/r/segmented-control.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Show More",
-    "name": "show-more",
-    "url": "https://interior.dev/r/show-more.json",
     "docs": "https://interior.dev/docs/show-more",
     "useWhen": "You need a \"show more\" toggle that animates height without reflowing text.",
-    "status": 200
+    "name": "show-more",
+    "url": "https://interior.dev/r/show-more.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Skeleton Swap",
-    "name": "skeleton-swap",
-    "url": "https://interior.dev/r/skeleton-swap.json",
     "docs": "https://interior.dev/docs/skeleton-swap",
     "useWhen": "You need skeleton loaders that swap to content with zero layout shift.",
-    "status": 200
+    "name": "skeleton-swap",
+    "url": "https://interior.dev/r/skeleton-swap.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Slider Detents",
-    "name": "slider-detents",
-    "url": "https://interior.dev/r/slider-detents.json",
     "docs": "https://interior.dev/docs/slider-detents",
     "useWhen": "You need a slider with snap points the user can feel.",
-    "status": 200
+    "name": "slider-detents",
+    "url": "https://interior.dev/r/slider-detents.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Snap Carousel",
-    "name": "snap-carousel",
-    "url": "https://interior.dev/r/snap-carousel.json",
     "docs": "https://interior.dev/docs/snap-carousel",
     "useWhen": "You need a carousel where momentum scrolling lands cleanly on a slide.",
-    "status": 200
+    "name": "snap-carousel",
+    "url": "https://interior.dev/r/snap-carousel.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Sortable Table",
-    "name": "sortable-table",
-    "url": "https://interior.dev/r/sortable-table.json",
     "docs": "https://interior.dev/docs/sortable-table",
     "useWhen": "You need a table where rows animate to their new sorted order.",
-    "status": 200
+    "name": "sortable-table",
+    "url": "https://interior.dev/r/sortable-table.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Sticky Header",
-    "name": "sticky-header",
-    "url": "https://interior.dev/r/sticky-header.json",
     "docs": "https://interior.dev/docs/sticky-header",
     "useWhen": "You need a header that condenses as the user scrolls down.",
-    "status": 200
+    "name": "sticky-header",
+    "url": "https://interior.dev/r/sticky-header.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Streaming Text",
-    "name": "streaming-text",
-    "url": "https://interior.dev/r/streaming-text.json",
     "docs": "https://interior.dev/docs/streaming-text",
     "useWhen": "You need token-by-token streaming text with a caret, like an LLM response.",
-    "status": 200
+    "name": "streaming-text",
+    "url": "https://interior.dev/r/streaming-text.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Swipe Deck",
-    "name": "swipe-deck",
-    "url": "https://interior.dev/r/swipe-deck.json",
     "docs": "https://interior.dev/docs/swipe-deck",
     "useWhen": "You need a swipeable card stack, like a decision deck.",
-    "status": 200
+    "name": "swipe-deck",
+    "url": "https://interior.dev/r/swipe-deck.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Tabs",
-    "name": "tabs",
-    "url": "https://interior.dev/r/tabs.json",
     "docs": "https://interior.dev/docs/tabs",
     "useWhen": "You need tabs sharing one animated indicator.",
-    "status": 200
+    "name": "tabs",
+    "url": "https://interior.dev/r/tabs.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Tag Input",
-    "name": "tag-input",
-    "url": "https://interior.dev/r/tag-input.json",
     "docs": "https://interior.dev/docs/tag-input",
     "useWhen": "You need a tag input where Enter adds and backspace highlights before removing.",
-    "status": 200
+    "name": "tag-input",
+    "url": "https://interior.dev/r/tag-input.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Task Steps",
-    "name": "task-steps",
-    "url": "https://interior.dev/r/task-steps.json",
     "docs": "https://interior.dev/docs/task-steps",
     "useWhen": "You need a step list that narrates ongoing background work.",
-    "status": 200
+    "name": "task-steps",
+    "url": "https://interior.dev/r/task-steps.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Text Reveal",
-    "name": "text-reveal",
-    "url": "https://interior.dev/r/text-reveal.json",
     "docs": "https://interior.dev/docs/text-reveal",
     "useWhen": "You need text that reveals in reading order.",
-    "status": 200
+    "name": "text-reveal",
+    "url": "https://interior.dev/r/text-reveal.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Tooltip Group",
-    "name": "tooltip-group",
-    "url": "https://interior.dev/r/tooltip-group.json",
     "docs": "https://interior.dev/docs/tooltip-group",
     "useWhen": "You need tooltips that delay once, then show instantly for the rest of the group.",
-    "status": 200
+    "name": "tooltip-group",
+    "url": "https://interior.dev/r/tooltip-group.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Tree View",
-    "name": "tree-view",
-    "url": "https://interior.dev/r/tree-view.json",
     "docs": "https://interior.dev/docs/tree-view",
     "useWhen": "You need a tree view whose disclosure works with arrow keys.",
-    "status": 200
+    "name": "tree-view",
+    "url": "https://interior.dev/r/tree-view.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Typing Indicator",
-    "name": "typing-indicator",
-    "url": "https://interior.dev/r/typing-indicator.json",
     "docs": "https://interior.dev/docs/typing-indicator",
     "useWhen": "You need a \"someone is typing\" indicator for chat or collaborative UIs.",
-    "status": 200
+    "name": "typing-indicator",
+    "url": "https://interior.dev/r/typing-indicator.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Value Flash",
-    "name": "value-flash",
-    "url": "https://interior.dev/r/value-flash.json",
     "docs": "https://interior.dev/docs/value-flash",
     "useWhen": "You need numbers that flash or highlight when they change.",
-    "status": 200
+    "name": "value-flash",
+    "url": "https://interior.dev/r/value-flash.json",
+    "via": "index"
   },
   {
     "resource": "interior.dev",
     "alias": "interior",
     "component": "Wizard Steps",
-    "name": "wizard-steps",
-    "url": "https://interior.dev/r/wizard-steps.json",
     "docs": "https://interior.dev/docs/wizard-steps",
     "useWhen": "You need a multi-step wizard whose transitions know forward from back.",
-    "status": 200
+    "name": "wizard-steps",
+    "url": "https://interior.dev/r/wizard-steps.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Android",
-    "name": "android",
-    "url": "https://magicui.design/r/android.json",
     "docs": "https://magicui.design/docs/components/android",
     "useWhen": "An Android screenshot needs a device frame so it reads as a real app rather than a floating image.",
-    "status": 200
+    "name": "android",
+    "url": "https://magicui.design/r/android.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Beam",
-    "name": "animated-beam",
-    "url": "https://magicui.design/r/animated-beam.json",
     "docs": "https://magicui.design/docs/components/animated-beam",
     "useWhen": "An integration or architecture diagram must show that data actually flows between two nodes.",
-    "status": 200
+    "name": "animated-beam",
+    "url": "https://magicui.design/r/animated-beam.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Circular Progress Bar",
-    "name": "animated-circular-progress-bar",
-    "url": "https://magicui.design/r/animated-circular-progress-bar.json",
     "docs": "https://magicui.design/docs/components/animated-circular-progress-bar",
     "useWhen": "A single percentage is the headline number — usage, score, completion — and a bar would read as secondary.",
-    "status": 200
+    "name": "animated-circular-progress-bar",
+    "url": "https://magicui.design/r/animated-circular-progress-bar.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Gradient Text",
-    "name": "animated-gradient-text",
-    "url": "https://magicui.design/r/animated-gradient-text.json",
     "docs": "https://magicui.design/docs/components/animated-gradient-text",
     "useWhen": "A launch pill or badge above the hero headline needs to catch the eye before the headline does.",
-    "status": 200
+    "name": "animated-gradient-text",
+    "url": "https://magicui.design/r/animated-gradient-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Grid Pattern",
-    "name": "animated-grid-pattern",
-    "url": "https://magicui.design/r/animated-grid-pattern.json",
     "docs": "https://magicui.design/docs/components/animated-grid-pattern",
     "useWhen": "A section background should feel alive without competing with the copy — cells fade in and out slowly.",
-    "status": 200
+    "name": "animated-grid-pattern",
+    "url": "https://magicui.design/r/animated-grid-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated List",
-    "name": "animated-list",
-    "url": "https://magicui.design/r/animated-list.json",
     "docs": "https://magicui.design/docs/components/animated-list",
     "useWhen": "You are demonstrating a live feed (notifications, events, orders) and items must enter in sequence, not all at once.",
-    "status": 200
+    "name": "animated-list",
+    "url": "https://magicui.design/r/animated-list.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Shiny Text",
-    "name": "animated-shiny-text",
-    "url": "https://magicui.design/r/animated-shiny-text.json",
     "docs": "https://magicui.design/docs/components/animated-shiny-text",
     "useWhen": "A small label needs a slow sweep of light to look interactive, typically a \"What's new\" link.",
-    "status": 200
+    "name": "animated-shiny-text",
+    "url": "https://magicui.design/r/animated-shiny-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Animated Theme Toggler",
-    "name": "animated-theme-toggler",
-    "url": "https://magicui.design/r/animated-theme-toggler.json",
     "docs": "https://magicui.design/docs/components/animated-theme-toggler",
     "useWhen": "Theme switching should be a moment, using View Transitions to wipe the new theme in from the button.",
-    "status": 200
+    "name": "animated-theme-toggler",
+    "url": "https://magicui.design/r/animated-theme-toggler.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Aurora Text",
-    "name": "aurora-text",
-    "url": "https://magicui.design/r/aurora-text.json",
     "docs": "https://magicui.design/docs/components/aurora-text",
     "useWhen": "One or two words in the hero headline carry the whole brand colour, with the gradient in motion.",
-    "status": 200
+    "name": "aurora-text",
+    "url": "https://magicui.design/r/aurora-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Avatar Circles",
-    "name": "avatar-circles",
-    "url": "https://magicui.design/r/avatar-circles.json",
     "docs": "https://magicui.design/docs/components/avatar-circles",
     "useWhen": "Social proof near the call to action: overlapping faces plus a count, in the width of a button.",
-    "status": 200
+    "name": "avatar-circles",
+    "url": "https://magicui.design/r/avatar-circles.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Backlight",
-    "name": "backlight",
-    "url": "https://magicui.design/r/backlight.json",
     "docs": "https://magicui.design/docs/components/backlight",
     "useWhen": "A product video or screenshot should look lit from behind, lifting it off a dark section.",
-    "status": 200
+    "name": "backlight",
+    "url": "https://magicui.design/r/backlight.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Bento Grid",
-    "name": "bento-grid",
-    "url": "https://magicui.design/r/bento-grid.json",
     "docs": "https://magicui.design/docs/components/bento-grid",
     "useWhen": "Features differ in weight and a uniform three-column grid would flatten them into equals.",
-    "status": 200
+    "name": "bento-grid",
+    "url": "https://magicui.design/r/bento-grid.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Blur Fade",
-    "name": "blur-fade",
-    "url": "https://magicui.design/r/blur-fade.json",
     "docs": "https://magicui.design/docs/components/blur-fade",
     "useWhen": "Sections should resolve as the user scrolls to them, giving a long page rhythm instead of one flat reveal.",
-    "status": 200
+    "name": "blur-fade",
+    "url": "https://magicui.design/r/blur-fade.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Border Beam",
-    "name": "border-beam",
-    "url": "https://magicui.design/r/border-beam.json",
     "docs": "https://magicui.design/docs/components/border-beam",
     "useWhen": "A single card — the recommended plan, the featured feature — must be the one thing that moves on screen.",
-    "status": 200
+    "name": "border-beam",
+    "url": "https://magicui.design/r/border-beam.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Code Comparison",
-    "name": "code-comparison",
-    "url": "https://magicui.design/r/code-comparison.json",
     "docs": "https://magicui.design/docs/components/code-comparison",
     "useWhen": "The pitch is \"before and after our tool\", and the diff itself is the argument.",
-    "status": 200
+    "name": "code-comparison",
+    "url": "https://magicui.design/r/code-comparison.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Comic Text",
-    "name": "comic-text",
-    "url": "https://magicui.design/r/comic-text.json",
     "docs": "https://magicui.design/docs/components/comic-text",
     "useWhen": "A playful brand needs a headline with comic-book weight and impact, not a standard type ramp.",
-    "status": 200
+    "name": "comic-text",
+    "url": "https://magicui.design/r/comic-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Confetti",
-    "name": "confetti",
-    "url": "https://magicui.design/r/confetti.json",
     "docs": "https://magicui.design/docs/components/confetti",
     "useWhen": "A genuine milestone lands — signup complete, first deploy — and the moment should be celebrated once, not on every click.",
-    "status": 200
+    "name": "confetti",
+    "url": "https://magicui.design/r/confetti.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Cool Mode",
-    "name": "cool-mode",
-    "url": "https://magicui.design/r/cool-mode.json",
     "docs": "https://magicui.design/docs/components/cool-mode",
     "useWhen": "A single element gets a particle burst on click, for a playful surface where delight beats restraint.",
-    "status": 200
+    "name": "cool-mode",
+    "url": "https://magicui.design/r/cool-mode.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Dia Text Reveal",
-    "name": "dia-text-reveal",
-    "url": "https://magicui.design/r/dia-text-reveal.json",
     "docs": "https://magicui.design/docs/components/dia-text-reveal",
     "useWhen": "A headline should arrive under a sweeping colour band and settle into the theme foreground.",
-    "status": 200
+    "name": "dia-text-reveal",
+    "url": "https://magicui.design/r/dia-text-reveal.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Dock",
-    "name": "dock",
-    "url": "https://magicui.design/r/dock.json",
     "docs": "https://magicui.design/docs/components/dock",
     "useWhen": "A small icon toolbar should feel macOS-native, magnifying under the cursor.",
-    "status": 200
+    "name": "dock",
+    "url": "https://magicui.design/r/dock.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Dot Pattern",
-    "name": "dot-pattern",
-    "url": "https://magicui.design/r/dot-pattern.json",
     "docs": "https://magicui.design/docs/components/dot-pattern",
     "useWhen": "A section needs texture rather than a flat colour, and dots read quieter than a grid.",
-    "status": 200
+    "name": "dot-pattern",
+    "url": "https://magicui.design/r/dot-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Dotted Map",
-    "name": "dotted-map",
-    "url": "https://magicui.design/r/dotted-map.json",
     "docs": "https://magicui.design/docs/components/dotted-map",
     "useWhen": "You claim global coverage and need a lightweight SVG world map instead of a mapping library.",
-    "status": 200
+    "name": "dotted-map",
+    "url": "https://magicui.design/r/dotted-map.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "File Tree",
-    "name": "file-tree",
-    "url": "https://magicui.design/r/file-tree.json",
     "docs": "https://magicui.design/docs/components/file-tree",
     "useWhen": "Docs or a landing page must show project structure, and an indented code block would be unreadable.",
-    "status": 200
+    "name": "file-tree",
+    "url": "https://magicui.design/r/file-tree.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Flickering Grid",
-    "name": "flickering-grid",
-    "url": "https://magicui.design/r/flickering-grid.json",
     "docs": "https://magicui.design/docs/components/flickering-grid",
     "useWhen": "A technical or infrastructure product needs a background that suggests activity and machines.",
-    "status": 200
+    "name": "flickering-grid",
+    "url": "https://magicui.design/r/flickering-grid.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Glare Hover",
-    "name": "glare-hover",
-    "url": "https://magicui.design/r/glare-hover.json",
     "docs": "https://magicui.design/docs/components/glare-hover",
     "useWhen": "A card should catch light diagonally on hover — glass-like, done with CSS only, no extra keyframes.",
-    "status": 200
+    "name": "glare-hover",
+    "url": "https://magicui.design/r/glare-hover.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Globe",
-    "name": "globe",
-    "url": "https://magicui.design/r/globe.json",
     "docs": "https://magicui.design/docs/components/globe",
     "useWhen": "An interactive globe with markers, when the claim is worldwide reach and a flat map undersells it.",
-    "status": 200
+    "name": "globe",
+    "url": "https://magicui.design/r/globe.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Glyph Matrix",
-    "name": "glyph-matrix",
-    "url": "https://magicui.design/r/glyph-matrix.json",
     "docs": "https://magicui.design/docs/components/glyph-matrix",
     "useWhen": "A canvas background of shifting glyphs, for a developer or security product where \"data moving\" is the mood.",
-    "status": 200
+    "name": "glyph-matrix",
+    "url": "https://magicui.design/r/glyph-matrix.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Grid Pattern",
-    "name": "grid-pattern",
-    "url": "https://magicui.design/r/grid-pattern.json",
     "docs": "https://magicui.design/docs/components/grid-pattern",
     "useWhen": "A static blueprint-style grid behind a section — the calm baseline the animated variants build on.",
-    "status": 200
+    "name": "grid-pattern",
+    "url": "https://magicui.design/r/grid-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Hero Video Dialog",
-    "name": "hero-video-dialog",
-    "url": "https://magicui.design/r/hero-video-dialog.json",
     "docs": "https://magicui.design/docs/components/hero-video-dialog",
     "useWhen": "The demo video must not autoplay in the hero, but the thumbnail should open it in a proper dialog.",
-    "status": 200
+    "name": "hero-video-dialog",
+    "url": "https://magicui.design/r/hero-video-dialog.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Hexagon Pattern",
-    "name": "hexagon-pattern",
-    "url": "https://magicui.design/r/hexagon-pattern.json",
     "docs": "https://magicui.design/docs/components/hexagon-pattern",
     "useWhen": "A background with more structure than dots, for a technical or scientific feel.",
-    "status": 200
+    "name": "hexagon-pattern",
+    "url": "https://magicui.design/r/hexagon-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Highlighter",
-    "name": "highlighter",
-    "url": "https://magicui.design/r/highlighter.json",
     "docs": "https://magicui.design/docs/components/highlighter",
     "useWhen": "A phrase in a paragraph is the point and needs a hand-drawn marker stroke instead of a `<mark>` block.",
-    "status": 200
+    "name": "highlighter",
+    "url": "https://magicui.design/r/highlighter.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Hyper Text",
-    "name": "hyper-text",
-    "url": "https://magicui.design/r/hyper-text.json",
     "docs": "https://magicui.design/docs/components/hyper-text",
     "useWhen": "A heading should scramble into place on hover or on view, for a technical brand.",
-    "status": 200
+    "name": "hyper-text",
+    "url": "https://magicui.design/r/hyper-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Icon Cloud",
-    "name": "icon-cloud",
-    "url": "https://magicui.design/r/icon-cloud.json",
     "docs": "https://magicui.design/docs/components/icon-cloud",
     "useWhen": "You support dozens of integrations and a rotating sphere of logos shows the breadth a list would bury.",
-    "status": 200
+    "name": "icon-cloud",
+    "url": "https://magicui.design/r/icon-cloud.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Interactive Grid Pattern",
-    "name": "interactive-grid-pattern",
-    "url": "https://magicui.design/r/interactive-grid-pattern.json",
     "docs": "https://magicui.design/docs/components/interactive-grid-pattern",
     "useWhen": "The background should respond to the pointer, making an otherwise static section feel touchable.",
-    "status": 200
+    "name": "interactive-grid-pattern",
+    "url": "https://magicui.design/r/interactive-grid-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Interactive Hover Button",
-    "name": "interactive-hover-button",
-    "url": "https://magicui.design/r/interactive-hover-button.json",
     "docs": "https://magicui.design/docs/components/interactive-hover-button",
     "useWhen": "The primary call to action should transform on hover, not merely darken.",
-    "status": 200
+    "name": "interactive-hover-button",
+    "url": "https://magicui.design/r/interactive-hover-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "iPhone",
-    "name": "iphone",
-    "url": "https://magicui.design/r/iphone.json",
     "docs": "https://magicui.design/docs/components/iphone",
     "useWhen": "A mobile screenshot needs an iPhone frame with correct proportions and notch.",
-    "status": 200
+    "name": "iphone",
+    "url": "https://magicui.design/r/iphone.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Kinetic Text",
-    "name": "kinetic-text",
-    "url": "https://magicui.design/r/kinetic-text.json",
     "docs": "https://magicui.design/docs/components/kinetic-text",
     "useWhen": "A variable font is loaded and hovering the headline should shift character weight — typography as the interaction.",
-    "status": 200
+    "name": "kinetic-text",
+    "url": "https://magicui.design/r/kinetic-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Lens",
-    "name": "lens",
-    "url": "https://magicui.design/r/lens.json",
     "docs": "https://magicui.design/docs/components/lens",
     "useWhen": "Detail matters in an image (a dashboard screenshot, a product photo) and users should magnify it in place.",
-    "status": 200
+    "name": "lens",
+    "url": "https://magicui.design/r/lens.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Light Rays",
-    "name": "light-rays",
-    "url": "https://magicui.design/r/light-rays.json",
     "docs": "https://magicui.design/docs/components/light-rays",
     "useWhen": "A dark hero needs directional light so the composition has a source instead of a flat gradient.",
-    "status": 200
+    "name": "light-rays",
+    "url": "https://magicui.design/r/light-rays.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Line Shadow Text",
-    "name": "line-shadow-text",
-    "url": "https://magicui.design/r/line-shadow-text.json",
     "docs": "https://magicui.design/docs/components/line-shadow-text",
     "useWhen": "A headline needs an offset line shadow for editorial weight, with an animated stroke.",
-    "status": 200
+    "name": "line-shadow-text",
+    "url": "https://magicui.design/r/line-shadow-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Magic Card",
-    "name": "magic-card",
-    "url": "https://magicui.design/r/magic-card.json",
     "docs": "https://magicui.design/docs/components/magic-card",
     "useWhen": "A grid of cards where the border should follow the cursor, so hover targets are unmistakable.",
-    "status": 200
+    "name": "magic-card",
+    "url": "https://magicui.design/r/magic-card.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Marquee",
-    "name": "marquee",
-    "url": "https://magicui.design/r/marquee.json",
     "docs": "https://magicui.design/docs/components/marquee",
     "useWhen": "Logos or testimonials outnumber the available width and infinite scroll beats a cramped grid.",
-    "status": 200
+    "name": "marquee",
+    "url": "https://magicui.design/r/marquee.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Meteors",
-    "name": "meteors",
-    "url": "https://magicui.design/r/meteors.json",
     "docs": "https://magicui.design/docs/components/meteors",
     "useWhen": "A dark section needs slow diagonal motion in the background — space-themed, cheap to run.",
-    "status": 200
+    "name": "meteors",
+    "url": "https://magicui.design/r/meteors.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Morphing Text",
-    "name": "morphing-text",
-    "url": "https://magicui.design/r/morphing-text.json",
     "docs": "https://magicui.design/docs/components/morphing-text",
     "useWhen": "One headline word cycles through several values and letters should melt between them rather than cut.",
-    "status": 200
+    "name": "morphing-text",
+    "url": "https://magicui.design/r/morphing-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Neon Gradient Card",
-    "name": "neon-gradient-card",
-    "url": "https://magicui.design/r/neon-gradient-card.json",
     "docs": "https://magicui.design/docs/components/neon-gradient-card",
     "useWhen": "A card must glow hard against a dark background — highest-attention treatment in the set.",
-    "status": 200
+    "name": "neon-gradient-card",
+    "url": "https://magicui.design/r/neon-gradient-card.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Noise Texture",
-    "name": "noise-texture",
-    "url": "https://magicui.design/r/noise-texture.json",
     "docs": "https://magicui.design/docs/components/noise-texture",
     "useWhen": "Flat gradients band on real displays; an SVG turbulence layer removes the plastic look.",
-    "status": 200
+    "name": "noise-texture",
+    "url": "https://magicui.design/r/noise-texture.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Number Ticker",
-    "name": "number-ticker",
-    "url": "https://magicui.design/r/number-ticker.json",
     "docs": "https://magicui.design/docs/components/number-ticker",
     "useWhen": "A stats row should count up when it scrolls into view, so the numbers get read instead of skipped.",
-    "status": 200
+    "name": "number-ticker",
+    "url": "https://magicui.design/r/number-ticker.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Orbiting Circles",
-    "name": "orbiting-circles",
-    "url": "https://magicui.design/r/orbiting-circles.json",
     "docs": "https://magicui.design/docs/components/orbiting-circles",
     "useWhen": "Your product sits at the centre of an ecosystem, and orbiting logos say that faster than a diagram.",
-    "status": 200
+    "name": "orbiting-circles",
+    "url": "https://magicui.design/r/orbiting-circles.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Particles",
-    "name": "particles",
-    "url": "https://magicui.design/r/particles.json",
     "docs": "https://magicui.design/docs/components/particles",
     "useWhen": "A hero needs ambient depth that reacts to the pointer without a WebGL dependency.",
-    "status": 200
+    "name": "particles",
+    "url": "https://magicui.design/r/particles.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Pixel Image",
-    "name": "pixel-image",
-    "url": "https://magicui.design/r/pixel-image.json",
     "docs": "https://magicui.design/docs/components/pixel-image",
     "useWhen": "An image should resolve from pixelation, turning a plain asset into a reveal.",
-    "status": 200
+    "name": "pixel-image",
+    "url": "https://magicui.design/r/pixel-image.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Pointer",
-    "name": "pointer",
-    "url": "https://magicui.design/r/pointer.json",
     "docs": "https://magicui.design/docs/components/pointer",
     "useWhen": "A demo area needs a custom cursor to signal \"this is interactive, try it\".",
-    "status": 200
+    "name": "pointer",
+    "url": "https://magicui.design/r/pointer.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Progressive Blur",
-    "name": "progressive-blur",
-    "url": "https://magicui.design/r/progressive-blur.json",
     "docs": "https://magicui.design/docs/components/progressive-blur",
     "useWhen": "Scrollable content must fade under a sticky header or toolbar instead of being cut off hard.",
-    "status": 200
+    "name": "progressive-blur",
+    "url": "https://magicui.design/r/progressive-blur.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Pulsating Button",
-    "name": "pulsating-button",
-    "url": "https://magicui.design/r/pulsating-button.json",
     "docs": "https://magicui.design/docs/components/pulsating-button",
     "useWhen": "One call to action must be found without reading — waitlist, live event, limited offer.",
-    "status": 200
+    "name": "pulsating-button",
+    "url": "https://magicui.design/r/pulsating-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Rainbow Button",
-    "name": "rainbow-button",
-    "url": "https://magicui.design/r/rainbow-button.json",
     "docs": "https://magicui.design/docs/components/rainbow-button",
     "useWhen": "The primary button carries the brand's colour range, when a single accent colour looks too plain.",
-    "status": 200
+    "name": "rainbow-button",
+    "url": "https://magicui.design/r/rainbow-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Retro Grid",
-    "name": "retro-grid",
-    "url": "https://magicui.design/r/retro-grid.json",
     "docs": "https://magicui.design/docs/components/retro-grid",
     "useWhen": "A synthwave horizon grid, for a brand that leans deliberately retro.",
-    "status": 200
+    "name": "retro-grid",
+    "url": "https://magicui.design/r/retro-grid.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Ripple",
-    "name": "ripple",
-    "url": "https://magicui.design/r/ripple.json",
     "docs": "https://magicui.design/docs/components/ripple",
     "useWhen": "Concentric rings behind a centred hero element, suggesting broadcast or reach.",
-    "status": 200
+    "name": "ripple",
+    "url": "https://magicui.design/r/ripple.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Ripple Button",
-    "name": "ripple-button",
-    "url": "https://magicui.design/r/ripple-button.json",
     "docs": "https://magicui.design/docs/components/ripple-button",
     "useWhen": "A button should show where it was clicked, Material-style, on touch-heavy surfaces.",
-    "status": 200
+    "name": "ripple-button",
+    "url": "https://magicui.design/r/ripple-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Safari",
-    "name": "safari",
-    "url": "https://magicui.design/r/safari.json",
     "docs": "https://magicui.design/docs/components/safari",
     "useWhen": "A web app screenshot needs a browser chrome frame so it reads as a real product, with your URL in the bar.",
-    "status": 200
+    "name": "safari",
+    "url": "https://magicui.design/r/safari.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Scroll Based Velocity",
-    "name": "scroll-based-velocity",
-    "url": "https://magicui.design/r/scroll-based-velocity.json",
     "docs": "https://magicui.design/docs/components/scroll-based-velocity",
     "useWhen": "A text strip should speed up and reverse with scroll direction, tying motion to the reader's own input.",
-    "status": 200
+    "name": "scroll-based-velocity",
+    "url": "https://magicui.design/r/scroll-based-velocity.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Scroll Progress",
-    "name": "scroll-progress",
-    "url": "https://magicui.design/r/scroll-progress.json",
     "docs": "https://magicui.design/docs/components/scroll-progress",
     "useWhen": "Long-form content needs a reading indicator so the length is visible from the first screen.",
-    "status": 200
+    "name": "scroll-progress",
+    "url": "https://magicui.design/r/scroll-progress.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Shimmer Button",
-    "name": "shimmer-button",
-    "url": "https://magicui.design/r/shimmer-button.json",
     "docs": "https://magicui.design/docs/components/shimmer-button",
     "useWhen": "A premium call to action with a light sweep — quieter than pulsating, louder than a solid fill.",
-    "status": 200
+    "name": "shimmer-button",
+    "url": "https://magicui.design/r/shimmer-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Shine Border",
-    "name": "shine-border",
-    "url": "https://magicui.design/r/shine-border.json",
     "docs": "https://magicui.design/docs/components/shine-border",
     "useWhen": "A card border should shine periodically, marking it as featured without the constant motion of a beam.",
-    "status": 200
+    "name": "shine-border",
+    "url": "https://magicui.design/r/shine-border.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Shiny Button",
-    "name": "shiny-button",
-    "url": "https://magicui.design/r/shiny-button.json",
     "docs": "https://magicui.design/docs/components/shiny-button",
     "useWhen": "A secondary action still needs polish, but must not compete with the primary one.",
-    "status": 200
+    "name": "shiny-button",
+    "url": "https://magicui.design/r/shiny-button.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Smooth Cursor",
-    "name": "smooth-cursor",
-    "url": "https://magicui.design/r/smooth-cursor.json",
     "docs": "https://magicui.design/docs/components/smooth-cursor",
     "useWhen": "A portfolio or agency site replaces the system cursor with a lagging, springy one.",
-    "status": 200
+    "name": "smooth-cursor",
+    "url": "https://magicui.design/r/smooth-cursor.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Sparkles Text",
-    "name": "sparkles-text",
-    "url": "https://magicui.design/r/sparkles-text.json",
     "docs": "https://magicui.design/docs/components/sparkles-text",
     "useWhen": "A word should sparkle — typically the AI or \"magic\" feature name in the hero.",
-    "status": 200
+    "name": "sparkles-text",
+    "url": "https://magicui.design/r/sparkles-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Spinning Text",
-    "name": "spinning-text",
-    "url": "https://magicui.design/r/spinning-text.json",
     "docs": "https://magicui.design/docs/components/spinning-text",
     "useWhen": "A circular text badge rotates around a mark or a scroll cue.",
-    "status": 200
+    "name": "spinning-text",
+    "url": "https://magicui.design/r/spinning-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Striped Pattern",
-    "name": "striped-pattern",
-    "url": "https://magicui.design/r/striped-pattern.json",
     "docs": "https://magicui.design/docs/components/striped-pattern",
     "useWhen": "A diagonal striped background for a section that needs separation without a hard divider.",
-    "status": 200
+    "name": "striped-pattern",
+    "url": "https://magicui.design/r/striped-pattern.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Terminal",
-    "name": "terminal",
-    "url": "https://magicui.design/r/terminal.json",
     "docs": "https://magicui.design/docs/components/terminal",
     "useWhen": "A CLI product should show its own output typing itself out — the most honest demo a CLI can give.",
-    "status": 200
+    "name": "terminal",
+    "url": "https://magicui.design/r/terminal.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Text 3D Flip",
-    "name": "text-3d-flip",
-    "url": "https://magicui.design/r/text-3d-flip.json",
     "docs": "https://magicui.design/docs/components/text-3d-flip",
     "useWhen": "Letters flip in 3D on hover with a stagger, for a playful headline.",
-    "status": 200
+    "name": "text-3d-flip",
+    "url": "https://magicui.design/r/text-3d-flip.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Text Animate",
-    "name": "text-animate",
-    "url": "https://magicui.design/r/text-animate.json",
     "docs": "https://magicui.design/docs/components/text-animate",
     "useWhen": "You need one text-entrance API covering fade, slide, blur, and stagger, instead of four components.",
-    "status": 200
+    "name": "text-animate",
+    "url": "https://magicui.design/r/text-animate.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Text Reveal",
-    "name": "text-reveal",
-    "url": "https://magicui.design/r/text-reveal.json",
     "docs": "https://magicui.design/docs/components/text-reveal",
     "useWhen": "A statement should reveal word by word as the user scrolls it, forcing a slower read.",
-    "status": 200
+    "name": "text-reveal",
+    "url": "https://magicui.design/r/text-reveal.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Tweet Card",
-    "name": "tweet-card",
-    "url": "https://magicui.design/r/tweet-card.json",
     "docs": "https://magicui.design/docs/components/tweet-card",
     "useWhen": "Real posts are the testimonials, and the embedded X widget would cost a third-party script and a layout shift.",
-    "status": 200
+    "name": "tweet-card",
+    "url": "https://magicui.design/r/tweet-card.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Typing Animation",
-    "name": "typing-animation",
-    "url": "https://magicui.design/r/typing-animation.json",
     "docs": "https://magicui.design/docs/components/typing-animation",
     "useWhen": "A headline or prompt example should type itself, mimicking someone using the product.",
-    "status": 200
+    "name": "typing-animation",
+    "url": "https://magicui.design/r/typing-animation.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Video Text",
-    "name": "video-text",
-    "url": "https://magicui.design/r/video-text.json",
     "docs": "https://magicui.design/docs/components/video-text",
     "useWhen": "Video plays inside the letterforms of a headline, for a bold single-word hero.",
-    "status": 200
+    "name": "video-text",
+    "url": "https://magicui.design/r/video-text.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Warp Background",
-    "name": "warp-background",
-    "url": "https://magicui.design/r/warp-background.json",
     "docs": "https://magicui.design/docs/components/warp-background",
     "useWhen": "A section background should warp toward a vanishing point, suggesting speed.",
-    "status": 200
+    "name": "warp-background",
+    "url": "https://magicui.design/r/warp-background.json",
+    "via": "index"
   },
   {
     "resource": "Magic UI",
     "alias": "magicui",
     "component": "Word Rotate",
-    "name": "word-rotate",
-    "url": "https://magicui.design/r/word-rotate.json",
     "docs": "https://magicui.design/docs/components/word-rotate",
     "useWhen": "The headline names several audiences and the last word cycles cleanly between them.",
-    "status": 200
+    "name": "word-rotate",
+    "url": "https://magicui.design/r/word-rotate.json",
+    "via": "index"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Supabase Client Libraries",
-    "name": "client",
-    "url": "https://supabase.com/ui/r/client.json",
     "docs": "https://supabase.com/ui/docs/nextjs/client",
     "useWhen": "First step in a new App Router project — server, client, and middleware clients set up so sessions survive server components.",
-    "status": 404
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Project setup documentation, not a component."
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Password-Based Auth",
-    "name": "password-based-auth",
-    "url": "https://supabase.com/ui/r/password-based-auth.json",
     "docs": "https://supabase.com/ui/docs/nextjs/password-based-auth",
     "useWhen": "You need the full email/password surface, including the reset and update flows people forget until launch.",
-    "status": 404
+    "name": "password-based-auth-nextjs",
+    "url": "https://supabase.com/ui/r/password-based-auth-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Social Auth",
-    "name": "social-auth",
-    "url": "https://supabase.com/ui/r/social-auth.json",
     "docs": "https://supabase.com/ui/docs/nextjs/social-auth",
     "useWhen": "Sign-in should be one click via an OAuth provider, with the callback route already handled.",
-    "status": 404
+    "name": "social-auth-nextjs",
+    "url": "https://supabase.com/ui/r/social-auth-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Dropzone",
-    "name": "dropzone",
-    "url": "https://supabase.com/ui/r/dropzone.json",
     "docs": "https://supabase.com/ui/docs/nextjs/dropzone",
     "useWhen": "Uploads go to Supabase Storage and you want bucket paths, progress, and errors wired rather than re-derived.",
-    "status": 404
+    "name": "dropzone-nextjs",
+    "url": "https://supabase.com/ui/r/dropzone-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Current User Avatar",
-    "name": "current-user-avatar",
-    "url": "https://supabase.com/ui/r/current-user-avatar.json",
     "docs": "https://supabase.com/ui/docs/nextjs/current-user-avatar",
     "useWhen": "The header avatar must reflect the signed-in user without you plumbing the session down to it.",
-    "status": 404
+    "name": "current-user-avatar-nextjs",
+    "url": "https://supabase.com/ui/r/current-user-avatar-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Realtime Avatar Stack",
-    "name": "realtime-avatar-stack",
-    "url": "https://supabase.com/ui/r/realtime-avatar-stack.json",
     "docs": "https://supabase.com/ui/docs/nextjs/realtime-avatar-stack",
     "useWhen": "Users should see who else is in the document or room right now — presence, not a member list.",
-    "status": 404
+    "name": "realtime-avatar-stack-nextjs",
+    "url": "https://supabase.com/ui/r/realtime-avatar-stack-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Realtime Chat",
-    "name": "realtime-chat",
-    "url": "https://supabase.com/ui/r/realtime-chat.json",
     "docs": "https://supabase.com/ui/docs/nextjs/realtime-chat",
     "useWhen": "A room chat needs to exist and running a separate socket service for it is not worth it.",
-    "status": 404
+    "name": "realtime-chat-nextjs",
+    "url": "https://supabase.com/ui/r/realtime-chat-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Realtime Cursor",
-    "name": "realtime-cursor",
-    "url": "https://supabase.com/ui/r/realtime-cursor.json",
     "docs": "https://supabase.com/ui/docs/nextjs/realtime-cursor",
     "useWhen": "Collaboration must feel live — other people's cursors moving is the cheapest proof of that.",
-    "status": 404
+    "name": "realtime-cursor-nextjs",
+    "url": "https://supabase.com/ui/r/realtime-cursor-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Realtime Monaco",
-    "name": "realtime-monaco",
-    "url": "https://supabase.com/ui/r/realtime-monaco.json",
     "docs": "https://supabase.com/ui/docs/nextjs/realtime-monaco",
     "useWhen": "Multiple people edit code in the same buffer and you need a working collaborative editor.",
-    "status": 404
+    "name": "realtime-monaco-nextjs",
+    "url": "https://supabase.com/ui/r/realtime-monaco-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Infinite Query Hook",
-    "name": "infinite-query-hook",
-    "url": "https://supabase.com/ui/r/infinite-query-hook.json",
     "docs": "https://supabase.com/ui/docs/infinite-query-hook",
     "useWhen": "A table is too large to fetch at once and paging must stay typed against your schema.",
-    "status": 200
+    "name": "infinite-query-hook",
+    "url": "https://supabase.com/ui/r/infinite-query-hook.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Platform Kit",
-    "name": "platform-kit",
-    "url": "https://supabase.com/ui/r/platform-kit.json",
     "docs": "https://supabase.com/ui/docs/platform/platform-kit",
     "useWhen": "Your own users manage their Supabase project from inside your app — database, auth, storage, secrets, logs embedded.",
-    "status": 404
+    "name": "platform-kit-nextjs",
+    "url": "https://supabase.com/ui/r/platform-kit-nextjs.json",
+    "via": "probe"
   },
   {
     "resource": "Supabase UI",
     "alias": "supabase",
     "component": "Agent Skills",
-    "name": "skills",
-    "url": "https://supabase.com/ui/r/skills.json",
     "docs": "https://supabase.com/ui/docs/ai-editors-rules/skills",
     "useWhen": "An AI agent writes Supabase code in this repo and should follow project conventions instead of guessing RLS.",
-    "status": 404
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Editor rules for an AI agent, not a component."
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Command Menu",
-    "name": "command-menu",
-    "url": "https://ui.unlumen.com/r/command-menu.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/command-menu",
     "useWhen": "A palette is the main navigation and its open, filter, and selection motion should feel deliberate.",
-    "status": 200
+    "name": "command-menu",
+    "url": "https://ui.unlumen.com/r/command-menu.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Cursor",
-    "name": "cursor",
-    "url": "https://ui.unlumen.com/r/cursor.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/cursor",
     "useWhen": "A portfolio or campaign page replaces the system cursor to make the whole surface feel authored.",
-    "status": 200
+    "name": "cursor",
+    "url": "https://ui.unlumen.com/r/cursor.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Floating Tooltip",
-    "name": "floating-tooltip",
-    "url": "https://ui.unlumen.com/r/floating-tooltip.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/floating-tooltip",
     "useWhen": "The hover target is large (a map, a chart, an image) and a corner-anchored tooltip would lose the pointer.",
-    "status": 200
+    "name": "floating-tooltip",
+    "url": "https://ui.unlumen.com/r/floating-tooltip.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Glowing Badge",
-    "name": "glowing-badge",
-    "url": "https://ui.unlumen.com/r/glowing-badge.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/glowing-badge",
     "useWhen": "One status must be visible in peripheral vision — live, recording, new — without becoming an alarm.",
-    "status": 200
+    "name": "glowing-badge",
+    "url": "https://ui.unlumen.com/r/glowing-badge.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Highlight",
-    "name": "highlight",
-    "url": "https://ui.unlumen.com/r/highlight.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/highlight",
     "useWhen": "A phrase inside a heading should be emphasised on entry rather than merely coloured.",
-    "status": 200
+    "name": "highlight",
+    "url": "https://ui.unlumen.com/r/highlight.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Kbd",
-    "name": "kbd",
-    "url": "https://ui.unlumen.com/r/kbd.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/kbd",
     "useWhen": "Shortcut labels sit next to this set's command menu and should share its styling.",
-    "status": 200
+    "name": "kbd",
+    "url": "https://ui.unlumen.com/r/kbd.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Magnetic Button",
-    "name": "magnetic-button",
-    "url": "https://ui.unlumen.com/r/magnetic-button.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/magnetic-button",
     "useWhen": "The primary call to action should lean toward the cursor, making it easier to hit and harder to ignore.",
-    "status": 200
+    "name": "magnetic-button",
+    "url": "https://ui.unlumen.com/r/magnetic-button.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Orbiting Skills",
-    "name": "orbiting-skills",
-    "url": "https://ui.unlumen.com/r/orbiting-skills.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/orbiting-skills",
     "useWhen": "A CV or about page shows a tool set, and a logo cluster in orbit beats a list of badges.",
-    "status": 200
+    "name": "orbiting-skills",
+    "url": "https://ui.unlumen.com/r/orbiting-skills.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Progressive Blur",
-    "name": "progressive-blur",
-    "url": "https://ui.unlumen.com/r/progressive-blur.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/progressive-blur",
     "useWhen": "Content must fade under a sticky header or bottom bar instead of being clipped hard.",
-    "status": 200
+    "name": "progressive-blur",
+    "url": "https://ui.unlumen.com/r/progressive-blur.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Scramble Text",
-    "name": "scramble-text",
-    "url": "https://ui.unlumen.com/r/scramble-text.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/scramble-text",
     "useWhen": "Technical copy should resolve out of noise, matching a terminal or security brand.",
-    "status": 200
+    "name": "scramble-text",
+    "url": "https://ui.unlumen.com/r/scramble-text.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Shimmer Skeleton",
-    "name": "shimmer-skeleton",
-    "url": "https://ui.unlumen.com/r/shimmer-skeleton.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/shimmer-skeleton",
     "useWhen": "A loading placeholder needs to look alive so slow requests do not read as frozen.",
-    "status": 200
+    "name": "shimmer-skeleton",
+    "url": "https://ui.unlumen.com/r/shimmer-skeleton.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Shimmering Text",
-    "name": "shimmering-text",
-    "url": "https://ui.unlumen.com/r/shimmering-text.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/shimmering-text",
     "useWhen": "A label needs a light sweep for emphasis without displacing anything around it.",
-    "status": 200
+    "name": "shimmering-text",
+    "url": "https://ui.unlumen.com/r/shimmering-text.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Slider",
-    "name": "slider",
-    "url": "https://ui.unlumen.com/r/slider.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/slider",
     "useWhen": "A range control in an animated context, where the stock shadcn slider would feel inert.",
-    "status": 200
+    "name": "slider",
+    "url": "https://ui.unlumen.com/r/slider.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Switch",
-    "name": "switch",
-    "url": "https://ui.unlumen.com/r/switch.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/switch",
     "useWhen": "A toggle whose thumb motion should match the rest of this set.",
-    "status": 200
+    "name": "switch",
+    "url": "https://ui.unlumen.com/r/switch.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Text Reveal",
-    "name": "text-reveal",
-    "url": "https://ui.unlumen.com/r/text-reveal.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/text-reveal",
     "useWhen": "A statement reveals as it scrolls into view, slowing the reader down on purpose.",
-    "status": 200
+    "name": "text-reveal",
+    "url": "https://ui.unlumen.com/r/text-reveal.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Theme Switch",
-    "name": "theme-switch",
-    "url": "https://ui.unlumen.com/r/theme-switch.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/theme-switch",
     "useWhen": "Theme switching is a visible moment rather than a setting buried in a menu.",
-    "status": 200
+    "name": "theme-switch",
+    "url": "https://ui.unlumen.com/r/theme-switch.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Tilt Card",
-    "name": "tilt-card",
-    "url": "https://ui.unlumen.com/r/tilt-card.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/tilt-card",
     "useWhen": "A card should gain depth on hover, marking it as interactive in a grid of many.",
-    "status": 200
+    "name": "tilt-card",
+    "url": "https://ui.unlumen.com/r/tilt-card.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Tilt",
-    "name": "tilt",
-    "url": "https://ui.unlumen.com/r/tilt.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/tilt",
     "useWhen": "You want the same tilt behaviour around your own content — the primitive behind Tilt Card.",
-    "status": 200
+    "name": "tilt",
+    "url": "https://ui.unlumen.com/r/tilt.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Tooltip Preview",
-    "name": "tooltip-preview",
-    "url": "https://ui.unlumen.com/r/tooltip-preview.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/tooltip-preview",
     "useWhen": "A link should preview its destination, so the user can decide without navigating away.",
-    "status": 200
+    "name": "tooltip-preview",
+    "url": "https://ui.unlumen.com/r/tooltip-preview.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Velocity Highlight",
-    "name": "velocity-highlight",
-    "url": "https://ui.unlumen.com/r/velocity-highlight.json",
     "docs": "https://ui.unlumen.com/docs/ui/unlumen/velocity-highlight",
     "useWhen": "Emphasis should react to how fast the user scrolls, tying the effect to their own input.",
-    "status": 200
+    "name": "velocity-highlight",
+    "url": "https://ui.unlumen.com/r/velocity-highlight.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Copy Button",
-    "name": "copy",
-    "url": "https://ui.unlumen.com/r/copy.json",
     "docs": "https://ui.unlumen.com/docs/ui/buttons/copy",
     "useWhen": "A token, command, or ID is copied often and the button must confirm and reset itself.",
-    "status": 200
+    "name": "copy",
+    "url": "https://ui.unlumen.com/r/copy.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Glow Button",
-    "name": "glow",
-    "url": "https://ui.unlumen.com/r/glow.json",
     "docs": "https://ui.unlumen.com/docs/ui/buttons/glow",
     "useWhen": "The hero call to action must survive a busy or dark background.",
-    "status": 200
+    "name": "glow",
+    "url": "https://ui.unlumen.com/r/glow.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Refresh Button",
-    "name": "refresh",
-    "url": "https://ui.unlumen.com/r/refresh.json",
     "docs": "https://ui.unlumen.com/docs/ui/buttons/refresh",
     "useWhen": "Data can be re-fetched manually and the spin must be tied to the actual request, not a fixed timeout.",
-    "status": 200
+    "name": "refresh",
+    "url": "https://ui.unlumen.com/r/refresh.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Pixel Background",
-    "name": "pixel",
-    "url": "https://ui.unlumen.com/r/pixel.json",
     "docs": "https://ui.unlumen.com/docs/ui/backgrounds/pixel",
     "useWhen": "A retro or game-adjacent brand needs an animated pixel field behind a section.",
-    "status": 401
+    "name": "pixel",
+    "url": "https://ui.unlumen.com/r/pixel.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Clipped Circle",
-    "name": "clipped-circle",
-    "url": "https://ui.unlumen.com/r/clipped-circle.json",
     "docs": "https://ui.unlumen.com/docs/ui/effects/clipped-circle",
     "useWhen": "A section or image reveals through an expanding circular clip, used as a transition between states.",
-    "status": 200
+    "name": "clipped-circle",
+    "url": "https://ui.unlumen.com/r/clipped-circle.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Count Up",
-    "name": "count-up",
-    "url": "https://ui.unlumen.com/r/count-up.json",
     "docs": "https://ui.unlumen.com/docs/ui/effects/count-up",
     "useWhen": "Metrics should count when they enter the viewport, so the numbers get read instead of scrolled past.",
-    "status": 200
+    "name": "count-up",
+    "url": "https://ui.unlumen.com/r/count-up.json",
+    "via": "index"
   },
   {
     "resource": "Unlumen UI",
     "alias": "unlumen",
     "component": "Math Graph",
-    "name": "math-graph",
-    "url": "https://ui.unlumen.com/r/math-graph.json",
     "docs": "https://ui.unlumen.com/docs/ui/effects/math-graph",
     "useWhen": "A technical page needs a plotted curve as decoration, without pulling in a charting library.",
-    "status": 200
+    "name": "math-graph",
+    "url": "https://ui.unlumen.com/r/math-graph.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Neon Drift",
-    "name": "dotm-square-1",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-1.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-1.json",
     "useWhen": "You need a square matrix loader with a diagonal ripple.",
-    "status": 200
+    "name": "dotm-square-1",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-1.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Pulse Ladder",
-    "name": "dotm-square-2",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-2.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-2.json",
     "useWhen": "You need a square matrix loader with a stepped snake motion.",
-    "status": 200
+    "name": "dotm-square-2",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-2.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Core Spiral",
-    "name": "dotm-square-3",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-3.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-3.json",
     "useWhen": "You need a square matrix loader that spirals toward the center.",
-    "status": 200
+    "name": "dotm-square-3",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-3.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Twin Orbit",
-    "name": "dotm-square-4",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-4.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-4.json",
     "useWhen": "You need a square matrix loader with opposing ring motion.",
-    "status": 200
+    "name": "dotm-square-4",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-4.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Prism Sweep",
-    "name": "dotm-square-5",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-5.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-5.json",
     "useWhen": "You need a square matrix loader with alternating diagonal movement.",
-    "status": 200
+    "name": "dotm-square-5",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-5.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Flux Columns",
-    "name": "dotm-square-6",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-6.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-6.json",
     "useWhen": "You need a square matrix loader with vertical column motion.",
-    "status": 200
+    "name": "dotm-square-6",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-6.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Block Drop",
-    "name": "dotm-square-7",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-7.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-7.json",
     "useWhen": "You need a square matrix loader with a stacking block feel.",
-    "status": 200
+    "name": "dotm-square-7",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-7.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Strobe Stack",
-    "name": "dotm-square-8",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-8.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-8.json",
     "useWhen": "You need a square matrix loader with stacked columns and a flash beat.",
-    "status": 200
+    "name": "dotm-square-8",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-8.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Glyph Pulse",
-    "name": "dotm-square-9",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-9.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-9.json",
     "useWhen": "You need a square matrix loader with braille-like glyph changes.",
-    "status": 200
+    "name": "dotm-square-9",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-9.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "CRT Glide",
-    "name": "dotm-square-10",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-10.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-10.json",
     "useWhen": "You need a square matrix loader with a scanline effect.",
-    "status": 200
+    "name": "dotm-square-10",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-10.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Echo Ring",
-    "name": "dotm-square-11",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-11.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-11.json",
     "useWhen": "You need a square matrix loader with concentric ripple motion.",
-    "status": 200
+    "name": "dotm-square-11",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-11.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Origin Wave",
-    "name": "dotm-square-12",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-12.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-12.json",
     "useWhen": "You need a square matrix loader that expands from one origin point.",
-    "status": 200
+    "name": "dotm-square-12",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-12.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Core Rotor",
-    "name": "dotm-square-13",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-13.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-13.json",
     "useWhen": "You need a square matrix loader with a compact rotor.",
-    "status": 200
+    "name": "dotm-square-13",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-13.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Prism Bloom",
-    "name": "dotm-square-14",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-14.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-14.json",
     "useWhen": "You need a square matrix loader with radial bloom motifs.",
-    "status": 200
+    "name": "dotm-square-14",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-14.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Helix Glow",
-    "name": "dotm-square-15",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-15.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-15.json",
     "useWhen": "You need a square matrix loader with a DNA-like helix.",
-    "status": 200
+    "name": "dotm-square-15",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-15.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Helix Core",
-    "name": "dotm-square-16",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-16.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-16.json",
     "useWhen": "You need a square matrix loader with a narrow central helix.",
-    "status": 200
+    "name": "dotm-square-16",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-16.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Half Helix",
-    "name": "dotm-square-17",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-17.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-17.json",
     "useWhen": "You need a square matrix loader with a single-strand helix.",
-    "status": 200
+    "name": "dotm-square-17",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-17.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Sound Bars",
-    "name": "dotm-square-18",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-18.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-18.json",
     "useWhen": "You need a square matrix loader that reads like audio levels.",
-    "status": 200
+    "name": "dotm-square-18",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-18.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Infinity Run",
-    "name": "dotm-square-19",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-19.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-19.json",
     "useWhen": "You need a square matrix loader with a figure-eight trace.",
-    "status": 200
+    "name": "dotm-square-19",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-19.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Mobius Run",
-    "name": "dotm-square-20",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-20.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-20.json",
     "useWhen": "You need a square matrix loader with outer-ring chase motion.",
-    "status": 200
+    "name": "dotm-square-20",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-square-20.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Halo Drift",
-    "name": "dotm-circular-1",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-1.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-1.json",
     "useWhen": "You need a circular loader with a diagonal helix drift.",
-    "status": 200
+    "name": "dotm-circular-1",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-1.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Tri Orbit",
-    "name": "dotm-circular-2",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-2.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-2.json",
     "useWhen": "You need a circular loader with three orbiting heads.",
-    "status": 200
+    "name": "dotm-circular-2",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-2.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Plasma Veil",
-    "name": "dotm-circular-3",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-3.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-3.json",
     "useWhen": "You need a circular loader with a soft plasma sweep.",
-    "status": 200
+    "name": "dotm-circular-3",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-3.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Radar Arc",
-    "name": "dotm-circular-4",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-4.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-4.json",
     "useWhen": "You need a circular loader with a rotating radar beam.",
-    "status": 200
+    "name": "dotm-circular-4",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-4.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Nova Wheel",
-    "name": "dotm-circular-5",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-5.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-5.json",
     "useWhen": "You need a circular loader with pinwheel motion.",
-    "status": 200
+    "name": "dotm-circular-5",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-5.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Phase Orb",
-    "name": "dotm-circular-6",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-6.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-6.json",
     "useWhen": "You need a circular loader with an orbiting energy point.",
-    "status": 200
+    "name": "dotm-circular-6",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-6.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Gate Shift",
-    "name": "dotm-circular-7",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-7.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-7.json",
     "useWhen": "You need a circular loader with alternating scan gates.",
-    "status": 200
+    "name": "dotm-circular-7",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-7.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Heart Pulse",
-    "name": "dotm-circular-8",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-8.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-8.json",
     "useWhen": "You need a circular loader with a center pulse.",
-    "status": 200
+    "name": "dotm-circular-8",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-8.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Star Compass",
-    "name": "dotm-circular-9",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-9.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-9.json",
     "useWhen": "You need a circular loader with directional beacon motion.",
-    "status": 200
+    "name": "dotm-circular-9",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-9.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Binary Bloom",
-    "name": "dotm-circular-10",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-10.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-10.json",
     "useWhen": "You need a circular loader with coded pulse tiers.",
-    "status": 200
+    "name": "dotm-circular-10",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-10.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Lunar Breathe",
-    "name": "dotm-circular-11",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-11.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-11.json",
     "useWhen": "You need a circular loader with a crescent-like sweep.",
-    "status": 200
+    "name": "dotm-circular-11",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-11.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Arc Beacon",
-    "name": "dotm-circular-12",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-12.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-12.json",
     "useWhen": "You need a circular loader with a stepped beacon beam.",
-    "status": 200
+    "name": "dotm-circular-12",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-12.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Twin Helix",
-    "name": "dotm-circular-13",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-13.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-13.json",
     "useWhen": "You need a circular loader with a twin-helix rhythm.",
-    "status": 200
+    "name": "dotm-circular-13",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-13.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Rung Shift",
-    "name": "dotm-circular-14",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-14.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-14.json",
     "useWhen": "You need a circular loader with DNA ladder movement.",
-    "status": 200
+    "name": "dotm-circular-14",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-14.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Glyph Cluster",
-    "name": "dotm-circular-15",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-15.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-15.json",
     "useWhen": "You need a circular loader with grouped glyph motifs.",
-    "status": 200
+    "name": "dotm-circular-15",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-15.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Rail Scan",
-    "name": "dotm-circular-16",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-16.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-16.json",
     "useWhen": "You need a circular loader with a braille rail scan.",
-    "status": 200
+    "name": "dotm-circular-16",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-16.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Checker Shift",
-    "name": "dotm-circular-17",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-17.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-17.json",
     "useWhen": "You need a circular loader with checker phase changes.",
-    "status": 200
+    "name": "dotm-circular-17",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-17.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Pulse Pair",
-    "name": "dotm-circular-18",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-18.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-18.json",
     "useWhen": "You need a circular loader with mirrored dot pairs.",
-    "status": 200
+    "name": "dotm-circular-18",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-18.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Orbit Cell",
-    "name": "dotm-circular-19",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-19.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-19.json",
     "useWhen": "You need a circular loader with a braille-cell orbit.",
-    "status": 200
+    "name": "dotm-circular-19",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-19.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Glyph Cycle",
-    "name": "dotm-circular-20",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-20.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-20.json",
     "useWhen": "You need a circular loader with readable glyph transitions.",
-    "status": 200
+    "name": "dotm-circular-20",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-circular-20.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Core Spokes",
-    "name": "dotm-triangle-1",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-1.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-1.json",
     "useWhen": "You need a triangle loader with spokes from the center.",
-    "status": 200
+    "name": "dotm-triangle-1",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-1.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Altitude Wave",
-    "name": "dotm-triangle-2",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-2.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-2.json",
     "useWhen": "You need a triangle loader with apex-to-base wave motion.",
-    "status": 200
+    "name": "dotm-triangle-2",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-2.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Corner Bounce",
-    "name": "dotm-triangle-3",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-3.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-3.json",
     "useWhen": "You need a triangle loader that bounces between corners.",
-    "status": 200
+    "name": "dotm-triangle-3",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-3.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Vertex Chase",
-    "name": "dotm-triangle-4",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-4.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-4.json",
     "useWhen": "You need a triangle loader with three perimeter heads.",
-    "status": 200
+    "name": "dotm-triangle-4",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-4.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Row Sweep",
-    "name": "dotm-triangle-5",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-5.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-5.json",
     "useWhen": "You need a triangle loader with reflected row scanning.",
-    "status": 200
+    "name": "dotm-triangle-5",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-5.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Braille Beat",
-    "name": "dotm-triangle-6",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-6.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-6.json",
     "useWhen": "You need a triangle loader with braille-style fills.",
-    "status": 200
+    "name": "dotm-triangle-6",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-6.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Oblique Weave",
-    "name": "dotm-triangle-7",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-7.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-7.json",
     "useWhen": "You need a triangle loader with diagonal harmonic bands.",
-    "status": 200
+    "name": "dotm-triangle-7",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-7.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Wing Metronome",
-    "name": "dotm-triangle-8",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-8.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-8.json",
     "useWhen": "You need a triangle loader with left-right wing emphasis.",
-    "status": 200
+    "name": "dotm-triangle-8",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-8.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Corona Tier",
-    "name": "dotm-triangle-9",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-9.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-9.json",
     "useWhen": "You need a triangle loader with tiered energy rings.",
-    "status": 200
+    "name": "dotm-triangle-9",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-9.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Column Rake",
-    "name": "dotm-triangle-10",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-10.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-10.json",
     "useWhen": "You need a triangle loader with strict column movement.",
-    "status": 200
+    "name": "dotm-triangle-10",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-10.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Shelf Descent",
-    "name": "dotm-triangle-11",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-11.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-11.json",
     "useWhen": "You need a triangle loader with descending horizontal tiers.",
-    "status": 200
+    "name": "dotm-triangle-11",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-11.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Skew Drift",
-    "name": "dotm-triangle-12",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-12.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-12.json",
     "useWhen": "You need a triangle loader with skewed ridge motion.",
-    "status": 200
+    "name": "dotm-triangle-12",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-12.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Serpent Zip",
-    "name": "dotm-triangle-13",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-13.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-13.json",
     "useWhen": "You need a triangle loader with a row-wise zigzag snake.",
-    "status": 200
+    "name": "dotm-triangle-13",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-13.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Pillar Sweep",
-    "name": "dotm-triangle-14",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-14.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-14.json",
     "useWhen": "You need a triangle loader with a vertical beam sweep.",
-    "status": 200
+    "name": "dotm-triangle-14",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-14.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Tripod Handoff",
-    "name": "dotm-triangle-15",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-15.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-15.json",
     "useWhen": "You need a triangle loader that hands brightness between vertices.",
-    "status": 200
+    "name": "dotm-triangle-15",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-15.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Updraft",
-    "name": "dotm-triangle-16",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-16.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-16.json",
     "useWhen": "You need a triangle loader with a rising V-shaped ridge.",
-    "status": 200
+    "name": "dotm-triangle-16",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-16.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Infinity Trace",
-    "name": "dotm-triangle-17",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-17.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-17.json",
     "useWhen": "You need a triangle loader with a crossing loop path.",
-    "status": 200
+    "name": "dotm-triangle-17",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-17.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Hollow Shell",
-    "name": "dotm-triangle-18",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-18.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-18.json",
     "useWhen": "You need a triangle loader with a hollow pulse.",
-    "status": 200
+    "name": "dotm-triangle-18",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-18.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Pivot Ray",
-    "name": "dotm-triangle-19",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-19.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-19.json",
     "useWhen": "You need a triangle loader with a rotating searchlight.",
-    "status": 200
+    "name": "dotm-triangle-19",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-19.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "Twin Perimeter",
-    "name": "dotm-triangle-20",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-20.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-20.json",
     "useWhen": "You need a triangle loader with two perimeter chasers.",
-    "status": 200
+    "name": "dotm-triangle-20",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/dotm-triangle-20.json",
+    "via": "index"
   },
   {
     "resource": "Dot Matrix",
     "alias": "dotmatrix",
     "component": "All Dot Matrix Loaders",
-    "name": "all",
-    "url": "https://dotmatrix.zzzzshawn.cloud/r/all.json",
     "docs": "https://dotmatrix.zzzzshawn.cloud/r/all.json",
     "useWhen": "You want to install every Dot Matrix loader in one step.",
-    "status": 200
+    "name": "all",
+    "url": "https://dotmatrix.zzzzshawn.cloud/r/all.json",
+    "via": "index"
   }
 ]
