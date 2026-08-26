@@ -5,8 +5,6 @@
  * casing: AICSS's `thinking-state` lands as `ThinkingState.tsx`. Both spellings
  * are tried before an item counts as missing.
  */
-import { readFileSync } from "node:fs"
-
 import { componentExports, defaultComponentExport } from "./component-exports"
 import { ITEM_FILES, keyFor } from "./overrides"
 
@@ -21,7 +19,7 @@ export const locate = async (alias: string, name: string): Promise<Located | nul
   const pinned = ITEM_FILES[keyFor(alias, name)]
   if (pinned) {
     const path = `${namespace}/${pinned}`
-    const source = readFileSync(path, "utf8")
+    const source = await Bun.file(path).text()
     const exports = componentExports(source)
     const defaultExport = defaultComponentExport(source)
     return exports.length || defaultExport ? { path, exports, defaultExport } : null
@@ -42,7 +40,7 @@ export const locate = async (alias: string, name: string): Promise<Located | nul
     const base = parts.slice(-2).join("/")
     if (!wanted.has(parts[parts.length - 1]) && !wanted.has(base)) continue
     const path = `${namespace}/${file}`
-    const source = readFileSync(path, "utf8")
+    const source = await Bun.file(path).text()
     const exports = componentExports(source)
     const defaultExport = defaultComponentExport(source)
     if (exports.length || defaultExport) return { path, exports, defaultExport }

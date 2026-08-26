@@ -11,8 +11,6 @@
  *
  * Usage: bun scripts/mark-type-defects.ts
  */
-import { readFileSync, writeFileSync } from "node:fs"
-
 const HEADER = "// @ts-nocheck -- published with a type error; see scripts/overrides.ts.\n"
 
 const tsc = Bun.spawn(["bunx", "tsc", "-b", "--noEmit"], { stdout: "pipe", stderr: "pipe" })
@@ -25,9 +23,9 @@ const failing = new Set(
 )
 
 for (const path of failing) {
-  const source = readFileSync(path, "utf8")
+  const source = await Bun.file(path).text()
   if (source.startsWith("// @ts-nocheck")) continue
-  writeFileSync(path, HEADER + source)
+  await Bun.write(path, HEADER + source)
   console.log(`  marked ${path}`)
 }
 

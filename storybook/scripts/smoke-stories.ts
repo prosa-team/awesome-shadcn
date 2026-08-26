@@ -12,21 +12,36 @@
  *
  * Usage: bun run build-storybook && bun scripts/smoke-stories.ts [--filter <text>]
  */
-import { readFileSync, writeFileSync } from "node:fs"
-
 import { chromium } from "playwright"
 
-import { RUNTIME_WARNINGS } from "./overrides"
+import { DEV_ONLY, RUNTIME_WARNINGS, keyFor } from "./overrides"
+import type { ManifestItem } from "./resolve-components"
 
 const DIST = "storybook-static"
 const PORT = 6100
 const CONCURRENCY = 6
 
-type Result = { id: string; title: string; ok: boolean; reason?: string; warning?: string }
+type Result = {
+  id: string
+  title: string
+  ok: boolean
+  known: boolean
+  reason?: string
+  warning?: string
+}
 
-const index = JSON.parse(readFileSync(`${DIST}/index.json`, "utf8")) as {
+const index = JSON.parse(await Bun.file(`${DIST}/index.json`).text()) as {
   entries: Record<string, { id: string; title: string; name: string; type: string }>
 }
+
+// Story titles (`resource/component`) whose failure is `DEV_ONLY`, resolved
+// from the manifest so the mapping from `alias:name` stays in one place.
+const manifest: ManifestItem[] = JSON.parse(await Bun.file("scripts/manifest.json").text())
+const devOnlyTitles = new Set(
+  manifest
+    .filter((item) => item.name && DEV_ONLY[keyFor(item.alias, item.name)])
+    .map((item) => `${item.resource}/${item.component}`)
+)
 
 const filterIndex = process.argv.indexOf("--filter")
 const filter = filterIndex === -1 ? null : process.argv[filterIndex + 1]
@@ -85,6 +100,12 @@ const check = async (story: { id: string; title: string; name: string }): Promis
 
   const noise = /favicon|Failed to load resource/i
   const tolerated = (message: string) => RUNTIME_WARNINGS.some((p) => p.test(message))
+  // The bundler drops framer-motion's Reorder export in the production build
+  // only (see DEV_ONLY in overrides.ts) — the component works in `bun run
+  // storybook`, so its React error #130 here is a known build-tool gap, not
+  // an unexplained failure. It still does not render in this static build,
+  // so it is reported separately rather than counted as passing.
+  const known = devOnlyTitles.has(story.title) && fatal.some((e) => /error #130/.test(e))
 
   const reason = fatal.find((e) => !noise.test(e) && !tolerated(e))
   const warning = [...fatal, ...logged].find((e) => !noise.test(e))
@@ -93,6 +114,7 @@ const check = async (story: { id: string; title: string; name: string }): Promis
     id: story.id,
     title: `${story.title} / ${story.name}`,
     ok: !reason,
+    known,
     reason: reason?.split("\n")[0].slice(0, 160),
     warning: warning?.split("\n")[0].slice(0, 160),
   }
@@ -112,12 +134,15 @@ await Promise.all(
 await browser.close()
 server.stop()
 
-const failures = results.filter((r) => !r.ok)
-writeFileSync("scripts/smoke-report.json", JSON.stringify(results, null, 2) + "\n")
+const failures = results.filter((r) => !r.ok && !r.known)
+const known = results.filter((r) => !r.ok && r.known)
+await Bun.write("scripts/smoke-report.json", JSON.stringify(results, null, 2) + "\n")
 
 const warned = results.filter((r) => r.ok && r.warning)
 
-console.log(`${results.length - failures.length}/${results.length} stories render`)
+console.log(`${results.length - failures.length - known.length}/${results.length} stories render`)
 for (const failure of failures) console.log(`  FAIL ${failure.title}\n       ${failure.reason}`)
+if (known.length) console.log(`${known.length} known build-tool failures (see DEV_ONLY in overrides.ts):`)
+for (const k of known) console.log(`  KNOWN ${k.title}\n       ${k.reason}`)
 if (warned.length) console.log(`${warned.length} render but log an error:`)
 for (const w of warned) console.log(`  WARN ${w.title}\n       ${w.warning}`)

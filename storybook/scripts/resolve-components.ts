@@ -9,8 +9,6 @@
  *
  * Run it after the README changes; everything downstream reads the manifest.
  */
-import { readFileSync, writeFileSync } from "node:fs"
-
 import { parseReadme } from "./parse-readme"
 import { candidatesFor, itemUrl, originOf, registryFor, type Registry } from "./registries"
 import { fetchRegistryIndex, normalize, type IndexItem } from "./registry-index"
@@ -93,7 +91,7 @@ const findInIndex = (index: IndexItem[], candidates: string[], componentName: st
   return loose?.name ?? null
 }
 
-const resources = parseReadme(readFileSync("../README.md", "utf8"))
+const resources = parseReadme(await Bun.file("../README.md").text())
 const indexes = new Map<string, IndexItem[] | null>()
 
 for (const resource of resources) {
@@ -163,7 +161,7 @@ const manifest: ManifestItem[] = await mapWithLimit(candidates, CONCURRENCY, asy
   return { ...base, name: null, url: null, via: "unresolved" as const }
 })
 
-writeFileSync("scripts/manifest.json", JSON.stringify(manifest, null, 2) + "\n")
+await Bun.write("scripts/manifest.json", JSON.stringify(manifest, null, 2) + "\n")
 
 const byResource = new Map<string, ManifestItem[]>()
 for (const item of manifest) {

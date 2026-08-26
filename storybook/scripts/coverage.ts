@@ -9,8 +9,6 @@
  *
  * Usage: bun run build-storybook && bun scripts/smoke-stories.ts && bun run coverage
  */
-import { readFileSync } from "node:fs"
-
 import { parseReadme } from "./parse-readme"
 import {
   BROKEN,
@@ -22,18 +20,18 @@ import {
 } from "./overrides"
 import type { ManifestItem } from "./resolve-components"
 
-const read = <T,>(path: string, fallback: T): T => {
+const read = async <T,>(path: string, fallback: T): Promise<T> => {
   try {
-    return JSON.parse(readFileSync(path, "utf8")) as T
+    return JSON.parse(await Bun.file(path).text()) as T
   } catch {
     return fallback
   }
 }
 
-const resources = parseReadme(readFileSync("../README.md", "utf8"))
-const manifest = read<ManifestItem[]>("scripts/manifest.json", [])
-const smoke = read<{ title: string; ok: boolean }[]>("scripts/smoke-report.json", [])
-const index = read<{ entries: Record<string, { title: string; type: string }> }>(
+const resources = parseReadme(await Bun.file("../README.md").text())
+const manifest = await read<ManifestItem[]>("scripts/manifest.json", [])
+const smoke = await read<{ title: string; ok: boolean }[]>("scripts/smoke-report.json", [])
+const index = await read<{ entries: Record<string, { title: string; type: string }> }>(
   "storybook-static/index.json",
   { entries: {} }
 )

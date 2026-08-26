@@ -14,7 +14,7 @@
  *
  * Usage: bun scripts/generate-stories.ts [alias] [--force]
  */
-import { mkdirSync, readFileSync, existsSync, writeFileSync, rmSync } from "node:fs"
+import { mkdirSync, existsSync, rmSync } from "node:fs"
 
 import { locate, pascal } from "./locate-components"
 import { requiredProps } from "./component-props"
@@ -62,7 +62,7 @@ export const metaTitle = (source: string) =>
 const claimedTitles = async () => {
   const titles = new Set<string>()
   for await (const file of new Bun.Glob("**/*.stories.tsx").scan({ cwd: HANDWRITTEN })) {
-    const title = metaTitle(readFileSync(`${HANDWRITTEN}/${file}`, "utf8"))
+    const title = metaTitle(await Bun.file(`${HANDWRITTEN}/${file}`).text())
     if (title) titles.add(title)
   }
   return titles
@@ -119,7 +119,7 @@ export const Default: Story = {}
 const [aliasFilter, ...flags] = process.argv.slice(2)
 if (flags.includes("--force") || aliasFilter === "--force") rmSync(GENERATED, { recursive: true, force: true })
 
-const manifest: ManifestItem[] = JSON.parse(readFileSync("scripts/manifest.json", "utf8"))
+const manifest: ManifestItem[] = JSON.parse(await Bun.file("scripts/manifest.json").text())
 const wanted = manifest.filter((item) => {
   if (!item.name) return false
   if (aliasFilter && !aliasFilter.startsWith("--") && item.alias !== aliasFilter) return false
@@ -154,11 +154,11 @@ for (const item of wanted) {
   const path = `${dir}/${pascal(item.name as string)}.stories.tsx`
   if (existsSync(path) && !flags.includes("--force")) continue
 
-  const source = readFileSync(located.path, "utf8")
+  const source = await Bun.file(located.path).text()
   const { args, unsupported } = sampleArgs(requiredProps(source, component), source)
   if (unsupported.length) needsArgs.push(`@${item.alias}/${item.name}  ${unsupported.join("  ")}`)
 
-  writeFileSync(path, storySource(item, component, importPath(located.path), isDefault, args))
+  await Bun.write(path, storySource(item, component, importPath(located.path), isDefault, args))
   written++
 }
 
@@ -171,7 +171,7 @@ for (const name of needsArgs) console.log(`  NEEDS ARGS ${name}`)
 const titles = new Map<string, string>()
 for await (const file of new Bun.Glob("**/*.stories.tsx").scan({ cwd: GENERATED })) {
   const path = `${GENERATED}/${file}`
-  const title = metaTitle(readFileSync(path, "utf8"))
+  const title = metaTitle(await Bun.file(path).text())
   if (!title) continue
   if (CLAIMED.has(title)) {
     console.error(`  DUPLICATE ${title} is hand-written and was generated as ${path}`)

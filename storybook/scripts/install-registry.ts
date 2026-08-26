@@ -26,7 +26,7 @@
  *
  * Usage: bun scripts/install-registry.ts <alias> [--dry]
  */
-import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs"
+import { mkdirSync, renameSync } from "node:fs"
 import { dirname } from "node:path"
 
 import { itemUrl, originOf, REGISTRIES } from "./registries"
@@ -52,9 +52,9 @@ const aliasesFor = (alias: string) => ({
   utils: `@/registries/${alias}/lib/utils`,
 })
 
-const readConfig = () => JSON.parse(readFileSync(COMPONENTS_JSON, "utf8"))
+const readConfig = async () => JSON.parse(await Bun.file(COMPONENTS_JSON).text())
 const writeConfig = (config: unknown) =>
-  writeFileSync(COMPONENTS_JSON, JSON.stringify(config, null, 2) + "\n")
+  Bun.write(COMPONENTS_JSON, JSON.stringify(config, null, 2) + "\n")
 
 const listSrc = async () => {
   const files = new Set<string>()
@@ -99,11 +99,10 @@ const relocate = (alias: string, before: Set<string>, after: Set<string>) => {
  * treats utils as satisfied once any `src/lib/utils.ts` exists and skips
  * writing a namespaced copy, leaving the import dangling.
  */
-const writeUtils = (alias: string) => {
+const writeUtils = async (alias: string) => {
   const path = `${namespaceOf(alias)}/lib/utils.ts`
-  if (existsSync(path)) return false
-  mkdirSync(dirname(path), { recursive: true })
-  writeFileSync(
+  if (await Bun.file(path).exists()) return false
+  await Bun.write(
     path,
     `import { clsx, type ClassValue } from "clsx"\nimport { twMerge } from "tailwind-merge"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n`
   )
@@ -118,7 +117,7 @@ const normalizeImports = async (alias: string) => {
 
   for await (const file of new Bun.Glob("**/*.{ts,tsx,css}").scan({ cwd: namespace })) {
     const path = `${namespace}/${file}`
-    const source = readFileSync(path, "utf8")
+    const source = await Bun.file(path).text()
     let next = source
     for (const shared of SHARED_PREFIXES) {
       next = next.replaceAll(shared, `${prefix}${shared.slice(2)}`)
@@ -127,7 +126,7 @@ const normalizeImports = async (alias: string) => {
     // slash resolves to nothing.
     next = next.replaceAll(/(["'])(@\/[^"']*?)\/\/([^"']*)\1/g, "$1$2/$3$1")
     if (next !== source) {
-      writeFileSync(path, next)
+      await Bun.write(path, next)
       rewritten++
     }
   }
@@ -142,7 +141,7 @@ if (!registry) {
   process.exit(1)
 }
 
-const manifest: ManifestItem[] = JSON.parse(readFileSync("scripts/manifest.json", "utf8"))
+const manifest: ManifestItem[] = JSON.parse(await Bun.file("scripts/manifest.json").text())
 const seeds = manifest
   .filter((i) => i.alias === alias && i.name)
   .map((i) => i.name as string)
@@ -168,13 +167,13 @@ if (flags.includes("--dry")) {
 }
 
 const before = await listSrc()
-const original = readConfig()
+const original = await readConfig()
 
 // The CLI resolves bare registryDependencies against ui.shadcn.com, so a
 // registry that depends on its own items needs them named explicitly.
 const proxy = await startRegistryProxy(alias, registry.url, originOf(registry))
 
-writeConfig({
+await writeConfig({
   ...original,
   aliases: { ...original.aliases, ...aliasesFor(alias) },
   registries: { ...original.registries, [`@${alias}`]: proxy?.url ?? registry.url },
@@ -211,7 +210,7 @@ try {
     }
   }
 } finally {
-  writeConfig(original)
+  await writeConfig(original)
   proxy?.stop()
 }
 
@@ -242,7 +241,7 @@ if (unwritten.length) {
   failed.push(...stillFailing)
   moved += relocate(alias, before, await listSrc())
 }
-const utils = writeUtils(alias)
+const utils = await writeUtils(alias)
 const rewritten = await normalizeImports(alias)
 
 console.log(`${alias}: installed ${names.length - failed.length}/${names.length}`)

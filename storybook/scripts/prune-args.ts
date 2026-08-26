@@ -9,8 +9,6 @@
  *
  * Usage: bun scripts/prune-args.ts
  */
-import { readFileSync, writeFileSync } from "node:fs"
-
 const tsc = Bun.spawn(["bunx", "tsc", "-b", "--noEmit"], { stdout: "pipe", stderr: "pipe" })
 const output =
   (await new Response(tsc.stdout).text()) + (await new Response(tsc.stderr).text())
@@ -21,10 +19,10 @@ const failing = new Set(
 )
 
 for (const path of failing) {
-  const source = readFileSync(path, "utf8")
+  const source = await Bun.file(path).text()
   const pruned = source.replace(/\n  args: \{[\s\S]*?\n  \},/, "")
   if (pruned === source) continue
-  writeFileSync(path, pruned)
+  await Bun.write(path, pruned)
   console.log(`  pruned args from ${path}`)
 }
 

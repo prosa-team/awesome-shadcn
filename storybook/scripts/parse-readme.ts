@@ -4,8 +4,6 @@
  * The README is the single source of truth for what belongs in this Storybook,
  * so the manifest is derived from it rather than maintained by hand.
  */
-import { readFileSync } from "node:fs"
-
 export type ComponentEntry = {
   name: string
   url: string
@@ -61,7 +59,7 @@ export function parseReadme(markdown: string): ResourceEntry[] {
 }
 
 if (import.meta.main) {
-  const resources = parseReadme(readFileSync("../README.md", "utf8"))
+  const resources = parseReadme(await Bun.file("../README.md").text())
   const total = resources.reduce((n, r) => n + r.components.length, 0)
 
   for (const r of resources) {
