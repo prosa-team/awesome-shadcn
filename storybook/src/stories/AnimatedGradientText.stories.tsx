@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { AnimatedGradientText } from '@/components/ui/animated-gradient-text'
+import { AnimatedGradientText } from '@/registries/magicui/ui/animated-gradient-text'
 
 /**
  * Text filled with a gradient that slides across it forever.

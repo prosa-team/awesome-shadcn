@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { AnimatedCircularProgressBar } from '@/components/ui/animated-circular-progress-bar'
+import { AnimatedCircularProgressBar } from '@/registries/magicui/ui/animated-circular-progress-bar'
 
 /**
  * A ring gauge that animates its stroke and prints the percentage in the middle.

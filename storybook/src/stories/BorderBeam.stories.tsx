@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { BorderBeam } from '@/components/ui/border-beam'
+import { BorderBeam } from '@/registries/magicui/ui/border-beam'
 
 /**
  * A travelling light that runs along a card's border.

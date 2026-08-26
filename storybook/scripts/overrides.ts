@@ -33,3 +33,74 @@ export const SKIPPED: Record<string, string> = {
 }
 
 export const keyFor = (alias: string, component: string) => `${alias}:${component}`
+
+/**
+ * Registry items that do not compile as published, keyed by `<alias>:<item>`.
+ *
+ * These are upstream defects, not resolution failures, so they are excluded
+ * from installs rather than worked around locally.
+ */
+export const BROKEN: Record<string, string> = {
+  "dotmatrix:dotm-3x3-9":
+    "Imports snakePath3NormFromIndex and snakePath3OrderValue, neither of which its own core module exports.",
+  "unlumen:pixel": "Answers 401; a paid component behind a licence key.",
+  "unlumen:glow":
+    "Imports buttonVariants from its own primitives/button, which exports only Button and ButtonProps.",
+  "unlumen:refresh":
+    "Imports buttonVariants from its own primitives/button, which exports only Button and ButtonProps.",
+  "unlumen:command-menu":
+    "Imports KbdGroup from its own kbd, which exports only Kbd and Shortcut.",
+  "unlumen:cursor":
+    "Imports a cursor-primitive module that the registry does not publish at any path.",
+  "ncdai:consent-manager":
+    "Imports ConsentManagerDialog and CookieBanner from @c15t/nextjs, which exports neither. Next.js only.",
+}
+
+/**
+ * Components that render correctly but do not type-check as published.
+ *
+ * Each carries a `@ts-nocheck` header naming this list. The defect is in the
+ * published source, so it is marked rather than patched.
+ */
+export const TYPE_ONLY_DEFECTS: Record<string, string> = {
+  "extend:schema-builder": "Passes a FormEvent where its own Input expects an InputEvent.",
+  "extend:command": "Passes the payload render-function branch of its children type into a ReactNode slot.",
+  "ncdai:spotlight-logo": "Passes a SoundAsset to use-sound, which takes a string.",
+  "ncdai:toc-minimap": "Passes a SoundAsset to use-sound, which takes a string.",
+  "unlumen:dialog": "Passes variant=\"outline\" to its own Button, whose ButtonProps has no variant.",
+}
+
+/**
+ * Registry items the dependency closure does not reach, keyed by alias.
+ *
+ * A registry item lists a dependency the CLI resolves at install time but that
+ * `registryDependencies` does not name — a primitive re-exported through
+ * another file, or a hook imported by path. Installing them explicitly is
+ * cheaper than parsing every import in a published component.
+ */
+export const EXTRA_ITEMS: Record<string, string[]> = {
+  unlumen: ["kbd", "button", "cursor-primitive"],
+  ncdai: ["use-sound"],
+}
+
+/**
+ * Stock shadcn items a registry expects but does not publish, keyed by alias.
+ *
+ * Magic UI's file tree imports `scroll-area` and Unlumen's command menu imports
+ * `command`; neither registry has an item of that name, so both come from the
+ * default shadcn registry into the namespace.
+ */
+export const STOCK_ITEMS: Record<string, string[]> = {
+  magicui: ["scroll-area"],
+  unlumen: ["command"],
+}
+
+/**
+ * Resources deliberately kept out of the Storybook, with the reason.
+ *
+ * This is the honest list of what the Storybook does not cover.
+ */
+export const EXCLUDED_RESOURCES: Record<string, string> = {
+  supabase:
+    "Every component needs a live Supabase project and the Next.js server, client, and middleware clients. There is nothing to render without a backend, which is also what CONTRIBUTING.md rules out.",
+}

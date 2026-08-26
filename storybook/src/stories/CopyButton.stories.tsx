@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { ClipboardIcon, ThumbsUpIcon, TriangleAlertIcon } from 'lucide-react'
 
-import { CopyButton } from '@/components/copy-button'
+import { CopyButton } from '@/registries/ncdai/copy-button'
 
 /**
  * A copy control that swaps its own icon to confirm the copy landed, then resets.

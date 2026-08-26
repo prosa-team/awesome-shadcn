@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { AnimatedSpan, Terminal, TypingAnimation } from '@/components/ui/terminal'
+import { AnimatedSpan, Terminal, TypingAnimation } from '@/registries/magicui/ui/terminal'
 
 /**
  * A fake terminal window that types a command and then reveals its output line by line.

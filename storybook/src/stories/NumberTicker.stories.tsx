@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { NumberTicker } from '@/components/ui/number-ticker'
+import { NumberTicker } from '@/registries/magicui/ui/number-ticker'
 
 /**
  * A number that springs from a start value to its target once it scrolls into view.

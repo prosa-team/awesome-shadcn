@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { ShimmerButton } from '@/components/ui/shimmer-button'
+import { ShimmerButton } from '@/registries/magicui/ui/shimmer-button'
 
 /**
  * A call-to-action button with a spark that circles its border.

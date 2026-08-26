@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Marquee } from '@/components/ui/marquee'
+import { Marquee } from '@/registries/magicui/ui/marquee'
 
 const logos = ['Vercel', 'Supabase', 'Linear', 'Resend', 'Clerk', 'Neon']
 

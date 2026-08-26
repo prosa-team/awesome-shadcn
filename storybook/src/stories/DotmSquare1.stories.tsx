@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { DotmSquare1 } from '@/components/ui/dotm-square-1'
+import { DotmSquare1 } from '@/registries/dotmatrix/ui/dotm-square-1'
 
 /**
  * "Neon Drift" — a square dot matrix with a diagonal ripple running through it.

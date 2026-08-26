@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Camera, Home, Mail, Music, Search, Settings } from 'lucide-react'
 
-import { Dock, DockIcon } from '@/components/ui/dock'
+import { Dock, DockIcon } from '@/registries/magicui/ui/dock'
 
 /**
  * A macOS-style dock whose icons magnify as the pointer passes them.
