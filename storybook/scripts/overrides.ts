@@ -271,3 +271,27 @@ export const DEV_ONLY: Record<string, string> = {
   "interior:reorder-list": "Renders through motion's Reorder.Group.",
   "extend:file-system": "Its columns view renders through motion's Reorder.Group.",
 }
+
+/**
+ * README resources with no shadcn registry behind them, and what they are instead.
+ *
+ * Each was checked directly, not assumed: the docs site was opened, its "view
+ * code" panel read, and the usual registry paths probed on every host it
+ * redirects to. This is the list of what no amount of installer work reaches.
+ */
+export const NO_REGISTRY: Record<string, string> = {
+  "Beautiful UI":
+    "Copy-paste only. Its view-code panel shows raw source with no CLI command, and beautifului.dev serves its SPA shell for every registry path.",
+  Coachmark:
+    "A React library cloned and built from source, not a registry. Its README's install step is `pnpm install`, and it is unpublished on npm.",
+  "Transitions.dev":
+    "Motion recipes copied into a component you already have. Its own page says the transitions are not separately addressable.",
+  "Thinking Orbs":
+    "A single live demo page rather than a set of addressable components.",
+  "Gradient Border":
+    "A Tailwind CSS plugin installed from npm, not a component registry.",
+  "Border Beam":
+    "A Tailwind CSS plugin installed from npm, not a component registry.",
+  "shadcn Project Creator":
+    "The official scaffolding flow, which creates a project rather than shipping components.",
+}
