@@ -2,7 +2,6 @@ import type { Preview } from '@storybook/react-vite'
 import React from 'react'
 
 import '../src/index.css'
-import '../src/registries/dotmatrix/dotmatrix-loader.css'
 
 const preview: Preview = {
   parameters: {

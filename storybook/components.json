@@ -26,6 +26,9 @@
     "@interior": "https://interior.dev/r/{name}.json",
     "@magicui": "https://magicui.design/r/{name}.json",
     "@unlumen": "https://ui.unlumen.com/r/{name}.json",
+    "@reui": "https://reui.io/r/{name}.json",
+    "@spell": "https://spell.sh/r/{name}.json",
+    "@watermelon": "https://registry.watermelon.sh/r/{name}.json",
     "@supabase": "https://supabase.com/ui/r/{name}.json",
     "@dotmatrix": "https://dotmatrix.zzzzshawn.cloud/r/{name}.json"
   }

@@ -5,14 +5,19 @@ party. This file lists, per registry, its actual license — verified against
 the registry's own GitHub repository, not assumed from ecosystem norms — and
 reproduces the notice each license requires a copy to carry.
 
-Twelve registries are vendored here. Ten are permissively licensed and pose
-no known conflict with hosting this Storybook publicly or serving its source
-over MCP. Two — ReUI and Dot Matrix — are marked **conflict** below: their
-own terms restrict exactly this kind of redistribution, in tension with the
-MIT license their GitHub repo otherwise displays. They are included anyway,
-by product decision, with their real terms documented rather than glossed
-over. Anyone building on this Storybook should read those two sections before
-relying on components from them.
+Ten registries are vendored here. All are permissively licensed and pose no
+known conflict with hosting this Storybook publicly or serving its source
+over MCP.
+
+Two more — ReUI and Dot Matrix — were checked and are **not** vendored. Both
+carry terms that forbid exactly what this Storybook does: republishing their
+component source as a component library. ReUI's own terms page conflicts
+with the MIT license its GitHub repo otherwise displays; Dot Matrix's custom
+license is explicit about it regardless of any badge. `scripts/registries.ts`
+still lists both — the resolver uses that entry to explain *why* their README
+components have no story, via `EXCLUDED_RESOURCES` in `scripts/overrides.ts`
+— but neither installs any source and neither has a story. Their terms are
+kept below for reference, so the reason stays on record.
 
 Every generated and hand-written story also carries this same registry and
 source-link in its own JSDoc block (`bun run stories`), so the attribution
@@ -178,19 +183,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## ReUI — conflict
+## ReUI — not vendored
 
 - **License:** MIT, on GitHub — but https://reui.io/legal/license, the terms
   a user actually agrees to on the registry's own site, separately states
   that licensees may not *"publish the Licensed Materials in a public or
   open-source repository"* and may not redistribute or resell them. That
-  page does not carve out the free components from this restriction. Only
-  ReUI's free components are vendored here (the Pro blocks are paywalled and
-  were never installed), but the "no public repo" clause is not limited to
-  the paid tier either.
-- **Status here:** vendored anyway, by product decision, with this conflict
-  documented. Anything reused from `@reui/*` in another project should get
-  its own legal read rather than relying on the MIT label alone.
+  page does not carve out the free components from this restriction.
+- **Status here:** not installed. `scripts/registries.ts` still lists ReUI so
+  the resolver can explain the gap; `EXCLUDED_RESOURCES` in
+  `scripts/overrides.ts` records this exact reason. No ReUI source, story, or
+  registry item is vendored anywhere in this project.
 - **Source:** https://github.com/keenthemes/reui
 - **Registry:** https://reui.io
 - **Terms:** https://reui.io/legal/license
@@ -500,7 +503,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## Dot Matrix — conflict
+## Dot Matrix — not vendored
 
 - **License:** Custom Proprietary License, not MIT and not open source. It
   permits using a component in a shipped product, commercial or not, but
@@ -510,10 +513,10 @@ SOFTWARE.
   (2) selling, sublicensing, renting, leasing, or otherwise commercializing
   any component as a standalone offering. That is what this Storybook, and
   serving its source over MCP, both do.
-- **Status here:** vendored anyway, by product decision, with this conflict
-  documented. Do not reuse `@dotmatrix/*` source in another project without
-  contacting the author for permission first — this is a harder restriction
-  than ReUI's, not merely a public-repo clause.
+- **Status here:** not installed. `scripts/registries.ts` still lists Dot
+  Matrix so the resolver can explain the gap; `EXCLUDED_RESOURCES` in
+  `scripts/overrides.ts` records this exact reason. No Dot Matrix source,
+  story, or registry item is vendored anywhere in this project.
 - **Source:** https://github.com/zzzzshawn/matrix
 - **Registry:** https://dotmatrix.zzzzshawn.cloud
 

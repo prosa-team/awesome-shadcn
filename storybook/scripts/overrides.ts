@@ -50,17 +50,7 @@ export const keyFor = (alias: string, component: string) => `${alias}:${componen
  * from installs rather than worked around locally.
  */
 export const BROKEN: Record<string, string> = {
-  "dotmatrix:dotm-3x3-9":
-    "Imports snakePath3NormFromIndex and snakePath3OrderValue, neither of which its own core module exports.",
   "unlumen:pixel": "Answers 401; a paid component behind a licence key.",
-  "reui:data-grid":
-    "Free itself, but built on ReUI's licensed Popover, Checkbox, and Select, which expect props the stock shadcn versions do not have. Needs REUI_LICENSE_KEY.",
-  "reui:filters":
-    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
-  "reui:event-calendar":
-    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
-  "reui:gantt":
-    "Free itself, but built on ReUI's licensed Tooltip and Popover. Needs REUI_LICENSE_KEY.",
   "watermelon:navigation-1":
     "Declares a registryDependency on `navigation`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
   "watermelon:navigation-2":
@@ -211,6 +201,12 @@ export const STOCK_ITEMS: Record<string, string[]> = {
 export const EXCLUDED_RESOURCES: Record<string, string> = {
   supabase:
     "Every component needs a live Supabase project and the Next.js server, client, and middleware clients. There is nothing to render without a backend, which is also what CONTRIBUTING.md rules out.",
+  // See LICENSES.md. Both carry terms that forbid exactly what this Storybook
+  // does — republishing their source as a component library — in tension
+  // with the MIT license reui's own GitHub repo otherwise displays.
+  reui: "reui.io/legal/license forbids publishing the licensed materials in a public or open-source repository.",
+  dotmatrix:
+    "Its license forbids publishing, distributing, or presenting any component as a standalone reusable component or as part of another component library.",
 }
 
 /**
@@ -238,7 +234,6 @@ export const NOT_RENDERABLE: Record<string, string> = {
   "ncdai:theme-toggle-effect-circle": "A style item; it installs no component file.",
   "fluid:springs": "Shared spring constants, published as lib/springs.ts.",
   "fluid:surfaces": "Shared surface class names, published as lib/surface-classes.ts.",
-  "dotmatrix:all": "An aggregate item that installs no component of its own.",
 }
 
 /**

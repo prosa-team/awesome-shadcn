@@ -7,14 +7,14 @@ import { Meta } from '@storybook/addon-docs/blocks'
 Every component this repo's README lists, from every registry that publishes
 one, installed with the shadcn CLI and documented here.
 
-**512 of the README's 676 components have a story. 511 of them render.**
+**436 of the README's 676 components have a story. 435 of them render.**
 
 The point of this Storybook is to answer the question the README cannot: what
 does a component actually do when you move its knobs?
 
 ## Where the components come from
 
-Eleven registries resolve, and each installs into a namespace of its own under
+Nine registries resolve, and each installs into a namespace of its own under
 `src/registries/<alias>` — thirteen components collide by name across
 registries, and every one of them ships its own `button`.
 
@@ -26,26 +26,29 @@ registries, and every one of them ships its own `button`.
 - **Fluid Functionalism** — 23 of 26
 - **Unlumen UI** — 22 of 27
 - **Extend UI** — 19 of 21
-- **Dot Matrix** — 60 of 61
 - **AICSS** — 13 of 14
-- **ReUI** — 16 of 72
 
-## Why the other 164 have no story
+Two more registries in the README — **ReUI** and **Dot Matrix** — are not
+installed here at all: both carry license terms that forbid redistributing
+their source as a component library, which is what this Storybook does. See
+[Licenses](#licenses) below.
+
+## Why the other 240 have no story
 
 Nothing here is an oversight. Each has a reason recorded in
 `scripts/overrides.ts`, and `bun run coverage --detail` prints them
 component by component.
 
-- **52 are behind a licence.** ReUI answers 401 for a paid item.
-- **54 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
+- **145 come from an excluded registry.** ReUI and Dot Matrix, for the
+  license reasons above; Supabase UI's components need a live Supabase
+  project and Next.js server clients, which is what this repo's CONTRIBUTING
+  rules out.
+- **50 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
   its registry does not publish; Unlumen's glow imports a `buttonVariants` its
-  own button does not export; four ReUI components are free but built on its
-  licensed Popover and Checkbox.
+  own button does not export.
 - **34 have no registry.** Beautiful UI is copy-paste only. Coachmark is a
   library built from source. Transitions.dev says outright that its recipes are
   not separately addressable.
-- **12 need a backend.** Supabase UI's components need a live Supabase project
-  and Next.js server clients, which is what this repo's CONTRIBUTING rules out.
 - **The rest** are tokens, hooks, and style-only items with nothing to render.
 
 ## How a story gets written
@@ -69,17 +72,16 @@ generator.
 
 Every component here was published by a third party under its own license.
 [`LICENSES.md`](https://github.com/carve-studio/awesome-shadcn/blob/main/storybook/LICENSES.md)
-lists all twelve, verified against each registry's own repository rather than
-assumed, and reproduces the notice text each license requires. Every story
-also names its source registry in its own docs block, right next to its
-controls.
+lists all twelve registries the README references, verified against each
+registry's own repository rather than assumed, and reproduces the notice text
+each license requires. Every story also names its source registry in its own
+docs block, right next to its controls.
 
-Ten registries are MIT or Apache 2.0 and permit redistribution outright.
-**ReUI** and **Dot Matrix** are the exception: both carry terms that restrict
-republishing their source as a component library, in tension with hosting it
-here. They are included anyway, with that conflict documented rather than
-hidden — read their sections in `LICENSES.md` before reusing anything from
-either in another project.
+The ten registries actually vendored here are all MIT or Apache 2.0 and
+permit redistribution outright. **ReUI** and **Dot Matrix** are checked and
+documented in `LICENSES.md` too, but neither is installed: both carry terms
+that forbid redistributing their source as a component library, which is
+what this Storybook does.
 
 ## Running it
 

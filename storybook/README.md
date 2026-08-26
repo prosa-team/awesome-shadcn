@@ -3,7 +3,7 @@
 Every component the [README](../README.md) lists, from every registry that
 publishes one, installed with the shadcn CLI and given a story.
 
-**512 of the README's 676 components have a story. 511 of them render.**
+**436 of the README's 676 components have a story. 435 of them render.**
 
 ```bash
 bun install
@@ -14,8 +14,9 @@ This project exists only to host the Storybook. There is no app to run.
 
 Every component is vendored from a third-party registry under its own
 license — see [LICENSES.md](LICENSES.md) for the verified license per
-registry, including two (ReUI, Dot Matrix) whose terms conflict with
-redistributing their source this way.
+registry. Two registries the README lists, ReUI and Dot Matrix, are checked
+there but not installed: both carry terms that forbid redistributing their
+source as a component library, which is what this Storybook does.
 
 ## Commands
 

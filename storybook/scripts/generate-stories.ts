@@ -37,7 +37,6 @@ const CURATED_ROOT = new Set([
   "magicui:terminal",
   "magicui:dock",
   "ncdai:copy-button",
-  "dotmatrix:dotm-square-1",
 ])
 
 /**
