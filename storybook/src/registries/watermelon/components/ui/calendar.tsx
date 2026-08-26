@@ -1,4 +1,4 @@
-// @ts-nocheck -- published with a type error; see scripts/overrides.ts (TYPE_ONLY_DEFECTS).
+// @ts-nocheck -- published with a type error; see scripts/overrides.ts.
 import * as React from "react"
 import {
   ChevronDownIcon,

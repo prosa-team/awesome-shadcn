@@ -60,11 +60,20 @@ const LICENSED = new Set([401, 402, 403])
  */
 const statusOf = async (url: string, attempt = 0): Promise<number> => {
   try {
-    const status = (await fetch(url, { redirect: "follow" })).status
+    const response = await fetch(url, { redirect: "follow" })
+    const status = response.status
+
     if ((LICENSED.has(status) || status === 429) && attempt < 2) {
       await Bun.sleep(500 * (attempt + 1))
       return statusOf(url, attempt + 1)
     }
+
+    // registry.watermelon.sh answers 200 with its SPA shell for names it does
+    // not have, so a status alone believes in items that are not there.
+    if (status === 200 && !(await response.json().then(() => true).catch(() => false))) {
+      return 404
+    }
+
     return status
   } catch {
     return 0

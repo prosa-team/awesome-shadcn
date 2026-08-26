@@ -32,6 +32,7 @@ import { dirname } from "node:path"
 import { itemUrl, originOf, REGISTRIES } from "./registries"
 import { BROKEN, EXTRA_ITEMS, STOCK_ITEMS, keyFor } from "./overrides"
 import { expandDependencies } from "./registry-deps"
+import { locate } from "./locate-components"
 import { startRegistryProxy } from "./registry-proxy"
 import type { ManifestItem } from "./resolve-components"
 
@@ -122,6 +123,9 @@ const normalizeImports = async (alias: string) => {
     for (const shared of SHARED_PREFIXES) {
       next = next.replaceAll(shared, `${prefix}${shared.slice(2)}`)
     }
+    // Watermelon's combobox-1 imports `@/components/ui//popover`, and a doubled
+    // slash resolves to nothing.
+    next = next.replaceAll(/(["'])(@\/[^"']*?)\/\/([^"']*)\1/g, "$1$2/$3$1")
     if (next !== source) {
       writeFileSync(path, next)
       rewritten++
@@ -211,7 +215,33 @@ try {
   proxy?.stop()
 }
 
-const moved = relocate(alias, before, await listSrc())
+/**
+ * A successful batch is not proof every item landed.
+ *
+ * The CLI exits zero having skipped items it considered already present, so a
+ * batch can report success while writing nothing for a dozen of them. The only
+ * reliable check is whether the file exists afterwards.
+ */
+const missingAfterInstall = async (names: string[]) => {
+  const missing: string[] = []
+  for (const name of names) {
+    if (!(await locate(alias, name))) missing.push(name)
+  }
+  return missing
+}
+
+let moved = relocate(alias, before, await listSrc())
+
+const unwritten = await missingAfterInstall(names.filter((n) => !failed.includes(`@${alias}/${n}`)))
+if (unwritten.length) {
+  console.log(`${alias}: ${unwritten.length} items wrote no file, installing them individually`)
+  const stillFailing = await installEach(
+    unwritten.map((name) => `@${alias}/${name}`),
+    250
+  )
+  failed.push(...stillFailing)
+  moved += relocate(alias, before, await listSrc())
+}
 const utils = writeUtils(alias)
 const rewritten = await normalizeImports(alias)
 

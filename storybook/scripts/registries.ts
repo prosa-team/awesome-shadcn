@@ -49,11 +49,24 @@ export const REGISTRIES: Registry[] = [
   { resource: "Unlumen UI", alias: "unlumen", url: "https://ui.unlumen.com/r/{name}.json" },
   // Only ReUI's 22 free components resolve; the rest answer 401 without a licence key.
   { resource: "ReUI", alias: "reui", url: "https://reui.io/r/{name}.json" },
+  { resource: "Spell UI", alias: "spell", url: "https://spell.sh/r/{name}.json" },
   // The registry lives on its own host, which the docs site never links to.
   {
     resource: "Watermelon UI",
     alias: "watermelon",
     url: "https://registry.watermelon.sh/r/{name}.json",
+    /**
+     * The README links a gallery of variants, not one component: `/components/alerts`
+     * is 12 alerts to choose from. The registry publishes the variants
+     * individually as `alert-1`, with no item under the gallery's own name, so
+     * the first variant stands for the entry.
+     */
+    candidates: (url) => {
+      const base = lastSegment(url)
+      const lower = base.toLowerCase()
+      const singular = lower.endsWith("s") ? lower.slice(0, -1) : lower
+      return [...new Set([base, lower, `${lower}-1`, `${singular}-1`])]
+    },
   },
   {
     resource: "Supabase UI",

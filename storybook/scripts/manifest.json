@@ -2291,7 +2291,7 @@
     "useWhen": "A message belongs to a region of the page and must stay visible, unlike a toast that disappears.",
     "name": "alert",
     "url": "https://reui.io/r/alert.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2323,7 +2323,7 @@
     "useWhen": "Options come from a server as the user types — debouncing, loading, and empty results are part of the problem.",
     "name": "autocomplete",
     "url": "https://reui.io/r/autocomplete.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2344,7 +2344,7 @@
     "useWhen": "A row or card carries a state (`active`, `failed`, `3`) that must be scannable in a column of many.",
     "name": "badge",
     "url": "https://reui.io/r/badge.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2486,7 +2486,7 @@
     "useWhen": "The table is the product: sorting, column filters, row selection, pinning, virtualised rows. The main reason to install ReUI.",
     "name": "data-grid",
     "url": "https://reui.io/r/data-grid.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2496,7 +2496,7 @@
     "useWhen": "A date or range is one field among many in a form and a full calendar would dominate it.",
     "name": "date-selector",
     "url": "https://reui.io/r/date-selector.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2550,7 +2550,7 @@
     "useWhen": "Scheduling is the feature: month, week, day, and agenda views with overlapping events handled.",
     "name": "event-calendar",
     "url": "https://reui.io/r/event-calendar.json",
-    "via": "index"
+    "via": "probe"
   },
   {
     "resource": "ReUI",
@@ -2580,9 +2580,10 @@
     "component": "Filters",
     "docs": "https://reui.io/components/filters",
     "useWhen": "Filter state must survive a reload and be shareable as a URL, defined from a schema rather than hand-built.",
-    "name": "filters",
-    "url": "https://reui.io/r/filters.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2590,9 +2591,10 @@
     "component": "Frame",
     "docs": "https://reui.io/components/frame",
     "useWhen": "You render a preview of the user's own content or an embedded app and need it isolated in a frame.",
-    "name": "frame",
-    "url": "https://reui.io/r/frame.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2600,9 +2602,10 @@
     "component": "Gantt",
     "docs": "https://reui.io/components/gantt",
     "useWhen": "Tasks have durations and dependencies, and a list would hide the fact that two of them collide.",
-    "name": "gantt",
-    "url": "https://reui.io/r/gantt.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2621,9 +2624,10 @@
     "component": "Icon Stack",
     "docs": "https://reui.io/components/icon-stack",
     "useWhen": "A row must show a tech or integration set compactly, overlapping instead of wrapping.",
-    "name": "icon-stack",
-    "url": "https://reui.io/r/icon-stack.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2631,9 +2635,10 @@
     "component": "Icon Tile",
     "docs": "https://reui.io/components/icon-tile",
     "useWhen": "An icon needs a consistent framed container across a settings list or feature grid.",
-    "name": "icon-tile",
-    "url": "https://reui.io/r/icon-tile.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2685,9 +2690,10 @@
     "component": "Kanban",
     "docs": "https://reui.io/components/kanban",
     "useWhen": "Work moves between states by dragging, and the board must stay accessible by keyboard too.",
-    "name": "kanban",
-    "url": "https://reui.io/r/kanban.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2750,9 +2756,10 @@
     "component": "Number Field",
     "docs": "https://reui.io/components/number-field",
     "useWhen": "Quantities are nudged rather than typed, and min/max/step must be enforced in the control.",
-    "name": "number-field",
-    "url": "https://reui.io/r/number-field.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2771,9 +2778,10 @@
     "component": "Phone Input",
     "docs": "https://reui.io/components/phone-input",
     "useWhen": "Users are international, so country codes and per-country formats must be part of the input.",
-    "name": "phone-input",
-    "url": "https://reui.io/r/phone-input.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2814,9 +2822,10 @@
     "component": "Rating",
     "docs": "https://reui.io/components/rating",
     "useWhen": "Users score something and half-steps or hover previews are part of the interaction.",
-    "name": "rating",
-    "url": "https://reui.io/r/rating.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2846,9 +2855,10 @@
     "component": "Scrollspy",
     "docs": "https://reui.io/components/scrollspy",
     "useWhen": "Long documentation needs side navigation that reflects the section actually in view.",
-    "name": "scrollspy",
-    "url": "https://reui.io/r/scrollspy.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2922,9 +2932,10 @@
     "component": "Sortable",
     "docs": "https://reui.io/components/sortable",
     "useWhen": "Order is data the user controls, and dragging must work with a keyboard as well.",
-    "name": "sortable",
-    "url": "https://reui.io/r/sortable.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2943,9 +2954,10 @@
     "component": "Stepper",
     "docs": "https://reui.io/components/stepper",
     "useWhen": "A form is long enough that users need to see progress and go back without losing input.",
-    "name": "stepper",
-    "url": "https://reui.io/r/stepper.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -2997,9 +3009,10 @@
     "component": "Timeline",
     "docs": "https://reui.io/components/timeline",
     "useWhen": "Order in time is the information: deploys, audit logs, activity feeds.",
-    "name": "timeline",
-    "url": "https://reui.io/r/timeline.json",
-    "via": "index"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
   },
   {
     "resource": "ReUI",
@@ -3040,8 +3053,339 @@
     "component": "Tree",
     "docs": "https://reui.io/components/tree",
     "useWhen": "Data is hierarchical and depth matters — files, org charts, categories — with keyboard traversal.",
-    "name": "tree",
-    "url": "https://reui.io/r/tree.json",
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "Behind a licence key; the registry answers 401 without one."
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Chart",
+    "docs": "https://spell.sh/docs/chart",
+    "useWhen": "A landing page shows real numbers and the chart should invite hovering instead of sitting there as an image.",
+    "name": "chart",
+    "url": "https://spell.sh/r/chart.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Perspective Book",
+    "docs": "https://spell.sh/docs/perspective-book",
+    "useWhen": "You sell an ebook, guide, or course and a flat cover image undersells it.",
+    "name": "perspective-book",
+    "url": "https://spell.sh/r/perspective-book.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Badge",
+    "docs": "https://spell.sh/docs/badge",
+    "useWhen": "Small labels — \"New\", \"Beta\", a plan tier — matched to the rest of this set.",
+    "name": "badge",
+    "url": "https://spell.sh/r/badge.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Keyboard Shortcuts",
+    "docs": "https://spell.sh/docs/kbd",
+    "useWhen": "The page documents shortcuts and must show ⌘ on macOS and Ctrl elsewhere without a manual check.",
+    "name": "kbd",
+    "url": "https://spell.sh/r/kbd.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Marquee",
+    "docs": "https://spell.sh/docs/marquee",
+    "useWhen": "Logos or cards outnumber the row and continuous scroll beats a cramped static grid.",
+    "name": "marquee",
+    "url": "https://spell.sh/r/marquee.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Tweet",
+    "docs": "https://spell.sh/docs/tweet",
+    "useWhen": "A real post is your testimonial, and you want it in your own styling rather than X's embed script.",
+    "name": "tweet",
+    "url": "https://spell.sh/r/tweet.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Spotify Card",
+    "docs": "https://spell.sh/docs/spotify-card",
+    "useWhen": "Music is part of the brand — a podcast, an artist page, a soundtrack — and the official embed is too heavy.",
+    "name": "spotify-card",
+    "url": "https://spell.sh/r/spotify-card.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Logos Carousel",
+    "docs": "https://spell.sh/docs/logos-carousel",
+    "useWhen": "The customer logo wall is the proof and should animate rather than sit still.",
+    "name": "logos-carousel",
+    "url": "https://spell.sh/r/logos-carousel.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "QR Code",
+    "docs": "https://spell.sh/docs/qr-code",
+    "useWhen": "The page bridges to a phone — app download, ticket, menu — and the code should match the design.",
+    "name": "qr-code",
+    "url": "https://spell.sh/r/qr-code.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Fallback Avatar",
+    "docs": "https://spell.sh/docs/fallback-avatar",
+    "useWhen": "Users have no profile image and you want a stable gradient per name instead of grey initials.",
+    "name": "fallback-avatar",
+    "url": "https://spell.sh/r/fallback-avatar.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Blur Reveal",
+    "docs": "https://spell.sh/docs/blur-reveal",
+    "useWhen": "The hero headline should come into focus rather than fade — softest of the entrance effects.",
+    "name": "blur-reveal",
+    "url": "https://spell.sh/r/blur-reveal.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Special Text",
+    "docs": "https://spell.sh/docs/special-text",
+    "useWhen": "A technical brand wants characters to scramble before settling on the final word.",
+    "name": "special-text",
+    "url": "https://spell.sh/r/special-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Shimmer Text",
+    "docs": "https://spell.sh/docs/shimmer-text",
+    "useWhen": "A single label needs a light sweep to be noticed without moving anything.",
+    "name": "shimmer-text",
+    "url": "https://spell.sh/r/shimmer-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Highlighted Text",
+    "docs": "https://spell.sh/docs/highlighted-text",
+    "useWhen": "One phrase in a paragraph is the promise and needs a marker stroke drawn across it.",
+    "name": "highlighted-text",
+    "url": "https://spell.sh/r/highlighted-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Slide Up Text",
+    "docs": "https://spell.sh/docs/slide-up-text",
+    "useWhen": "Headline lines should rise in sequence, giving the section a beat as it enters.",
+    "name": "slide-up-text",
+    "url": "https://spell.sh/r/slide-up-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Text Marquee",
+    "docs": "https://spell.sh/docs/text-marquee",
+    "useWhen": "A vertical strip of words scrolls beside content, used as a visual rail rather than a message.",
+    "name": "text-marquee",
+    "url": "https://spell.sh/r/text-marquee.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Words Stagger",
+    "docs": "https://spell.sh/docs/words-stagger",
+    "useWhen": "The headline should be read at the pace it appears, one word at a time.",
+    "name": "words-stagger",
+    "url": "https://spell.sh/r/words-stagger.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Signature",
+    "docs": "https://spell.sh/docs/signature",
+    "useWhen": "A founder letter or about page closes with a signature that draws itself as you reach it.",
+    "name": "signature",
+    "url": "https://spell.sh/r/signature.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Randomized Text",
+    "docs": "https://spell.sh/docs/randomized-text",
+    "useWhen": "Characters resolve out of noise — a heavier variant of the scramble effect.",
+    "name": "randomized-text",
+    "url": "https://spell.sh/r/randomized-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Gradient Wave Text",
+    "docs": "https://spell.sh/docs/gradient-wave-text",
+    "useWhen": "The brand gradient should move through the headline in a wave rather than sit static.",
+    "name": "gradient-wave-text",
+    "url": "https://spell.sh/r/gradient-wave-text.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Rich Button",
+    "docs": "https://spell.sh/docs/rich-button",
+    "useWhen": "The primary call to action needs colour variants that carry weight on a busy hero.",
+    "name": "rich-button",
+    "url": "https://spell.sh/r/rich-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Flow Button",
+    "docs": "https://spell.sh/docs/flow-button",
+    "useWhen": "A secondary action should look provisional and inviting — animated dashed border, good for \"try it\".",
+    "name": "flow-button",
+    "url": "https://spell.sh/r/flow-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Copy Button",
+    "docs": "https://spell.sh/docs/copy-button",
+    "useWhen": "An install command or code sits on the marketing page and must be copyable with feedback.",
+    "name": "copy-button",
+    "url": "https://spell.sh/r/copy-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Pop Button",
+    "docs": "https://spell.sh/docs/pop-button",
+    "useWhen": "A playful brand wants a button that physically depresses on click.",
+    "name": "pop-button",
+    "url": "https://spell.sh/r/pop-button.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Color Selector",
+    "docs": "https://spell.sh/docs/color-selector",
+    "useWhen": "The page demonstrates theming or product variants and visitors should try colours live.",
+    "name": "color-selector",
+    "url": "https://spell.sh/r/color-selector.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Label Input",
+    "docs": "https://spell.sh/docs/label-input",
+    "useWhen": "A signup or waitlist field where the label floats and the password toggle already works.",
+    "name": "label-input",
+    "url": "https://spell.sh/r/label-input.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Animated Checkbox",
+    "docs": "https://spell.sh/docs/animated-checkbox",
+    "useWhen": "A checklist or terms box where checking should feel satisfying — spring plus strike-through.",
+    "name": "animated-checkbox",
+    "url": "https://spell.sh/r/animated-checkbox.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Exploding Input",
+    "docs": "https://spell.sh/docs/exploding-input",
+    "useWhen": "A demo input where typing bursts particles, to make an empty field worth touching.",
+    "name": "exploding-input",
+    "url": "https://spell.sh/r/exploding-input.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Spinner",
+    "docs": "https://spell.sh/docs/spinner",
+    "useWhen": "A loading state on a marketing surface that should match this set rather than the app's.",
+    "name": "spinner",
+    "url": "https://spell.sh/r/spinner.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Bars Spinner",
+    "docs": "https://spell.sh/docs/bars-spinner",
+    "useWhen": "Same job, rotating-bars look, when a circular spinner reads too generic.",
+    "name": "bars-spinner",
+    "url": "https://spell.sh/r/bars-spinner.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Light Rays",
+    "docs": "https://spell.sh/docs/light-rays",
+    "useWhen": "A dark hero needs volumetric WebGL light — check the frame cost before shipping to mobile.",
+    "name": "light-rays",
+    "url": "https://spell.sh/r/light-rays.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Animated Gradient",
+    "docs": "https://spell.sh/docs/animated-gradient",
+    "useWhen": "The hero background is a slowly shifting WebGL gradient instead of a static image.",
+    "name": "animated-gradient",
+    "url": "https://spell.sh/r/animated-gradient.json",
+    "via": "index"
+  },
+  {
+    "resource": "Spell UI",
+    "alias": "spell",
+    "component": "Tilt Card",
+    "docs": "https://spell.sh/docs/tilt-card",
+    "useWhen": "A feature or pricing card should tilt toward the cursor with a spotlight following it.",
+    "name": "tilt-card",
+    "url": "https://spell.sh/r/tilt-card.json",
     "via": "index"
   },
   {
@@ -3452,9 +3796,9 @@
     "component": "Alerts",
     "docs": "https://ui.watermelon.sh/components/alerts",
     "useWhen": "30 variants — the widest set here, for products that need distinct looks per severity and placement.",
-    "name": "alerts",
-    "url": "https://registry.watermelon.sh/r/alerts.json",
-    "via": "probe"
+    "name": "alert-1",
+    "url": "https://registry.watermelon.sh/r/alert-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3502,9 +3846,9 @@
     "component": "Button Group",
     "docs": "https://ui.watermelon.sh/components/button-group",
     "useWhen": "12 variants — segmented and split-action groupings.",
-    "name": "button-group",
-    "url": "https://registry.watermelon.sh/r/button-group.json",
-    "via": "probe"
+    "name": "button-group-1",
+    "url": "https://registry.watermelon.sh/r/button-group-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3552,9 +3896,9 @@
     "component": "Combobox",
     "docs": "https://ui.watermelon.sh/components/combobox",
     "useWhen": "12 variants — searchable selects in several shapes.",
-    "name": "combobox",
-    "url": "https://registry.watermelon.sh/r/combobox.json",
-    "via": "probe"
+    "name": "combobox-1",
+    "url": "https://registry.watermelon.sh/r/combobox-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3572,9 +3916,9 @@
     "component": "Date Picker",
     "docs": "https://ui.watermelon.sh/components/date-picker",
     "useWhen": "13 variants — single date and range pickers as form fields.",
-    "name": "date-picker",
-    "url": "https://registry.watermelon.sh/r/date-picker.json",
-    "via": "probe"
+    "name": "date-picker-1",
+    "url": "https://registry.watermelon.sh/r/date-picker-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3602,9 +3946,9 @@
     "component": "Form",
     "docs": "https://ui.watermelon.sh/components/form",
     "useWhen": "10 variants — complete form layouts, so field spacing and error placement are decided for you.",
-    "name": "form",
-    "url": "https://registry.watermelon.sh/r/form.json",
-    "via": "probe"
+    "name": "form-1",
+    "url": "https://registry.watermelon.sh/r/form-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3612,9 +3956,9 @@
     "component": "Input Mask",
     "docs": "https://ui.watermelon.sh/components/input-mask",
     "useWhen": "6 variants — enforce format while typing for phone, date, IBAN, or card numbers.",
-    "name": "input-mask",
-    "url": "https://registry.watermelon.sh/r/input-mask.json",
-    "via": "probe"
+    "name": "input-mask-1",
+    "url": "https://registry.watermelon.sh/r/input-mask-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3622,9 +3966,9 @@
     "component": "Input OTP",
     "docs": "https://ui.watermelon.sh/components/input-otp",
     "useWhen": "10 variants — verification code entry in several box styles.",
-    "name": "input-otp",
-    "url": "https://registry.watermelon.sh/r/input-otp.json",
-    "via": "probe"
+    "name": "input-otp-1",
+    "url": "https://registry.watermelon.sh/r/input-otp-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -3682,9 +4026,10 @@
     "component": "Sonner",
     "docs": "https://ui.watermelon.sh/components/sonner",
     "useWhen": "20 variants — toast styling per severity and position.",
-    "name": "sonner",
-    "url": "https://registry.watermelon.sh/r/sonner.json",
-    "via": "probe"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "The docs page exists but the registry publishes no item under sonner or any variant of it."
   },
   {
     "resource": "Watermelon UI",
@@ -3742,9 +4087,9 @@
     "component": "Card Split Accordian",
     "docs": "https://ui.watermelon.sh/animated-components/card-split-accordian",
     "useWhen": "Accordion | A card must reveal detail by splitting open, when a normal accordion below it would break the card's shape.",
-    "name": "card-split-accordian",
-    "url": "https://registry.watermelon.sh/r/card-split-accordian.json",
-    "via": "probe"
+    "name": "card-split-accordion",
+    "url": "https://registry.watermelon.sh/r/card-split-accordion.json",
+    "via": "override"
   },
   {
     "resource": "Watermelon UI",
@@ -3762,9 +4107,10 @@
     "component": "Family Receive Button",
     "docs": "https://ui.watermelon.sh/animated-components/family-receive-button",
     "useWhen": "Buttons | A button must become a full confirmation modal with backdrop blur — for money or transfer flows.",
-    "name": "family-receive-button",
-    "url": "https://registry.watermelon.sh/r/family-receive-button.json",
-    "via": "probe"
+    "name": null,
+    "url": null,
+    "via": "skipped",
+    "reason": "The docs page exists but the registry publishes no item under that name."
   },
   {
     "resource": "Watermelon UI",
@@ -4532,9 +4878,9 @@
     "component": "Licence Key",
     "docs": "https://ui.watermelon.sh/animated-components/licence-key",
     "useWhen": "Micro-interaction | A licence key is revealed, copied, and masked again — entry and handling in one control.",
-    "name": "licence-key",
-    "url": "https://registry.watermelon.sh/r/licence-key.json",
-    "via": "probe"
+    "name": "license-key",
+    "url": "https://registry.watermelon.sh/r/license-key.json",
+    "via": "override"
   },
   {
     "resource": "Watermelon UI",
@@ -5242,9 +5588,9 @@
     "component": "Hero",
     "docs": "https://ui.watermelon.sh/blocks/hero",
     "useWhen": "43 blocks — the widest set: pick a hero shape before designing one, since it decides the page's rhythm.",
-    "name": "hero",
-    "url": "https://registry.watermelon.sh/r/hero.json",
-    "via": "probe"
+    "name": "hero-1",
+    "url": "https://registry.watermelon.sh/r/hero-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5252,9 +5598,9 @@
     "component": "Footer",
     "docs": "https://ui.watermelon.sh/blocks/footer",
     "useWhen": "31 blocks — footers carry navigation, legal, and newsletter duties and are always underestimated.",
-    "name": "footer",
-    "url": "https://registry.watermelon.sh/r/footer.json",
-    "via": "probe"
+    "name": "footer-1",
+    "url": "https://registry.watermelon.sh/r/footer-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5262,8 +5608,8 @@
     "component": "Auth",
     "docs": "https://ui.watermelon.sh/blocks/auth",
     "useWhen": "13 blocks — complete sign-in and sign-up screens, including split-image and centred layouts.",
-    "name": "auth",
-    "url": "https://registry.watermelon.sh/r/auth.json",
+    "name": "auth-1",
+    "url": "https://registry.watermelon.sh/r/auth-1.json",
     "via": "probe"
   },
   {
@@ -5272,9 +5618,9 @@
     "component": "Announcement",
     "docs": "https://ui.watermelon.sh/blocks/Announcement",
     "useWhen": "9 blocks — top-of-page banners for launches, maintenance, or migration notices.",
-    "name": "Announcement",
-    "url": "https://registry.watermelon.sh/r/Announcement.json",
-    "via": "probe"
+    "name": "announcement-1",
+    "url": "https://registry.watermelon.sh/r/announcement-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5282,9 +5628,9 @@
     "component": "Widget",
     "docs": "https://ui.watermelon.sh/blocks/widget",
     "useWhen": "9 blocks — self-contained dashboard sections rather than page-width blocks.",
-    "name": "widget",
-    "url": "https://registry.watermelon.sh/r/widget.json",
-    "via": "probe"
+    "name": "widget-1",
+    "url": "https://registry.watermelon.sh/r/widget-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5292,9 +5638,9 @@
     "component": "Contact",
     "docs": "https://ui.watermelon.sh/blocks/contact",
     "useWhen": "7 blocks — contact sections combining form, address, and map.",
-    "name": "contact",
-    "url": "https://registry.watermelon.sh/r/contact.json",
-    "via": "probe"
+    "name": "contact-1",
+    "url": "https://registry.watermelon.sh/r/contact-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5302,9 +5648,9 @@
     "component": "Error",
     "docs": "https://ui.watermelon.sh/blocks/Error",
     "useWhen": "7 blocks — 404 and error screens that still offer a way forward.",
-    "name": "Error",
-    "url": "https://registry.watermelon.sh/r/Error.json",
-    "via": "probe"
+    "name": "error-1",
+    "url": "https://registry.watermelon.sh/r/error-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5312,9 +5658,9 @@
     "component": "FAQ",
     "docs": "https://ui.watermelon.sh/blocks/FAQ",
     "useWhen": "6 blocks — objection handling near the bottom of a landing page.",
-    "name": "FAQ",
-    "url": "https://registry.watermelon.sh/r/FAQ.json",
-    "via": "probe"
+    "name": "faq-1",
+    "url": "https://registry.watermelon.sh/r/faq-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5322,9 +5668,9 @@
     "component": "CTA",
     "docs": "https://ui.watermelon.sh/blocks/CTA",
     "useWhen": "5 blocks — the closing ask, in several levels of insistence.",
-    "name": "CTA",
-    "url": "https://registry.watermelon.sh/r/CTA.json",
-    "via": "probe"
+    "name": "cta-1",
+    "url": "https://registry.watermelon.sh/r/cta-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5332,9 +5678,9 @@
     "component": "Feature",
     "docs": "https://ui.watermelon.sh/blocks/Feature",
     "useWhen": "5 blocks — feature sections in grid, alternating, and list arrangements.",
-    "name": "Feature",
-    "url": "https://registry.watermelon.sh/r/Feature.json",
-    "via": "probe"
+    "name": "feature-1",
+    "url": "https://registry.watermelon.sh/r/feature-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5352,9 +5698,9 @@
     "component": "Integrations",
     "docs": "https://ui.watermelon.sh/blocks/integrations",
     "useWhen": "5 blocks — showing what you connect to, when the ecosystem is part of the pitch.",
-    "name": "integrations",
-    "url": "https://registry.watermelon.sh/r/integrations.json",
-    "via": "probe"
+    "name": "integrations-1",
+    "url": "https://registry.watermelon.sh/r/integrations-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5362,9 +5708,9 @@
     "component": "Newsletter",
     "docs": "https://ui.watermelon.sh/blocks/newsletter",
     "useWhen": "5 blocks — email capture as a section rather than a lone input.",
-    "name": "newsletter",
-    "url": "https://registry.watermelon.sh/r/newsletter.json",
-    "via": "probe"
+    "name": "newsletter-1",
+    "url": "https://registry.watermelon.sh/r/newsletter-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5372,9 +5718,9 @@
     "component": "Pricing",
     "docs": "https://ui.watermelon.sh/blocks/pricing",
     "useWhen": "5 blocks — plan comparison including the billing toggle.",
-    "name": "pricing",
-    "url": "https://registry.watermelon.sh/r/pricing.json",
-    "via": "probe"
+    "name": "pricing-1",
+    "url": "https://registry.watermelon.sh/r/pricing-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5382,9 +5728,9 @@
     "component": "Team",
     "docs": "https://ui.watermelon.sh/blocks/Team",
     "useWhen": "5 blocks — people sections for about and careers pages.",
-    "name": "Team",
-    "url": "https://registry.watermelon.sh/r/Team.json",
-    "via": "probe"
+    "name": "team-1",
+    "url": "https://registry.watermelon.sh/r/team-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5392,9 +5738,9 @@
     "component": "Blog",
     "docs": "https://ui.watermelon.sh/blocks/Blog",
     "useWhen": "4 blocks — post listings and article layouts.",
-    "name": "Blog",
-    "url": "https://registry.watermelon.sh/r/Blog.json",
-    "via": "probe"
+    "name": "blog-1",
+    "url": "https://registry.watermelon.sh/r/blog-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5402,9 +5748,9 @@
     "component": "Career",
     "docs": "https://ui.watermelon.sh/blocks/Career",
     "useWhen": "4 blocks — open-roles sections with filtering by team or location.",
-    "name": "Career",
-    "url": "https://registry.watermelon.sh/r/Career.json",
-    "via": "probe"
+    "name": "career-1",
+    "url": "https://registry.watermelon.sh/r/career-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5412,9 +5758,9 @@
     "component": "Notification",
     "docs": "https://ui.watermelon.sh/blocks/notification",
     "useWhen": "4 blocks — in-page notification sections rather than toasts.",
-    "name": "notification",
-    "url": "https://registry.watermelon.sh/r/notification.json",
-    "via": "probe"
+    "name": "notification-1",
+    "url": "https://registry.watermelon.sh/r/notification-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5422,9 +5768,9 @@
     "component": "Stats",
     "docs": "https://ui.watermelon.sh/blocks/Stats",
     "useWhen": "4 blocks — metric rows for social proof.",
-    "name": "Stats",
-    "url": "https://registry.watermelon.sh/r/Stats.json",
-    "via": "probe"
+    "name": "stats-1",
+    "url": "https://registry.watermelon.sh/r/stats-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5432,9 +5778,9 @@
     "component": "Testimonials",
     "docs": "https://ui.watermelon.sh/blocks/testimonials",
     "useWhen": "4 blocks — quote sections in grid and carousel forms.",
-    "name": "testimonials",
-    "url": "https://registry.watermelon.sh/r/testimonials.json",
-    "via": "probe"
+    "name": "testimonials-1",
+    "url": "https://registry.watermelon.sh/r/testimonials-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5442,9 +5788,9 @@
     "component": "Bento",
     "docs": "https://ui.watermelon.sh/blocks/Bento",
     "useWhen": "2 blocks — mixed-size feature grids where items differ in importance.",
-    "name": "Bento",
-    "url": "https://registry.watermelon.sh/r/Bento.json",
-    "via": "probe"
+    "name": "bento-1",
+    "url": "https://registry.watermelon.sh/r/bento-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",
@@ -5452,9 +5798,9 @@
     "component": "Navigation",
     "docs": "https://ui.watermelon.sh/blocks/navigation",
     "useWhen": "7 blocks — full navbars, complementing the animated navigation components above.",
-    "name": "navigation",
-    "url": "https://registry.watermelon.sh/r/navigation.json",
-    "via": "probe"
+    "name": "navigation-1",
+    "url": "https://registry.watermelon.sh/r/navigation-1.json",
+    "via": "index"
   },
   {
     "resource": "Watermelon UI",

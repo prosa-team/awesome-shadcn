@@ -8,6 +8,9 @@
 
 /** README component name to registry item name. */
 export const OVERRIDES: Record<string, string> = {
+  // The README spells these the way the docs site does; the registry does not.
+  "watermelon:Card Split Accordian": "card-split-accordion",
+  "watermelon:Licence Key": "license-key",
   // The README links /components/react-wheel-picker; the item is wheel-picker.
   "ncdai:React Wheel Picker": "wheel-picker",
   // Ships as seven shaped variants. The circle wipe is the one the docs lead with.
@@ -20,6 +23,10 @@ export const OVERRIDES: Record<string, string> = {
 
 /** README components with no registry item, and why. */
 export const SKIPPED: Record<string, string> = {
+  "watermelon:Sonner":
+    "The docs page exists but the registry publishes no item under sonner or any variant of it.",
+  "watermelon:Family Receive Button":
+    "The docs page exists but the registry publishes no item under that name.",
   "aicss:Web Search":
     "Removed upstream. The README's link 404s and the component is gone from the AICSS index.",
   "extend:Excel Document Splits":
@@ -90,6 +97,44 @@ export const BROKEN: Record<string, string> = {
     "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
   "watermelon:widget-8":
     "Declares a registryDependency on `widget`, which Watermelon does not publish and shadcn does not have. The registry answers 200 with its SPA shell for that name.",
+  "watermelon:announcement-1":
+    "Declares a registryDependency on `announcement`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:auth-1":
+    "Declares a registryDependency on `auth`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:blog-1":
+    "Declares a registryDependency on `blog`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:date-picker-1":
+    "Declares a registryDependency on `date-picker`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:input-mask-1":
+    "Declares a registryDependency on `input-mask`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:footer-1":
+    "Declares a registryDependency on `footer`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:contact-1":
+    "Declares a registryDependency on `contact`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:error-1":
+    "Declares a registryDependency on `error`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:faq-1":
+    "Declares a registryDependency on `faq`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:cta-1":
+    "Declares a registryDependency on `cta`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:feature-1":
+    "Declares a registryDependency on `feature`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:integrations-1":
+    "Declares a registryDependency on `integrations`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:newsletter-1":
+    "Declares a registryDependency on `newsletter`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:pricing-1":
+    "Declares a registryDependency on `pricing`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:team-1":
+    "Declares a registryDependency on `team`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:career-1":
+    "Declares a registryDependency on `career`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:stats-1":
+    "Declares a registryDependency on `stats`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:testimonials-1":
+    "Declares a registryDependency on `testimonials`, which Watermelon does not publish and shadcn does not have.",
+  "watermelon:pop-stepper":
+    "Installs no file: the registry item lists no files of its own.",
   "watermelon:family-wallet":
     "Imports Github, Chrome, and Twitter from lucide-react, which dropped its brand icons in v1.",
   "watermelon:web3-dashboard":
@@ -122,6 +167,8 @@ export const TYPE_ONLY_DEFECTS: Record<string, string> = {
   "unlumen:dialog": "Passes variant=\"outline\" to its own Button, whose ButtonProps has no variant.",
   "watermelon:chart":
     "The stock shadcn chart wrapper, whose Recharts tooltip payload types drifted in Recharts 3.",
+  "spell:tweet":
+    "Reads hashtags, urls, user_mentions, and symbols off an entities object it types as {}.",
   "watermelon:calendar":
     "The stock shadcn calendar, whose classNames keys drifted in react-day-picker 9.",
 }
@@ -149,6 +196,9 @@ export const EXTRA_ITEMS: Record<string, string[]> = {
 export const STOCK_ITEMS: Record<string, string[]> = {
   magicui: ["scroll-area"],
   unlumen: ["command"],
+  // combobox-1 imports `@/components/ui//popover` — a doubled slash that
+  // resolves to the ui alias root, where neither file otherwise lands.
+  watermelon: ["popover", "command"],
 }
 
 /**

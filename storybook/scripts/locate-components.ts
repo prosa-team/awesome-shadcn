@@ -27,11 +27,20 @@ export const locate = async (alias: string, name: string): Promise<Located | nul
     return exports.length || defaultExport ? { path, exports, defaultExport } : null
   }
 
-  const wanted = new Set([`${name}.tsx`, `${pascal(name)}.tsx`, `${name}.ts`])
+  // Most items install as `<name>.tsx`. Target-pinned ones keep their own
+  // casing, and Watermelon's dashboards install as a directory with a demo entry.
+  const wanted = new Set([
+    `${name}.tsx`,
+    `${pascal(name)}.tsx`,
+    `${name}.ts`,
+    `${name}/demo.tsx`,
+    `${name}/index.tsx`,
+  ])
 
   for await (const file of new Bun.Glob("**/*.{ts,tsx}").scan({ cwd: namespace })) {
-    const base = file.split("/").pop() as string
-    if (!wanted.has(base)) continue
+    const parts = file.split("/")
+    const base = parts.slice(-2).join("/")
+    if (!wanted.has(parts[parts.length - 1]) && !wanted.has(base)) continue
     const path = `${namespace}/${file}`
     const source = readFileSync(path, "utf8")
     const exports = componentExports(source)
