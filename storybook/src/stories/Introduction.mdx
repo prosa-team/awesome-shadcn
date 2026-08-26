@@ -4,39 +4,69 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # awesome-shadcn — Storybook
 
-Ten components pulled straight from the registries listed in this repo's README,
-installed with the shadcn CLI and documented here with every prop wired to a
-control.
+Every component this repo's README lists, from every registry that publishes
+one, installed with the shadcn CLI and documented here.
 
-The point of this Storybook is to answer one question the README cannot: what
-does the component actually do when you move its knobs?
+**502 of the README's 676 components have a story. 501 of them render.**
 
-## What is in here
+The point of this Storybook is to answer the question the README cannot: what
+does a component actually do when you move its knobs?
 
-- **Border Beam** (Magic UI) — one card must be the only thing moving on screen.
-- **Shimmer Button** (Magic UI) — the hero has exactly one primary action.
-- **Marquee** (Magic UI) — more logos or quotes than fit the viewport.
-- **Number Ticker** (Magic UI) — a headline metric should register as a change.
-- **Animated Gradient Text** (Magic UI) — a launch pill must outrank the headline.
-- **Animated Circular Progress Bar** (Magic UI) — a single percentage is the headline number.
-- **Terminal** (Magic UI) — the install step is the pitch.
-- **Dock** (Magic UI) — a small fixed set of actions should feel like an app.
-- **Copy Button** (Chánh Đại) — any copyable value needs feedback that the click landed.
-- **Neon Drift** (Dot Matrix) — a busy state with more character than a spinner.
+## Where the components come from
 
-## Registries
+Eleven registries resolve, and each installs into a namespace of its own under
+`src/registries/<alias>` — thirteen components collide by name across
+registries, and every one of them ships its own `button`.
 
-Registry URLs live in `components.json`, so any component from these four is one
-command away:
+| Registry | In the README | Has a story |
+| --- | --- | --- |
+| Watermelon UI | 210 | 164 |
+| Magic UI | 76 | 76 |
+| interior.dev | 54 | 54 |
+| Spell UI | 33 | 33 |
+| Chánh Đại Components | 36 | 32 |
+| Fluid Functionalism | 26 | 23 |
+| Unlumen UI | 27 | 22 |
+| Extend UI | 21 | 19 |
+| Dot Matrix | 61 | 60 |
+| AICSS | 14 | 13 |
+| ReUI | 72 | 6 |
 
-```bash
-bunx shadcn@latest add @magicui/bento-grid
-```
+## Why the other 174 have no story
 
-- `@magicui` — `https://magicui.design/r/[name].json`
-- `@ncdai` — `https://chanhdai.com/r/[name].json`
-- `@reui` — `https://reui.io/r/[name].json`
-- `@dotmatrix` — `https://dotmatrix.zzzzshawn.cloud/r/[name].json`
+Nothing here is an oversight. Each has a reason recorded in
+`scripts/overrides.ts`, and `bun run coverage --detail` prints them
+component by component.
+
+- **64 are behind a licence.** ReUI answers 401 for a paid item. Four of its
+  free components are unusable too, because they are built on its licensed
+  Popover and Checkbox.
+- **52 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
+  its registry does not publish; Unlumen's glow imports a `buttonVariants` its
+  own button does not export.
+- **34 have no registry.** Beautiful UI is copy-paste only. Coachmark is a
+  library built from source. Transitions.dev says outright that its recipes are
+  not separately addressable.
+- **12 need a backend.** Supabase UI's components need a live Supabase project
+  and Next.js server clients, which is what this repo's CONTRIBUTING rules out.
+- **The rest** are tokens, hooks, and style-only items with nothing to render.
+
+## How a story gets written
+
+Most are generated. `bun run stories` reads the manifest, finds each
+component's file, and writes a story carrying its registry, the README's reason
+to reach for it, and a link to its docs. It declares no `argTypes` — Storybook's
+docgen reads the props off the component, so a hand-written block would just be
+a stale copy of the registry's types.
+
+Required props are synthesised from those types: arrays get three entries,
+object types are resolved and filled member by member, and a `url` gets a URL
+because a link component fed "Sample" looks broken in a way it is not.
+
+Where that is not enough — a component needing its own provider, a nested shape
+a generator cannot invent, a fixture the registry itself publishes — the story
+is written by hand under `src/stories/handwritten/`. Those always win over the
+generator.
 
 ## Running it
 
@@ -45,6 +75,6 @@ bun install
 bun run storybook
 ```
 
-Use the **Theme** toolbar control to check every story in dark mode. The
+Use the **Theme** toolbar control to check any story in dark mode. The
 `@storybook/addon-mcp` addon is installed, so an agent connected to this
 Storybook can read the stories directly.

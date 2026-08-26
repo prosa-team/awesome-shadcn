@@ -14,7 +14,8 @@
     "smoke-stories": "bun scripts/smoke-stories.ts",
     "prune-args": "bun scripts/prune-args.ts",
     "stories": "bun scripts/generate-stories.ts --force && bun scripts/prune-args.ts",
-    "mark-type-defects": "bun scripts/mark-type-defects.ts"
+    "mark-type-defects": "bun scripts/mark-type-defects.ts",
+    "coverage": "bun scripts/coverage.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

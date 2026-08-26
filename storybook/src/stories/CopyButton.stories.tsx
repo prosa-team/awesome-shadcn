@@ -17,7 +17,7 @@ import { CopyButton } from '@/registries/ncdai/copy-button'
  * `useCopyToClipboard`. The three icons are overridable.
  */
 const meta = {
-  title: 'Chanh Dai/Copy Button',
+  title: 'Chánh Đại Components/Copy Button',
   component: CopyButton,
   tags: ['autodocs'],
   argTypes: {

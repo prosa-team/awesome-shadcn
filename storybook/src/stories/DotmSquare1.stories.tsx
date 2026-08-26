@@ -18,7 +18,7 @@ import { DotmSquare1 } from '@/registries/dotmatrix/ui/dotm-square-1'
  * the animation drops to a static pattern instead of stopping dead.
  */
 const meta = {
-  title: 'Dot Matrix/Neon Drift (Square 1)',
+  title: 'Dot Matrix/Neon Drift',
   component: DotmSquare1,
   tags: ['autodocs'],
   argTypes: {

@@ -29,6 +29,8 @@ export const SKIPPED: Record<string, string> = {
     "The docs page exists but the registry publishes no item under that name.",
   "aicss:Web Search":
     "Removed upstream. The README's link 404s and the component is gone from the AICSS index.",
+  "extend:Bounding Box Citations Block":
+    "Its registry item targets `registry/new-york-v4/blocks/`, outside the project's src tree, so the CLI writes it nowhere the app can import.",
   "extend:Excel Document Splits":
     "Documented as an anchor on the blocks page with no registry item behind it.",
   "fluid:Scrollbars":
