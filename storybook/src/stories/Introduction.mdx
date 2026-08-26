@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Introduction" />
+
+# awesome-shadcn — Storybook
+
+Ten components pulled straight from the registries listed in this repo's README,
+installed with the shadcn CLI and documented here with every prop wired to a
+control.
+
+The point of this Storybook is to answer one question the README cannot: what
+does the component actually do when you move its knobs?
+
+## What is in here
+
+- **Border Beam** (Magic UI) — one card must be the only thing moving on screen.
+- **Shimmer Button** (Magic UI) — the hero has exactly one primary action.
+- **Marquee** (Magic UI) — more logos or quotes than fit the viewport.
+- **Number Ticker** (Magic UI) — a headline metric should register as a change.
+- **Animated Gradient Text** (Magic UI) — a launch pill must outrank the headline.
+- **Animated Circular Progress Bar** (Magic UI) — a single percentage is the headline number.
+- **Terminal** (Magic UI) — the install step is the pitch.
+- **Dock** (Magic UI) — a small fixed set of actions should feel like an app.
+- **Copy Button** (Chánh Đại) — any copyable value needs feedback that the click landed.
+- **Neon Drift** (Dot Matrix) — a busy state with more character than a spinner.
+
+## Registries
+
+Registry URLs live in `components.json`, so any component from these four is one
+command away:
+
+```bash
+bunx shadcn@latest add @magicui/bento-grid
+```
+
+- `@magicui` — `https://magicui.design/r/[name].json`
+- `@ncdai` — `https://chanhdai.com/r/[name].json`
+- `@reui` — `https://reui.io/r/[name].json`
+- `@dotmatrix` — `https://dotmatrix.zzzzshawn.cloud/r/[name].json`
+
+## Running it
+
+```bash
+bun install
+bun run storybook
+```
+
+Use the **Theme** toolbar control to check every story in dark mode. The
+`@storybook/addon-mcp` addon is installed, so an agent connected to this
+Storybook can read the stories directly.
