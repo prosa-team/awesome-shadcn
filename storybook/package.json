@@ -10,7 +10,8 @@
     "resolve-components": "bun scripts/resolve-components.ts",
     "sync-components-json": "bun scripts/sync-components-json.ts",
     "install-registry": "bun scripts/install-registry.ts",
-    "generate-stories": "bun scripts/generate-stories.ts"
+    "generate-stories": "bun scripts/generate-stories.ts",
+    "smoke-stories": "bun scripts/smoke-stories.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
