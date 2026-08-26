@@ -12,6 +12,11 @@ bun run storybook
 
 This project exists only to host the Storybook. There is no app to run.
 
+Every component is vendored from a third-party registry under its own
+license — see [LICENSES.md](LICENSES.md) for the verified license per
+registry, including two (ReUI, Dot Matrix) whose terms conflict with
+redistributing their source this way.
+
 ## Commands
 
 | Command | What it does |
