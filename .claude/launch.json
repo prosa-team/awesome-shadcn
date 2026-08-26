@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "storybook",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "storybook", "--", "--no-open", "--port", "6006"],
+      "port": 6006,
+      "cwd": "storybook"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {
+    "@aicss": "https://www.aicss.dev/r/{name}.json",
+    "@ncdai": "https://chanhdai.com/r/{name}.json",
+    "@extend": "https://ui.extend.ai/r/{name}.json",
+    "@fluid": "https://www.fluidfunctionalism.com/r/{name}.json",
+    "@interior": "https://interior.dev/r/{name}.json",
+    "@magicui": "https://magicui.design/r/{name}.json",
+    "@unlumen": "https://ui.unlumen.com/r/{name}.json",
+    "@reui": "https://reui.io/r/{name}.json",
+    "@spell": "https://spell.sh/r/{name}.json",
+    "@watermelon": "https://registry.watermelon.sh/r/{name}.json",
+    "@supabase": "https://supabase.com/ui/r/{name}.json",
+    "@dotmatrix": "https://dotmatrix.zzzzshawn.cloud/r/{name}.json"
+  }
+}

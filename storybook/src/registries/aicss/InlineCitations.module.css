@@ -1,0 +1,30 @@
+.citeProse { max-width: 100%; font-size: 14px; line-height: 19px; color: #1a1a1a; overflow-wrap: anywhere; }
+.citeProse p { margin: 0; }
+.citeMark { display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; flex: none; border-radius: 4px; background: #f4f5f7; color: #a1a1a1; font-size: 9px; font-weight: 600; line-height: 1; vertical-align: 5.5px; margin: 0 2px; }
+a.citeMark { cursor: pointer; text-decoration: none; transition: color 0.15s, background 0.15s; }
+a.citeMark:hover { color: #1a1a1a; background: #e6e8ec; }
+.citeTip { position: relative; display: inline; }
+.citeTipBox { position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%) translateY(1px); font-size: 10px; line-height: 1; font-weight: 500; color: rgba(255, 255, 255, 0.9); background: rgba(29, 29, 29, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); padding: 4px 5px; border-radius: 6px; white-space: nowrap; pointer-events: none; opacity: 0; filter: blur(2px); transition: opacity 0.15s ease, transform 0.15s ease, filter 0.15s ease; z-index: 1000; }
+.citeTip:hover .citeTipBox, .citeTip:focus-within .citeTipBox { opacity: 1; filter: blur(0); transform: translateX(-50%) translateY(0); }
+.citeFooter { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #e6e8ec; }
+.citeRef { display: flex; align-items: center; gap: 6px; font-size: 12px; line-height: 18px; color: #a1a1a1; min-width: 0; text-decoration: none; cursor: pointer; }
+.citeRef .citeMark { margin: 0; }
+.citeRefLabel { color: #1a1a1a; font-weight: 450; flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.citeSep { color: #a1a1a1; flex: none; }
+.citeRefHost { color: #a1a1a1; flex: none; white-space: nowrap; transition: color 0.16s; }
+.citeArrow { display: inline-flex; flex: none; margin-left: -2px; color: #a1a1a1; opacity: 0; transform: rotate(45deg) translate(0, 2px); transition: opacity 0.16s, transform 0.22s; pointer-events: none; }
+.citeRef:hover .citeArrow { opacity: 1; transform: rotate(45deg) translate(0, 0); }
+.citeRef:hover .citeRefHost { color: #1a1a1a; }
+@media (prefers-color-scheme: dark) {
+  .citeProse { color: #f5f5f5; }
+  .citeMark { background: #424242; }
+  a.citeMark:hover { color: #f5f5f5; background: #525252; }
+  .citeFooter { border-top-color: #303030; }
+  .citeSep { color: #737373; }
+  .citeArrow { color: #737373; }
+  .citeRefLabel { color: #f5f5f5; }
+  .citeRef:hover .citeRefHost { color: #f5f5f5; }
+  .citeTipBox { background: rgba(255, 255, 255, 0.12); }
+}
+:global([data-theme="dark"]) .citeTipBox,
+:global(.dark) .citeTipBox { background: rgba(255, 255, 255, 0.12); }

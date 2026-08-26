@@ -1,0 +1,95 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Introduction" />
+
+# awesome-shadcn — Storybook
+
+Every component this repo's README lists, from every registry that publishes
+one, installed with the shadcn CLI and documented here.
+
+**436 of the README's 676 components have a story. 435 of them render.**
+
+The point of this Storybook is to answer the question the README cannot: what
+does a component actually do when you move its knobs?
+
+## Where the components come from
+
+Nine registries resolve, and each installs into a namespace of its own under
+`src/registries/<alias>` — thirteen components collide by name across
+registries, and every one of them ships its own `button`.
+
+- **Watermelon UI** — 164 of 210
+- **Magic UI** — 76 of 76
+- **interior.dev** — 54 of 54
+- **Spell UI** — 33 of 33
+- **Chánh Đại Components** — 32 of 36
+- **Fluid Functionalism** — 23 of 26
+- **Unlumen UI** — 22 of 27
+- **Extend UI** — 19 of 21
+- **AICSS** — 13 of 14
+
+Two more registries in the README — **ReUI** and **Dot Matrix** — are not
+installed here at all: both carry license terms that forbid redistributing
+their source as a component library, which is what this Storybook does. See
+[Licenses](#licenses) below.
+
+## Why the other 240 have no story
+
+Nothing here is an oversight. Each has a reason recorded in
+`scripts/overrides.ts`, and `bun run coverage --detail` prints them
+component by component.
+
+- **145 come from an excluded registry.** ReUI and Dot Matrix, for the
+  license reasons above; Supabase UI's components need a live Supabase
+  project and Next.js server clients, which is what this repo's CONTRIBUTING
+  rules out.
+- **50 are broken as published.** Watermelon's `faq-1` depends on a `faq` item
+  its registry does not publish; Unlumen's glow imports a `buttonVariants` its
+  own button does not export.
+- **34 have no registry.** Beautiful UI is copy-paste only. Coachmark is a
+  library built from source. Transitions.dev says outright that its recipes are
+  not separately addressable.
+- **The rest** are tokens, hooks, and style-only items with nothing to render.
+
+## How a story gets written
+
+Most are generated. `bun run stories` reads the manifest, finds each
+component's file, and writes a story carrying its registry, the README's reason
+to reach for it, and a link to its docs. It declares no `argTypes` — Storybook's
+docgen reads the props off the component, so a hand-written block would just be
+a stale copy of the registry's types.
+
+Required props are synthesised from those types: arrays get three entries,
+object types are resolved and filled member by member, and a `url` gets a URL
+because a link component fed "Sample" looks broken in a way it is not.
+
+Where that is not enough — a component needing its own provider, a nested shape
+a generator cannot invent, a fixture the registry itself publishes — the story
+is written by hand under `src/stories/handwritten/`. Those always win over the
+generator.
+
+## Licenses
+
+Every component here was published by a third party under its own license.
+[`LICENSES.md`](https://github.com/carve-studio/awesome-shadcn/blob/main/storybook/LICENSES.md)
+lists all twelve registries the README references, verified against each
+registry's own repository rather than assumed, and reproduces the notice text
+each license requires. Every story also names its source registry in its own
+docs block, right next to its controls.
+
+The ten registries actually vendored here are all MIT or Apache 2.0 and
+permit redistribution outright. **ReUI** and **Dot Matrix** are checked and
+documented in `LICENSES.md` too, but neither is installed: both carry terms
+that forbid redistributing their source as a component library, which is
+what this Storybook does.
+
+## Running it
+
+```bash
+bun install
+bun run storybook
+```
+
+Use the **Theme** toolbar control to check any story in dark mode. The
+`@storybook/addon-mcp` addon is installed, so an agent connected to this
+Storybook can read the stories directly.
